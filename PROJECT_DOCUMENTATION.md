@@ -1,4 +1,4 @@
-# HTML5 Master Reference & Cheat Sheet: Complete Technical Architecture & Implementation Guide
+﻿# HTML5 Master Reference & Cheat Sheet: Complete Technical Architecture & Implementation Guide
 
 **Project Name:** HTML5 Tags Master Reference & Interactive Cheat Sheet  
 **Author & Creator:** Kaustubh Singh  
@@ -242,7 +242,7 @@ sequenceDiagram
 
 ### Challenge 3: Privacy & Phone Number Removal
 * **Requirement**: Complete removal of contact phone numbers from headers, footers, and code snippets across all 60 tag pages, homepage, and documentation.
-* **Solution**: Executed an automated regex script that matched multiple permutations of phone numbers (`+91 7000919343`, `7000919343`), scrubbed all occurrences, verified 0 matches remained across all files, and pushed the sanitized commit to GitHub.
+* **Solution**: Executed an automated regex script that matched multiple permutations of phone numbers (`contact phone numbers`, `contact phone numbers`), scrubbed all occurrences, verified 0 matches remained across all files, and pushed the sanitized commit to GitHub.
 
 ---
 
