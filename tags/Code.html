@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="kaustubh singh" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>HTML Tags Cheat Sheet</title>
+  <link rel="stylesheet" href="style.css" />
+  
+    
+    <style>
+      .demo-box {
+    background: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-left: 4px solid #009688;
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 4px;
+   }
+    </style>
+     <meta property="og:title" content="HTML Code Tag (<code>) - Cheat Sheet" />
+    <meta property="og:description" content="Complete guide to the HTML Code tag with live examples, use cases, attributes, and W3C standards." />
+    <meta property="og:type" content="article" />
+    <link rel="prev" href="Cite.html" />
+    <link rel="next" href="Col.html" />
+    <script src="app.js" defer></script>
+  </head>
+ <body>
+  <header>
+   <h1>Code tag</h1>
+   <p>Learn tags with description, use cases, and examples</p>
+  </header>
+
+  <main>
+      <nav class="quick-nav">
+        <a href="index.html" class="home-btn">&larr; All Tags (Index)</a>
+        <div class="nav-selector">
+          <label for="tagJump"><strong>Jump to Tag:</strong></label>
+          <select id="tagJump" onchange="if(this.value) window.location.href=this.value;">
+            <option value="">-- Choose a Tag to Switch --</option>
+            <option value="Abbreviation.html">&lt;abbr&gt; Abbreviation</option>
+            <option value="Address.html">&lt;address&gt; Address</option>
+            <option value="Anchor.html">&lt;a&gt; Anchor</option>
+            <option value="Area.html">&lt;area&gt; Area</option>
+            <option value="Article.html">&lt;article&gt; Article</option>
+            <option value="Aside.html">&lt;aside&gt; Aside</option>
+            <option value="Audio.html">&lt;audio&gt; Audio</option>
+            <option value="Base.html">&lt;base&gt; Base</option>
+            <option value="Bdo.html">&lt;bdo&gt; Bdo</option>
+            <option value="Blockquote.html">&lt;blockquote&gt; Blockquote</option>
+            <option value="Body.html">&lt;body&gt; Body</option>
+            <option value="Br.html">&lt;br&gt; Line Break</option>
+            <option value="Button.html">&lt;button&gt; Button</option>
+            <option value="Caption.html">&lt;caption&gt; Caption</option>
+            <option value="Cite.html">&lt;cite&gt; Citation</option>
+            <option value="Code.html" selected="selected">&lt;code&gt; Code</option>
+            <option value="Col.html">&lt;col&gt; Column</option>
+            <option value="Colgroup.html">&lt;colgroup&gt; Column Group</option>
+            <option value="Data.html">&lt;data&gt; Machine Data</option>
+            <option value="Datalist.html">&lt;datalist&gt; Datalist</option>
+            <option value="Del.html">&lt;del&gt; Deleted Text</option>
+            <option value="DescriptionList.html">&lt;dl&gt; Description List</option>
+            <option value="Details.html">&lt;details&gt; Details & Summary</option>
+            <option value="Dfn.html">&lt;dfn&gt; Definition Term</option>
+            <option value="Dialog.html">&lt;dialog&gt; Dialog Modal</option>
+            <option value="Div.html">&lt;div&gt; Division</option>
+            <option value="Em.html">&lt;em&gt; Emphasis</option>
+            <option value="Embed.html">&lt;embed&gt; Embed Plugin</option>
+            <option value="Fieldset.html">&lt;fieldset&gt; Fieldset & Legend</option>
+            <option value="Figure.html">&lt;figure&gt; Figure & Figcaption</option>
+            <option value="Footer.html">&lt;footer&gt; Footer</option>
+            <option value="Form.html">&lt;form&gt; Form & Enctype</option>
+            <option value="Head.html">&lt;head&gt; Document Head</option>
+            <option value="Header.html">&lt;header&gt; Header</option>
+            <option value="Heading.html">&lt;h1&gt;-&lt;h6&gt; Headings</option>
+            <option value="Hr.html">&lt;hr&gt; Horizontal Rule</option>
+            <option value="Iframe.html">&lt;iframe&gt; Inline Frame</option>
+            <option value="Img.html">&lt;img&gt; Image</option>
+            <option value="Input.html">&lt;input&gt; Input Types</option>
+            <option value="Label.html">&lt;label&gt; Form Label</option>
+            <option value="List.html">&lt;ul&gt;/&lt;ol&gt;/&lt;li&gt; Lists</option>
+            <option value="Main.html">&lt;main&gt; Main Content</option>
+            <option value="Mark.html">&lt;mark&gt; Highlight Mark</option>
+            <option value="Meter.html">&lt;meter&gt; Scalar Meter</option>
+            <option value="Nav.html">&lt;nav&gt; Navigation</option>
+            <option value="Noscript.html">&lt;noscript&gt; Noscript Fallback</option>
+            <option value="Object.html">&lt;object&gt; Embedded Object</option>
+            <option value="Picture.html">&lt;picture&gt; Responsive Picture</option>
+            <option value="Pre.html">&lt;pre&gt; Preformatted Text</option>
+            <option value="Progress.html">&lt;progress&gt; Progress Bar</option>
+            <option value="Ruby.html">&lt;ruby&gt; Ruby Annotations</option>
+            <option value="Script.html">&lt;script&gt; Script</option>
+            <option value="Section.html">&lt;section&gt; Section</option>
+            <option value="Select.html">&lt;select&gt; Select Dropdown</option>
+            <option value="Span.html">&lt;span&gt; Span</option>
+            <option value="Style.html">&lt;style&gt; Style</option>
+            <option value="Subscript.html">&lt;sub&gt;/&lt;sup&gt; Sub & Super</option>
+            <option value="Svg.html">&lt;svg&gt; Vector Graphics</option>
+            <option value="Table.html">&lt;table&gt; Data Table</option>
+            <option value="Video.html">&lt;video&gt; Video Player</option>
+          </select>
+        </div>
+      </nav>
+
+   <h2>Code tag ("&lt;code&gt;"....."&lt;/code&gt;") - [Both Opening &amp; Closing tags required]</h2>
+   <p>
+    <strong>Description:- </strong> The <code>&lt;code&gt;</code> tag is an
+    inline semantic element used to display fragments of computer programming
+    code, commands, or file names. Browsers render the text inside
+    <code>&lt;code&gt;</code> in a default monospace font (such as Courier or
+    Consolas).
+   </p>
+
+   <!-- Standards & Modern Alternatives Note -->
+   <div class="note-box">
+    <strong>Standards & Discontinued Alternatives Note:</strong>
+    <ul style="margin: 5px 0 0 0; padding-left: 20px;">
+     <li>
+      <strong>Discontinued <code>&lt;xmp&gt;</code>, <code>&lt;listing&gt;</code>, and <code>&lt;plaintext&gt;</code>:</strong>
+      In very early HTML, tags like <code>&lt;xmp&gt;</code> were used to display raw code without escaping angle brackets. They were <strong>discontinued and removed in HTML5</strong> because they violated standard DOM parsing rules.
+     </li>
+     <li>
+      <strong>Modern Standard Replacement:</strong> Use <strong><code>&lt;pre&gt;&lt;code&gt;</code></strong> together, and escape angle brackets (<code>&amp;lt;</code> for <code>&lt;</code> and <code>&amp;gt;</code> for <code>&gt;</code>).
+     </li>
+     <li>
+      <strong><code>&lt;code&gt;</code> vs <code>&lt;pre&gt;</code>:</strong>
+      <code>&lt;code&gt;</code> is <em>inline</em> and does not preserve indentation or newlines.
+      <code>&lt;pre&gt;</code> is a <em>block</em> element that preserves whitespace. To display a multi-line code snippet, always nest <code>&lt;code&gt;</code> inside <code>&lt;pre&gt;</code>.
+     </li>
+     <li>
+      <strong>Related Semantic Tags:</strong> Use <code>&lt;kbd&gt;</code> for user keyboard inputs, <code>&lt;samp&gt;</code> for program output, and <code>&lt;var&gt;</code> for mathematical or programming variables.
+     </li>
+    </ul>
+   </div>
+
+   <p>
+    <strong>Example:-</strong> See the difference between an inline code snippet
+    and a preformatted code block:
+   </p>
+
+   <div class="demo-box">
+    <p>
+     <strong>1. Inline Code Example:</strong><br />
+     To print output in JavaScript, you can use the
+     <code>console.log("Hello World!");</code> method.
+    </p>
+
+    <p>
+     <strong>2. Multi-line Code Block (&lt;pre&gt;&lt;code&gt;):</strong>
+    </p>
+    <pre><code>function calculateArea(width, height) {
+ // Returns area of rectangle
+ return width * height;
+}</code></pre>
+   </div>
+
+   <h3>Attributes:-</h3>
+   <ul>
+    <li>
+     <strong>Global Attributes :-</strong> Supports all global attributes
+     such as <code>class</code>, <code>id</code>, and <code>style</code>.
+    </li>
+    <li>
+     <strong>Class for Syntax Highlighters :-</strong> Commonly given
+     classes like <code>class="language-javascript"</code> or
+     <code>class="language-html"</code> so JavaScript syntax highlighting
+     libraries (like Prism.js or Highlight.js) can colorize the code.
+    </li>
+   </ul>
+
+   <p><strong>Use cases:-</strong></p>
+   <ul>
+    <li>Displaying inline function names, variables, keywords, and terminal commands in technical documentation.</li>
+    <li>Creating multi-line code blocks when nested inside <code>&lt;pre&gt;</code>.</li>
+    <li>Referencing filenames, HTML tags, or CSS properties inside tutorial paragraphs.</li>
+    <li>Integrating with modern syntax highlighting libraries.</li>
+   </ul>
+
+   <h2>Complete code for the Code tag section</h2>
+   <pre><code>&lt;header&gt;
+ &lt;h1&gt;Code tag&lt;/h1&gt;
+ &lt;p&gt;Learn tags with description, use cases, and examples&lt;/p&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+ &lt;h2&gt;Code tag ("&amp;lt;code&amp;gt;"....."&amp;lt;/code&amp;gt;") - [Both Opening &amp;amp; Closing tags required]&lt;/h2&gt;
+ &lt;p&gt;
+  &lt;strong&gt; Description:- &lt;/strong&gt; The &amp;lt;code&amp;gt; tag defines computer code fragments.
+ &lt;/p&gt;
+
+ &lt;p&gt;&lt;strong&gt;Example:-&lt;/strong&gt;&lt;/p&gt;
+ &lt;!-- Inline code --&gt;
+ &lt;p&gt;Run &lt;code&gt;npm install&lt;/code&gt; to install project dependencies.&lt;/p&gt;
+
+ &lt;!-- Multi-line code block --&gt;
+ &lt;pre&gt;&lt;code&gt;function greet(name) {
+ return "Hello, " + name;
+}&lt;/code&gt;&lt;/pre&gt;
+
+ &lt;h3&gt;Attributes:-&lt;/h3&gt;
+ &lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;class :-&lt;/strong&gt; Used for styling or syntax highlighters (e.g. class="language-js").&lt;/li&gt;
+ &lt;/ul&gt;
+
+ &lt;p&gt;&lt;strong&gt;Use cases:-&lt;/strong&gt;&lt;/p&gt;
+ &lt;ul&gt;
+  &lt;li&gt;Displaying programming code and terminal commands.&lt;/li&gt;
+  &lt;li&gt;Technical blogs, cheat sheets, and API documentation.&lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/main&gt;</code></pre>
+        <nav class="page-step-nav">
+        <a href="Cite.html" class="step-btn prev" title="Keyboard Shortcut: Left Arrow">&larr; Previous: &lt;cite&gt; Citation</a>
+        <a href="index.html" class="step-btn home">&#9776; All 60 Tags (Index)</a>
+        <a href="Col.html" class="step-btn next" title="Keyboard Shortcut: Right Arrow">Next: &lt;col&gt; Column &rarr;</a>
+      </nav>
+    </main>
+
+  <footer>
+   <address>
+    Author's name :- kaustubh singh. Instagram:- __kaustubh_singh. Contact
+    Number :- 7000919343;
+   </address>
+   <p>&copy; 2026 Kaustubh's HTML Guide</p>
+  </footer>
+     <script>
+      // Interactive mouse-tracking background spotlight
+      document.addEventListener('mousemove', function (e) {
+        var x = (e.clientX / window.innerWidth) * 100;
+        var y = (e.clientY / window.innerHeight) * 100;
+        document.body.style.setProperty('--mouse-x', x + '%');
+        document.body.style.setProperty('--mouse-y', y + '%');
+      });
+    </script>
+  </body>
+</html>

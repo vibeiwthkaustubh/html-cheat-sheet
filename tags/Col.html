@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="kaustubh singh" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>HTML Tags Cheat Sheet</title>
+  <link rel="stylesheet" href="style.css" />
+  
+    
+    <style>
+      table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px 0;
+   }
+   th, td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: left;
+   }
+    </style>
+     <meta property="og:title" content="HTML Column Tag (<col>) - Cheat Sheet" />
+    <meta property="og:description" content="Complete guide to the HTML Column tag with live examples, use cases, attributes, and W3C standards." />
+    <meta property="og:type" content="article" />
+    <link rel="prev" href="Code.html" />
+    <link rel="next" href="Colgroup.html" />
+    <script src="app.js" defer></script>
+  </head>
+ <body>
+  <header>
+   <h1>Col tag</h1>
+   <p>Learn tags with description, use cases, and examples</p>
+  </header>
+
+  <main>
+      <nav class="quick-nav">
+        <a href="index.html" class="home-btn">&larr; All Tags (Index)</a>
+        <div class="nav-selector">
+          <label for="tagJump"><strong>Jump to Tag:</strong></label>
+          <select id="tagJump" onchange="if(this.value) window.location.href=this.value;">
+            <option value="">-- Choose a Tag to Switch --</option>
+            <option value="Abbreviation.html">&lt;abbr&gt; Abbreviation</option>
+            <option value="Address.html">&lt;address&gt; Address</option>
+            <option value="Anchor.html">&lt;a&gt; Anchor</option>
+            <option value="Area.html">&lt;area&gt; Area</option>
+            <option value="Article.html">&lt;article&gt; Article</option>
+            <option value="Aside.html">&lt;aside&gt; Aside</option>
+            <option value="Audio.html">&lt;audio&gt; Audio</option>
+            <option value="Base.html">&lt;base&gt; Base</option>
+            <option value="Bdo.html">&lt;bdo&gt; Bdo</option>
+            <option value="Blockquote.html">&lt;blockquote&gt; Blockquote</option>
+            <option value="Body.html">&lt;body&gt; Body</option>
+            <option value="Br.html">&lt;br&gt; Line Break</option>
+            <option value="Button.html">&lt;button&gt; Button</option>
+            <option value="Caption.html">&lt;caption&gt; Caption</option>
+            <option value="Cite.html">&lt;cite&gt; Citation</option>
+            <option value="Code.html">&lt;code&gt; Code</option>
+            <option value="Col.html" selected="selected">&lt;col&gt; Column</option>
+            <option value="Colgroup.html">&lt;colgroup&gt; Column Group</option>
+            <option value="Data.html">&lt;data&gt; Machine Data</option>
+            <option value="Datalist.html">&lt;datalist&gt; Datalist</option>
+            <option value="Del.html">&lt;del&gt; Deleted Text</option>
+            <option value="DescriptionList.html">&lt;dl&gt; Description List</option>
+            <option value="Details.html">&lt;details&gt; Details & Summary</option>
+            <option value="Dfn.html">&lt;dfn&gt; Definition Term</option>
+            <option value="Dialog.html">&lt;dialog&gt; Dialog Modal</option>
+            <option value="Div.html">&lt;div&gt; Division</option>
+            <option value="Em.html">&lt;em&gt; Emphasis</option>
+            <option value="Embed.html">&lt;embed&gt; Embed Plugin</option>
+            <option value="Fieldset.html">&lt;fieldset&gt; Fieldset & Legend</option>
+            <option value="Figure.html">&lt;figure&gt; Figure & Figcaption</option>
+            <option value="Footer.html">&lt;footer&gt; Footer</option>
+            <option value="Form.html">&lt;form&gt; Form & Enctype</option>
+            <option value="Head.html">&lt;head&gt; Document Head</option>
+            <option value="Header.html">&lt;header&gt; Header</option>
+            <option value="Heading.html">&lt;h1&gt;-&lt;h6&gt; Headings</option>
+            <option value="Hr.html">&lt;hr&gt; Horizontal Rule</option>
+            <option value="Iframe.html">&lt;iframe&gt; Inline Frame</option>
+            <option value="Img.html">&lt;img&gt; Image</option>
+            <option value="Input.html">&lt;input&gt; Input Types</option>
+            <option value="Label.html">&lt;label&gt; Form Label</option>
+            <option value="List.html">&lt;ul&gt;/&lt;ol&gt;/&lt;li&gt; Lists</option>
+            <option value="Main.html">&lt;main&gt; Main Content</option>
+            <option value="Mark.html">&lt;mark&gt; Highlight Mark</option>
+            <option value="Meter.html">&lt;meter&gt; Scalar Meter</option>
+            <option value="Nav.html">&lt;nav&gt; Navigation</option>
+            <option value="Noscript.html">&lt;noscript&gt; Noscript Fallback</option>
+            <option value="Object.html">&lt;object&gt; Embedded Object</option>
+            <option value="Picture.html">&lt;picture&gt; Responsive Picture</option>
+            <option value="Pre.html">&lt;pre&gt; Preformatted Text</option>
+            <option value="Progress.html">&lt;progress&gt; Progress Bar</option>
+            <option value="Ruby.html">&lt;ruby&gt; Ruby Annotations</option>
+            <option value="Script.html">&lt;script&gt; Script</option>
+            <option value="Section.html">&lt;section&gt; Section</option>
+            <option value="Select.html">&lt;select&gt; Select Dropdown</option>
+            <option value="Span.html">&lt;span&gt; Span</option>
+            <option value="Style.html">&lt;style&gt; Style</option>
+            <option value="Subscript.html">&lt;sub&gt;/&lt;sup&gt; Sub & Super</option>
+            <option value="Svg.html">&lt;svg&gt; Vector Graphics</option>
+            <option value="Table.html">&lt;table&gt; Data Table</option>
+            <option value="Video.html">&lt;video&gt; Video Player</option>
+          </select>
+        </div>
+      </nav>
+
+   <h2>Col tag ("&lt;col&gt;") - [Void Tag / Self-Closing (No Closing tag required)]</h2>
+   <p>
+    <strong>Description:- </strong> The <code>&lt;col&gt;</code> tag is used to
+    specify column properties for each column within a <code>&lt;colgroup&gt;</code>
+    element inside a table. It allows you to apply styling (like background color or
+    column width) to an entire column rather than repeating styles for every single
+    table cell.
+   </p>
+
+   <div class="note-box">
+    <strong>Standards & Discontinued Attributes Note:</strong>
+    <p style="margin: 5px 0 0 0;">
+     In HTML4, <code>&lt;col align="center" width="100"&gt;</code> was used to
+     align text and set column widths. In HTML5, attributes like <code>align</code>,
+     <code>valign</code>, and <code>char</code> are <strong>obsolete</strong>.
+     <br />
+     <strong>Modern Alternative:</strong> Style columns using modern CSS classes
+     or CSS properties (e.g. <code>background-color</code>, <code>width</code>,
+     <code>visibility</code>) applied directly to the <code>&lt;col&gt;</code> tag.
+    </p>
+   </div>
+
+   <p>
+    <strong>Example:-</strong> In the table below, the first column is highlighted
+    with a soft blue background and the second with a yellow tint using <code>&lt;col&gt;</code>:
+   </p>
+
+   <table>
+    <colgroup>
+     <col style="background-color: #e3f2fd; width: 40%;" />
+     <col style="background-color: #fff9c4; width: 30%;" />
+     <col style="background-color: #f1f8e9; width: 30%;" />
+    </colgroup>
+    <thead>
+     <tr>
+      <th>Student Name</th>
+      <th>Roll No</th>
+      <th>Marks</th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>Kaustubh Singh</td>
+      <td>101</td>
+      <td>95%</td>
+     </tr>
+     <tr>
+      <td>Aman Verma</td>
+      <td>102</td>
+      <td>88%</td>
+     </tr>
+    </tbody>
+   </table>
+
+   <h3>Attributes:-</h3>
+   <ul>
+    <li>
+     <strong>span :-</strong> Specifies the number of consecutive columns the
+     <code>&lt;col&gt;</code> element should apply its properties to (default is 1).
+    </li>
+    <li>
+     <strong>style / class :-</strong> Applies CSS styling (background-color, width,
+     border) to the entire span of columns.
+    </li>
+   </ul>
+
+   <p><strong>Use cases:-</strong></p>
+   <ul>
+    <li>Highlighting specific columns (like row headers, totals, or IDs) in financial tables.</li>
+    <li>Setting uniform column widths across large data tables without styling individual <code>&lt;td&gt;</code> cells.</li>
+    <li>Hiding or collapsing columns dynamically with <code>visibility: collapse</code>.</li>
+   </ul>
+
+   <h2>Complete code for the Col tag section</h2>
+   <pre><code>&lt;header&gt;
+ &lt;h1&gt;Col tag&lt;/h1&gt;
+ &lt;p&gt;Learn tags with description, use cases, and examples&lt;/p&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+ &lt;h2&gt;Col tag ("&amp;lt;col&amp;gt;") - [Void Tag / Self-Closing (No Closing tag required)]&lt;/h2&gt;
+ &lt;p&gt;
+  &lt;strong&gt; Description:- &lt;/strong&gt; The &amp;lt;col&amp;gt; tag specifies column properties.
+ &lt;/p&gt;
+
+ &lt;table&gt;
+  &lt;colgroup&gt;
+   &lt;col style="background-color: #e3f2fd; width: 50%;" /&gt;
+   &lt;col style="background-color: #fff9c4; width: 50%;" /&gt;
+  &lt;/colgroup&gt;
+  &lt;tr&gt;
+   &lt;th&gt;Name&lt;/th&gt;
+   &lt;th&gt;Status&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td&gt;Kaustubh&lt;/td&gt;
+   &lt;td&gt;Active&lt;/td&gt;
+  &lt;/tr&gt;
+ &lt;/table&gt;
+
+ &lt;h3&gt;Attributes:-&lt;/h3&gt;
+ &lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;span :-&lt;/strong&gt; Number of columns to span.&lt;/li&gt;
+ &lt;/ul&gt;
+
+ &lt;p&gt;&lt;strong&gt;Use cases:-&lt;/strong&gt;&lt;/p&gt;
+ &lt;ul&gt;
+  &lt;li&gt;Styling whole table columns uniformly.&lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/main&gt;</code></pre>
+        <nav class="page-step-nav">
+        <a href="Code.html" class="step-btn prev" title="Keyboard Shortcut: Left Arrow">&larr; Previous: &lt;code&gt; Code</a>
+        <a href="index.html" class="step-btn home">&#9776; All 60 Tags (Index)</a>
+        <a href="Colgroup.html" class="step-btn next" title="Keyboard Shortcut: Right Arrow">Next: &lt;colgroup&gt; Column Group &rarr;</a>
+      </nav>
+    </main>
+
+  <footer>
+   <address>
+    Author's name :- kaustubh singh. Instagram:- __kaustubh_singh. Contact
+    Number :- 7000919343;
+   </address>
+   <p>&copy; 2026 Kaustubh's HTML Guide</p>
+  </footer>
+     <script>
+      // Interactive mouse-tracking background spotlight
+      document.addEventListener('mousemove', function (e) {
+        var x = (e.clientX / window.innerWidth) * 100;
+        var y = (e.clientY / window.innerHeight) * 100;
+        document.body.style.setProperty('--mouse-x', x + '%');
+        document.body.style.setProperty('--mouse-y', y + '%');
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="kaustubh singh" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>HTML Tags Cheat Sheet</title>
+  <link rel="stylesheet" href="style.css" />
+  
+    
+    <style>
+      .demo-box {
+    background-color: #f9f9f9;
+    border-left: 4px solid #4caf50;
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 4px;
+   }
+   .highlight {
+    color: #d9534f;
+    font-weight: bold;
+   }
+    </style>
+     <meta property="og:title" content="HTML Bdo Tag (<bdo>) - Cheat Sheet" />
+    <meta property="og:description" content="Complete guide to the HTML Bdo tag with live examples, use cases, attributes, and W3C standards." />
+    <meta property="og:type" content="article" />
+    <link rel="prev" href="Base.html" />
+    <link rel="next" href="Blockquote.html" />
+    <script src="app.js" defer></script>
+  </head>
+ <body>
+  <header>
+   <h1>Bdo tag</h1>
+   <p>Learn tags with description, use cases, and examples</p>
+  </header>
+
+  <main>
+      <nav class="quick-nav">
+        <a href="index.html" class="home-btn">&larr; All Tags (Index)</a>
+        <div class="nav-selector">
+          <label for="tagJump"><strong>Jump to Tag:</strong></label>
+          <select id="tagJump" onchange="if(this.value) window.location.href=this.value;">
+            <option value="">-- Choose a Tag to Switch --</option>
+            <option value="Abbreviation.html">&lt;abbr&gt; Abbreviation</option>
+            <option value="Address.html">&lt;address&gt; Address</option>
+            <option value="Anchor.html">&lt;a&gt; Anchor</option>
+            <option value="Area.html">&lt;area&gt; Area</option>
+            <option value="Article.html">&lt;article&gt; Article</option>
+            <option value="Aside.html">&lt;aside&gt; Aside</option>
+            <option value="Audio.html">&lt;audio&gt; Audio</option>
+            <option value="Base.html">&lt;base&gt; Base</option>
+            <option value="Bdo.html" selected="selected">&lt;bdo&gt; Bdo</option>
+            <option value="Blockquote.html">&lt;blockquote&gt; Blockquote</option>
+            <option value="Body.html">&lt;body&gt; Body</option>
+            <option value="Br.html">&lt;br&gt; Line Break</option>
+            <option value="Button.html">&lt;button&gt; Button</option>
+            <option value="Caption.html">&lt;caption&gt; Caption</option>
+            <option value="Cite.html">&lt;cite&gt; Citation</option>
+            <option value="Code.html">&lt;code&gt; Code</option>
+            <option value="Col.html">&lt;col&gt; Column</option>
+            <option value="Colgroup.html">&lt;colgroup&gt; Column Group</option>
+            <option value="Data.html">&lt;data&gt; Machine Data</option>
+            <option value="Datalist.html">&lt;datalist&gt; Datalist</option>
+            <option value="Del.html">&lt;del&gt; Deleted Text</option>
+            <option value="DescriptionList.html">&lt;dl&gt; Description List</option>
+            <option value="Details.html">&lt;details&gt; Details & Summary</option>
+            <option value="Dfn.html">&lt;dfn&gt; Definition Term</option>
+            <option value="Dialog.html">&lt;dialog&gt; Dialog Modal</option>
+            <option value="Div.html">&lt;div&gt; Division</option>
+            <option value="Em.html">&lt;em&gt; Emphasis</option>
+            <option value="Embed.html">&lt;embed&gt; Embed Plugin</option>
+            <option value="Fieldset.html">&lt;fieldset&gt; Fieldset & Legend</option>
+            <option value="Figure.html">&lt;figure&gt; Figure & Figcaption</option>
+            <option value="Footer.html">&lt;footer&gt; Footer</option>
+            <option value="Form.html">&lt;form&gt; Form & Enctype</option>
+            <option value="Head.html">&lt;head&gt; Document Head</option>
+            <option value="Header.html">&lt;header&gt; Header</option>
+            <option value="Heading.html">&lt;h1&gt;-&lt;h6&gt; Headings</option>
+            <option value="Hr.html">&lt;hr&gt; Horizontal Rule</option>
+            <option value="Iframe.html">&lt;iframe&gt; Inline Frame</option>
+            <option value="Img.html">&lt;img&gt; Image</option>
+            <option value="Input.html">&lt;input&gt; Input Types</option>
+            <option value="Label.html">&lt;label&gt; Form Label</option>
+            <option value="List.html">&lt;ul&gt;/&lt;ol&gt;/&lt;li&gt; Lists</option>
+            <option value="Main.html">&lt;main&gt; Main Content</option>
+            <option value="Mark.html">&lt;mark&gt; Highlight Mark</option>
+            <option value="Meter.html">&lt;meter&gt; Scalar Meter</option>
+            <option value="Nav.html">&lt;nav&gt; Navigation</option>
+            <option value="Noscript.html">&lt;noscript&gt; Noscript Fallback</option>
+            <option value="Object.html">&lt;object&gt; Embedded Object</option>
+            <option value="Picture.html">&lt;picture&gt; Responsive Picture</option>
+            <option value="Pre.html">&lt;pre&gt; Preformatted Text</option>
+            <option value="Progress.html">&lt;progress&gt; Progress Bar</option>
+            <option value="Ruby.html">&lt;ruby&gt; Ruby Annotations</option>
+            <option value="Script.html">&lt;script&gt; Script</option>
+            <option value="Section.html">&lt;section&gt; Section</option>
+            <option value="Select.html">&lt;select&gt; Select Dropdown</option>
+            <option value="Span.html">&lt;span&gt; Span</option>
+            <option value="Style.html">&lt;style&gt; Style</option>
+            <option value="Subscript.html">&lt;sub&gt;/&lt;sup&gt; Sub & Super</option>
+            <option value="Svg.html">&lt;svg&gt; Vector Graphics</option>
+            <option value="Table.html">&lt;table&gt; Data Table</option>
+            <option value="Video.html">&lt;video&gt; Video Player</option>
+          </select>
+        </div>
+      </nav>
+
+   <h2>Bdo tag ("&lt;bdo&gt;"....."&lt;/bdo&gt;") - [Both Opening &amp; Closing tags required]</h2>
+   <p>
+    <strong>Description:- </strong> The <code>&lt;bdo&gt;</code> (Bi-Directional
+    Override) tag is used to explicitly override the default text direction
+    of the content inside it. It forces the text to display in a specified
+    direction, either left-to-right (<code>ltr</code>) or right-to-left
+    (<code>rtl</code>), ignoring the browser's default bidirectional
+    algorithm.
+   </p>
+
+   <p>
+    <strong>Example:-</strong> See how the direction of the exact same sentence
+    reverses when wrapped inside the <code>bdo</code> tag with <code>dir="rtl"</code>:
+   </p>
+
+   <div class="demo-box">
+    <p>
+     <strong>Default text direction (LTR):</strong><br />
+     This text is displayed normally from left to right.
+    </p>
+    <p>
+     <strong>Overridden with &lt;bdo dir="rtl"&gt;:</strong><br />
+     <bdo dir="rtl" class="highlight">This text is displayed normally from left to right.</bdo>
+    </p>
+   </div>
+
+   <h3>Attributes:-</h3>
+   <ul>
+    <li>
+     <strong>dir (Required) :-</strong> Specifies the bidirectional override
+     direction for the enclosed text:
+     <ul>
+      <li><strong>rtl :-</strong> Right-to-left text direction.</li>
+      <li><strong>ltr :-</strong> Left-to-right text direction.</li>
+     </ul>
+    </li>
+   </ul>
+
+   <p><strong>Use cases:-</strong></p>
+   <ul>
+    <li>
+     Displaying multilingual content where Right-to-Left (RTL) languages like
+     Arabic, Hebrew, Urdu, or Persian are mixed with Left-to-Right (LTR)
+     languages like English or Hindi.
+    </li>
+    <li>
+     Preventing phone numbers, email addresses, product codes, or serial numbers
+     from flipping incorrectly inside RTL text paragraphs.
+    </li>
+    <li>
+     Creating visual text-reversal effects or mirror puzzle text on a webpage
+     without using JavaScript.
+    </li>
+   </ul>
+
+   <h2>Complete code for the Bdo tag section</h2>
+   <pre><code>&lt;header&gt;
+ &lt;h1&gt;Bdo tag&lt;/h1&gt;
+ &lt;p&gt;Learn tags with description, use cases, and examples&lt;/p&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+ &lt;h2&gt;Bdo tag ("&amp;lt;bdo&amp;gt;"....."&amp;lt;/bdo&amp;gt;")&lt;/h2&gt;
+ &lt;p&gt;
+  &lt;strong&gt; Description:- &lt;/strong&gt; The &amp;lt;bdo&amp;gt; (Bi-Directional Override)
+  tag is used to explicitly override the default text direction of its content.
+ &lt;/p&gt;
+
+ &lt;p&gt;&lt;strong&gt;Example:-&lt;/strong&gt;&lt;/p&gt;
+ &lt;p&gt;Normal: This text is displayed normally from left to right.&lt;/p&gt;
+ &lt;p&gt;
+  Reversed:
+  &lt;bdo dir="rtl"&gt;This text is displayed normally from left to right.&lt;/bdo&gt;
+ &lt;/p&gt;
+
+ &lt;h3&gt;Attributes:-&lt;/h3&gt;
+ &lt;ul&gt;
+  &lt;li&gt;
+   &lt;strong&gt;dir (Required) :-&lt;/strong&gt; Accepts "ltr" (Left-to-Right) or
+   "rtl" (Right-to-Left).
+  &lt;/li&gt;
+ &lt;/ul&gt;
+
+ &lt;p&gt;&lt;strong&gt;Use cases:-&lt;/strong&gt;&lt;/p&gt;
+ &lt;ul&gt;
+  &lt;li&gt;Handling multilingual documents mixing LTR and RTL scripts.&lt;/li&gt;
+  &lt;li&gt;Preserving correct order of phone numbers and serial codes in RTL text.&lt;/li&gt;
+  &lt;li&gt;Creating simple visual text reversal effects.&lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/main&gt;</code></pre>
+        <nav class="page-step-nav">
+        <a href="Base.html" class="step-btn prev" title="Keyboard Shortcut: Left Arrow">&larr; Previous: &lt;base&gt; Base</a>
+        <a href="index.html" class="step-btn home">&#9776; All 60 Tags (Index)</a>
+        <a href="Blockquote.html" class="step-btn next" title="Keyboard Shortcut: Right Arrow">Next: &lt;blockquote&gt; Blockquote &rarr;</a>
+      </nav>
+    </main>
+
+  <footer>
+   <address>
+    Author's name :- kaustubh singh. Instagram:- __kaustubh_singh. Contact
+    Number :- 7000919343;
+   </address>
+   <p>&copy; 2026 Kaustubh's HTML Guide</p>
+  </footer>
+     <script>
+      // Interactive mouse-tracking background spotlight
+      document.addEventListener('mousemove', function (e) {
+        var x = (e.clientX / window.innerWidth) * 100;
+        var y = (e.clientY / window.innerHeight) * 100;
+        document.body.style.setProperty('--mouse-x', x + '%');
+        document.body.style.setProperty('--mouse-y', y + '%');
+      });
+    </script>
+  </body>
+</html>

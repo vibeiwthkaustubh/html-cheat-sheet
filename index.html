@@ -1,0 +1,1641 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="kaustubh singh" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>HTML5 Tags Master Cheat Sheet & Interactive Guide</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Master Homepage Specific Enhancements */
+      :root {
+        --hero-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+        --accent-blue: #38bdf8;
+        --accent-indigo: #6366f1;
+        --accent-emerald: #10b981;
+        --accent-amber: #f59e0b;
+      }
+
+      body {
+        background-color: #f8fafc;
+        padding-top: 0;
+      }
+
+      /* Hero Banner */
+      .hero-section {
+        background: var(--hero-gradient);
+        color: #ffffff;
+        padding: 60px 24px 45px 24px;
+        text-align: center;
+        border-radius: 0 0 24px 24px;
+        box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.3);
+        margin-bottom: 35px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-section::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle at center, rgba(56, 189, 248, 0.08) 0%, transparent 60%);
+        pointer-events: none;
+      }
+
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(56, 189, 248, 0.12);
+        color: var(--accent-blue);
+        border: 1px solid rgba(56, 189, 248, 0.3);
+        padding: 6px 16px;
+        border-radius: 50px;
+        font-size: 0.88rem;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        margin-bottom: 18px;
+      }
+
+      .hero-title {
+        font-size: 2.8rem;
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        line-height: 1.15;
+        margin: 0 auto 16px auto;
+        max-width: 800px;
+      }
+
+      .hero-title span {
+        background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .hero-subtitle {
+        color: #94a3b8;
+        font-size: 1.15rem;
+        max-width: 680px;
+        margin: 0 auto 26px auto;
+        line-height: 1.6;
+      }
+
+      .hero-author {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        padding: 8px 18px;
+        border-radius: 50px;
+        font-size: 0.92rem;
+        color: #e2e8f0;
+      }
+
+      .hero-author a {
+        color: var(--accent-blue);
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .hero-author a:hover {
+        text-decoration: underline;
+      }
+
+      /* Stats Counter Bar */
+      .stats-bar {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 35px;
+        padding-top: 25px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        flex-wrap: wrap;
+      }
+
+      .stat-item {
+        text-align: center;
+      }
+
+      .stat-number {
+        font-size: 1.7rem;
+        font-weight: 800;
+        color: #ffffff;
+        display: block;
+      }
+
+      .stat-label {
+        font-size: 0.82rem;
+        color: #94a3b8;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-weight: 600;
+      }
+
+      /* Controls & Search Container */
+      .controls-container {
+        max-width: 1080px;
+        margin: 0 auto 28px auto;
+        padding: 0 16px;
+      }
+
+      .search-box-wrapper {
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+      .search-input {
+        width: 100%;
+        padding: 16px 22px 16px 50px;
+        font-size: 1.08rem;
+        border: 2px solid #cbd5e1;
+        border-radius: 14px;
+        background: #ffffff;
+        color: #0f172a;
+        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+        transition: all 0.25s ease;
+      }
+
+      .search-input:focus {
+        border-color: #0284c7;
+        box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.15), 0 8px 16px rgba(15, 23, 42, 0.08);
+        outline: none;
+      }
+
+      .search-icon {
+        position: absolute;
+        left: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #94a3b8;
+        font-size: 1.25rem;
+        pointer-events: none;
+      }
+
+      .search-clear {
+        position: absolute;
+        right: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #e2e8f0;
+        border: none;
+        border-radius: 50%;
+        width: 26px;
+        height: 26px;
+        color: #475569;
+        font-weight: bold;
+        cursor: pointer;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+      }
+
+      /* Category Filter Pills */
+      .categories-bar {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .category-pill {
+        background: #ffffff;
+        border: 1.5px solid #cbd5e1;
+        color: #475569;
+        padding: 8px 16px;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        user-select: none;
+      }
+
+      .category-pill:hover {
+        border-color: #0284c7;
+        color: #0284c7;
+        background: #f0f9ff;
+      }
+
+      .category-pill.active {
+        background: #0f172a;
+        color: #ffffff;
+        border-color: #0f172a;
+        box-shadow: 0 2px 6px rgba(15, 23, 42, 0.2);
+      }
+
+      /* Toolbar: Status & View Toggle */
+      .toolbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+        padding: 0 4px;
+      }
+
+      .result-count {
+        color: #64748b;
+        font-size: 0.95rem;
+        font-weight: 600;
+      }
+
+      .view-toggle {
+        display: flex;
+        background: #e2e8f0;
+        padding: 3px;
+        border-radius: 8px;
+        gap: 2px;
+      }
+
+      .view-btn {
+        background: transparent;
+        border: none;
+        padding: 6px 14px;
+        border-radius: 6px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #475569;
+        cursor: pointer;
+        transition: all 0.15s ease;
+      }
+
+      .view-btn.active {
+        background: #ffffff;
+        color: #0f172a;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      }
+
+      /* Grid Layout */
+      .tags-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+        gap: 20px;
+        max-width: 1080px;
+        margin: 0 auto 50px auto;
+        padding: 0 16px;
+      }
+
+      /* Tag Card */
+      .tag-card {
+        background: #ffffff;
+        border: 1.5px solid #e2e8f0;
+        border-radius: 14px;
+        padding: 22px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        text-decoration: none;
+        color: inherit;
+        position: relative;
+      }
+
+      .tag-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px -3px rgba(15, 23, 42, 0.1);
+        border-color: #0284c7;
+      }
+
+      .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 12px;
+      }
+
+      .tag-badge {
+        font-family: Consolas, monospace;
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: #0284c7;
+        background: #f0f9ff;
+        border: 1px solid #bae6fd;
+        padding: 4px 10px;
+        border-radius: 8px;
+        display: inline-block;
+      }
+
+      .tag-type-pill {
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        padding: 4px 8px;
+        border-radius: 6px;
+      }
+
+      .tag-type-pill.paired {
+        background: #f1f5f9;
+        color: #475569;
+      }
+
+      .tag-type-pill.void {
+        background: #fef3c7;
+        color: #b45309;
+      }
+
+      .card-body {
+        flex-grow: 1;
+      }
+
+      .tag-title {
+        font-size: 1.12rem;
+        font-weight: 700;
+        color: #0f172a;
+        margin: 0 0 6px 0;
+      }
+
+      .tag-desc {
+        color: #475569;
+        font-size: 0.92rem;
+        line-height: 1.5;
+        margin: 0 0 16px 0;
+      }
+
+      .card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #f1f5f9;
+        padding-top: 12px;
+        margin-top: 8px;
+      }
+
+      .category-tag {
+        font-size: 0.78rem;
+        color: #64748b;
+        font-weight: 600;
+        background: #f8fafc;
+        padding: 3px 8px;
+        border-radius: 4px;
+      }
+
+      .action-link {
+        color: #0284c7;
+        font-weight: 700;
+        font-size: 0.88rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        transition: gap 0.15s ease;
+      }
+
+      .tag-card:hover .action-link {
+        gap: 7px;
+        color: #0369a1;
+      }
+
+      /* Compact List View */
+      .tags-grid.list-view {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .tags-grid.list-view .tag-card {
+        flex-direction: row;
+        align-items: center;
+        padding: 14px 20px;
+      }
+
+      .tags-grid.list-view .card-header {
+        margin-bottom: 0;
+        min-width: 140px;
+      }
+
+      .tags-grid.list-view .card-body {
+        margin: 0 20px;
+      }
+
+      .tags-grid.list-view .tag-desc {
+        margin: 0;
+      }
+
+      .tags-grid.list-view .card-footer {
+        border-top: none;
+        padding-top: 0;
+        margin-top: 0;
+        gap: 15px;
+      }
+
+      /* Empty Search State */
+      .empty-state {
+        grid-column: 1 / -1;
+        text-align: center;
+        padding: 60px 20px;
+        background: #ffffff;
+        border-radius: 14px;
+        border: 1.5px dashed #cbd5e1;
+        display: none;
+      }
+
+      .empty-state h3 {
+        color: #0f172a;
+        margin: 0 0 8px 0;
+      }
+
+      .empty-state p {
+        color: #64748b;
+        margin: 0;
+      }
+
+      /* Master Footer */
+      .master-footer {
+        background: #0f172a;
+        color: #94a3b8;
+        padding: 45px 20px;
+        text-align: center;
+        border-radius: 20px 20px 0 0;
+        margin-top: 60px;
+      }
+
+      .master-footer h3 {
+        color: #ffffff;
+        font-size: 1.3rem;
+        margin: 0 0 10px 0;
+      }
+
+      .master-footer p {
+        color: #94a3b8;
+        max-width: 600px;
+        margin: 0 auto 18px auto;
+        font-size: 0.95rem;
+      }
+
+      .master-footer address {
+        font-style: normal;
+        color: #cbd5e1;
+        font-weight: 500;
+        line-height: 1.8;
+      }
+
+      .master-footer address a {
+        color: var(--accent-blue);
+        text-decoration: none;
+      }
+
+      .master-footer address a:hover {
+        text-decoration: underline;
+      }
+
+      .back-to-top {
+        margin-top: 25px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: #ffffff;
+        padding: 8px 18px;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 0.88rem;
+        font-weight: 600;
+        transition: all 0.2s ease;
+      }
+
+      .back-to-top:hover {
+        background: #0284c7;
+        border-color: #0284c7;
+      }
+
+      @media (max-width: 768px) {
+        .hero-title {
+          font-size: 2.1rem;
+        }
+        .stats-bar {
+          gap: 18px;
+        }
+        .tags-grid.list-view .tag-card {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .tags-grid.list-view .card-body {
+          margin: 10px 0;
+        }
+      }
+    </style>
+      <script src="app.js" defer></script>
+  </head>
+  <body>
+
+    <!-- Hero Header -->
+    <header class="hero-section">
+      <div class="hero-badge">HTML5 Developer Reference</div>
+      <h1 class="hero-title">HTML5 Tags <span>Master Cheat Sheet</span></h1>
+      <p class="hero-subtitle">
+        An interactive, deeply structured reference guide for 60 HTML tags with real-world examples,
+        accessibility best practices, W3C standards, and live previews.
+      </p>
+
+      <div class="hero-author">
+        <span>Author: <strong>Kaustubh Singh</strong></span>
+        <span>&bull;</span>
+        <a href="https://instagram.com/__kaustubh_singh" target="_blank">@__kaustubh_singh</a>
+        <span>&bull;</span>
+        <span>+91 7000919343</span>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-number">60</span>
+          <span class="stat-label">HTML Tags</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">W3C Validated</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">20+</span>
+          <span class="stat-label">Input Types</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">Live</span>
+          <span class="stat-label">Code Demos</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Search & Filter Controls -->
+    <section class="controls-container">
+      <div class="search-box-wrapper">
+        <span class="search-icon">&#128269;</span>
+        <input
+          type="text"
+          id="tagSearch"
+          class="search-input"
+          placeholder="Search tags by name, syntax, or keyword (e.g., 'form', 'enctype', 'modal', 'input')..."
+          autocomplete="off"
+        />
+        <button id="clearSearch" class="search-clear">&times;</button>
+      </div>
+
+      <div class="categories-bar" id="categoryFilter">
+        <button class="category-pill active" data-category="all">All Tags (60)</button>
+        <button class="category-pill" data-category="semantic">Semantic &amp; Layout</button>
+        <button class="category-pill" data-category="forms">Forms &amp; Interactive</button>
+        <button class="category-pill" data-category="text">Text &amp; Typography</button>
+        <button class="category-pill" data-category="media">Media &amp; Embedded</button>
+        <button class="category-pill" data-category="tables">Tables &amp; Lists</button>
+        <button class="category-pill" data-category="meta">Document &amp; Metadata</button>
+      </div>
+
+      <div class="toolbar">
+        <div class="result-count" id="resultCount">Showing all 60 tags</div>
+        <div class="view-toggle">
+          <button class="view-btn active" id="btnGridView" title="Grid Card View">&#9638; Grid</button>
+          <button class="view-btn" id="btnListView" title="Compact List View">&#9776; List</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Master Tags Grid -->
+    <main class="tags-grid" id="tagsGrid">
+
+      <!-- SEMANTIC & LAYOUT -->
+      <a href="Header.html" target="_blank" class="tag-card" data-category="semantic" data-name="header" data-tags="banner navigation introductory heading">
+        <div class="card-header">
+          <span class="tag-badge">&lt;header&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Header tag</h3>
+          <p class="tag-desc">Introductory banner container for site headings, logos, search forms, and navigation.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Semantic</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Nav.html" target="_blank" class="tag-card" data-category="semantic" data-name="nav" data-tags="navigation links menu sidebar breadcrumb">
+        <div class="card-header">
+          <span class="tag-badge">&lt;nav&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Nav tag</h3>
+          <p class="tag-desc">Defines major navigation landmark link blocks and accessible menus for screen readers.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Semantic</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Main.html" target="_blank" class="tag-card" data-category="semantic" data-name="main" data-tags="content primary unique body landmark">
+        <div class="card-header">
+          <span class="tag-badge">&lt;main&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Main tag</h3>
+          <p class="tag-desc">Specifies the dominant, central content unique to the document (must appear once per page).</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Semantic</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Article.html" target="_blank" class="tag-card" data-category="semantic" data-name="article" data-tags="blog post news independent syndication">
+        <div class="card-header">
+          <span class="tag-badge">&lt;article&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Article tag</h3>
+          <p class="tag-desc">Self-contained, independently distributable composition like blog posts, cards, or news stories.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Semantic</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Section.html" target="_blank" class="tag-card" data-category="semantic" data-name="section" data-tags="thematic chapter group container">
+        <div class="card-header">
+          <span class="tag-badge">&lt;section&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Section tag</h3>
+          <p class="tag-desc">Represents a standalone generic thematic section of content typically starting with a heading.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Semantic</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Aside.html" target="_blank" class="tag-card" data-category="semantic" data-name="aside" data-tags="sidebar callout tangential quote widget">
+        <div class="card-header">
+          <span class="tag-badge">&lt;aside&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Aside tag</h3>
+          <p class="tag-desc">Tangential sidebar, callout box, or related information complementing the main content.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Semantic</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Footer.html" target="_blank" class="tag-card" data-category="semantic" data-name="footer" data-tags="copyright author links bottom metadata">
+        <div class="card-header">
+          <span class="tag-badge">&lt;footer&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Footer tag</h3>
+          <p class="tag-desc">Container for footer information, copyright notices, author addresses, and back-to-top links.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Semantic</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Div.html" target="_blank" class="tag-card" data-category="semantic" data-name="div" data-tags="container wrapper box layout flex grid division">
+        <div class="card-header">
+          <span class="tag-badge">&lt;div&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Div tag</h3>
+          <p class="tag-desc">Generic block container used exclusively for styling wrappers, CSS flexbox, and grid layouts.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Semantic</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Span.html" target="_blank" class="tag-card" data-category="semantic" data-name="span" data-tags="inline styling text color badge hook">
+        <div class="card-header">
+          <span class="tag-badge">&lt;span&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Span tag</h3>
+          <p class="tag-desc">Generic inline container for styling specific words, prices, highlights, or status badges.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Semantic</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Body.html" target="_blank" class="tag-card" data-category="semantic" data-name="body" data-tags="document root container visible">
+        <div class="card-header">
+          <span class="tag-badge">&lt;body&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Body tag</h3>
+          <p class="tag-desc">Contains all visible rendering content, structural elements, scripts, and components of a web page.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Semantic</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <!-- FORMS & INTERACTIVE -->
+      <a href="Form.html" target="_blank" class="tag-card" data-category="forms" data-name="form" data-tags="form enctype multipart submit file upload post get">
+        <div class="card-header">
+          <span class="tag-badge">&lt;form&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Form tag</h3>
+          <p class="tag-desc">Interactive form handling user inputs, method, and deep breakdown of enctype attribute.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Forms</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Input.html" target="_blank" class="tag-card" data-category="forms" data-name="input" data-tags="input types text password email number color date file button checkbox radio">
+        <div class="card-header">
+          <span class="tag-badge">&lt;input&gt;</span>
+          <span class="tag-type-pill void">Void Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Input tag</h3>
+          <p class="tag-desc">Universal user input element featuring comprehensive showcase of all 20+ HTML input types.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Forms</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Button.html" target="_blank" class="tag-card" data-category="forms" data-name="button" data-tags="button click submit reset accesskey action">
+        <div class="card-header">
+          <span class="tag-badge">&lt;button&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Button tag</h3>
+          <p class="tag-desc">Interactive clickable button with support for form submit, reset, and keyboard accesskeys.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Forms</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Label.html" target="_blank" class="tag-card" data-category="forms" data-name="label" data-tags="label caption accessibility for id form input">
+        <div class="card-header">
+          <span class="tag-badge">&lt;label&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Label tag</h3>
+          <p class="tag-desc">Accessible caption for form controls bound through the for attribute and input id.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Forms</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Select.html" target="_blank" class="tag-card" data-category="forms" data-name="select" data-tags="select dropdown optgroup option menu picker">
+        <div class="card-header">
+          <span class="tag-badge">&lt;select&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Select tag</h3>
+          <p class="tag-desc">Drop-down selection menu with option groupings via &lt;optgroup&gt; and &lt;option&gt;.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Forms</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Fieldset.html" target="_blank" class="tag-card" data-category="forms" data-name="fieldset" data-tags="fieldset legend group form controls border">
+        <div class="card-header">
+          <span class="tag-badge">&lt;fieldset&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Fieldset &amp; Legend</h3>
+          <p class="tag-desc">Logically groups related form controls and assigns an accessible caption via &lt;legend&gt;.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Forms</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Datalist.html" target="_blank" class="tag-card" data-category="forms" data-name="datalist" data-tags="datalist autocomplete search suggest option input">
+        <div class="card-header">
+          <span class="tag-badge">&lt;datalist&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Datalist tag</h3>
+          <p class="tag-desc">Provides native autocomplete dropdown recommendations for connected &lt;input&gt; controls.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Forms</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Dialog.html" target="_blank" class="tag-card" data-category="forms" data-name="dialog" data-tags="dialog modal popup backdrop window showmodal">
+        <div class="card-header">
+          <span class="tag-badge">&lt;dialog&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Dialog tag</h3>
+          <p class="tag-desc">Native HTML5 modal popup window with built-in focus trapping, Esc dismiss, and backdrop dimming.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Forms</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Details.html" target="_blank" class="tag-card" data-category="forms" data-name="details" data-tags="details summary accordion toggle expand collapse">
+        <div class="card-header">
+          <span class="tag-badge">&lt;details&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Details &amp; Summary</h3>
+          <p class="tag-desc">Zero-JavaScript native disclosure widget creating expandable accordion FAQ cards.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Forms</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Progress.html" target="_blank" class="tag-card" data-category="forms" data-name="progress" data-tags="progress bar task completion percentage meter">
+        <div class="card-header">
+          <span class="tag-badge">&lt;progress&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Progress tag</h3>
+          <p class="tag-desc">Visual progress bar displaying the completion percentage of a background task or upload.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Forms</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Meter.html" target="_blank" class="tag-card" data-category="forms" data-name="meter" data-tags="meter gauge disk battery usage scalar range">
+        <div class="card-header">
+          <span class="tag-badge">&lt;meter&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Meter tag</h3>
+          <p class="tag-desc">Scalar gauge representing a fractional value within a defined range (e.g. disk space, battery).</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Forms</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <!-- TEXT & TYPOGRAPHY -->
+      <a href="Heading.html" target="_blank" class="tag-card" data-category="text" data-name="heading" data-tags="h1 h2 h3 h4 h5 h6 title headline hierarchy seo">
+        <div class="card-header">
+          <span class="tag-badge">&lt;h1&gt; - &lt;h6&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Heading tags</h3>
+          <p class="tag-desc">Six levels of document section headings crucial for document outline, SEO, and screen readers.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Text</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Abbreviation.html" target="_blank" class="tag-card" data-category="text" data-name="abbr" data-tags="abbr abbreviation acronym tooltip title explain">
+        <div class="card-header">
+          <span class="tag-badge">&lt;abbr&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Abbreviation tag</h3>
+          <p class="tag-desc">Represents an abbreviation or acronym, displaying full explanation on mouse hover via title.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Text</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Address.html" target="_blank" class="tag-card" data-category="text" data-name="address" data-tags="address contact email author phone physical location">
+        <div class="card-header">
+          <span class="tag-badge">&lt;address&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Address tag</h3>
+          <p class="tag-desc">Provides contact information for the author, creator, or organization of the document.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Text</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Anchor.html" target="_blank" class="tag-card" data-category="text" data-name="a" data-tags="anchor link href target download mailto tel">
+        <div class="card-header">
+          <span class="tag-badge">&lt;a&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Anchor tag</h3>
+          <p class="tag-desc">Creates hyperlinks to external web pages, intra-page bookmark anchors, emails, and file downloads.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Text</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Blockquote.html" target="_blank" class="tag-card" data-category="text" data-name="blockquote" data-tags="blockquote quote citation source speech excerpt">
+        <div class="card-header">
+          <span class="tag-badge">&lt;blockquote&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Blockquote tag</h3>
+          <p class="tag-desc">Represents an extended quotation from another source with optional cite attribute link.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Text</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Br.html" target="_blank" class="tag-card" data-category="text" data-name="br" data-tags="break line break text poem address newline">
+        <div class="card-header">
+          <span class="tag-badge">&lt;br&gt;</span>
+          <span class="tag-type-pill void">Void Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Line Break tag</h3>
+          <p class="tag-desc">Produces a single line break in text (for poems or street addresses, never for layout spacing).</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Text</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Cite.html" target="_blank" class="tag-card" data-category="text" data-name="cite" data-tags="cite citation work title book movie song artwork">
+        <div class="card-header">
+          <span class="tag-badge">&lt;cite&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Cite tag</h3>
+          <p class="tag-desc">Marks the title of a creative work such as a book, film, song, paper, or theatrical production.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Text</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Code.html" target="_blank" class="tag-card" data-category="text" data-name="code" data-tags="code snippet computer programming syntax inline">
+        <div class="card-header">
+          <span class="tag-badge">&lt;code&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Code tag</h3>
+          <p class="tag-desc">Displays a short fragment of computer programming code in monospace font styling.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Text</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Pre.html" target="_blank" class="tag-card" data-category="text" data-name="pre" data-tags="preformatted text whitespace ascii art monospace code">
+        <div class="card-header">
+          <span class="tag-badge">&lt;pre&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Preformatted Text</h3>
+          <p class="tag-desc">Preserves literal whitespaces and line breaks, ideal for code blocks and ASCII diagrams.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Text</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Del.html" target="_blank" class="tag-card" data-category="text" data-name="del" data-tags="del delete strikethrough revision edit discount">
+        <div class="card-header">
+          <span class="tag-badge">&lt;del&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Del tag</h3>
+          <p class="tag-desc">Marks text that has been removed or deleted from a document during editorial revisions.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Text</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Dfn.html" target="_blank" class="tag-card" data-category="text" data-name="dfn" data-tags="dfn definition term concept glossary vocabulary">
+        <div class="card-header">
+          <span class="tag-badge">&lt;dfn&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Definition Term tag</h3>
+          <p class="tag-desc">Indicates the defining instance of a term or technical concept within its surrounding context.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Text</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Em.html" target="_blank" class="tag-card" data-category="text" data-name="em" data-tags="emphasis vocal stress italic semantic tone">
+        <div class="card-header">
+          <span class="tag-badge">&lt;em&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Emphasis tag</h3>
+          <p class="tag-desc">Designates semantic vocal stress and tonal emphasis that alters the sentence's spoken meaning.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Text</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Mark.html" target="_blank" class="tag-card" data-category="text" data-name="mark" data-tags="mark highlight yellow search relevance note">
+        <div class="card-header">
+          <span class="tag-badge">&lt;mark&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Mark tag</h3>
+          <p class="tag-desc">Highlights text for reference or search term relevance (rendered with standard yellow backing).</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Text</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Subscript.html" target="_blank" class="tag-card" data-category="text" data-name="sub" data-tags="sub sup subscript superscript math chemical formula power">
+        <div class="card-header">
+          <span class="tag-badge">&lt;sub&gt; / &lt;sup&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Sub &amp; Super Script</h3>
+          <p class="tag-desc">Formats chemical formulas (H2O) and mathematical exponents (x2) with typographical precision.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Text</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Ruby.html" target="_blank" class="tag-card" data-category="text" data-name="ruby" data-tags="ruby rt rp furigana pinyin east asian pronunciation annotation">
+        <div class="card-header">
+          <span class="tag-badge">&lt;ruby&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Ruby Annotations</h3>
+          <p class="tag-desc">Small pronunciation guide text annotations above base East Asian characters (Japanese/Chinese).</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Text</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Bdo.html" target="_blank" class="tag-card" data-category="text" data-name="bdo" data-tags="bdo bidirectional override rtl ltr direction arabic hebrew">
+        <div class="card-header">
+          <span class="tag-badge">&lt;bdo&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Bdo tag</h3>
+          <p class="tag-desc">Bi-Directional Override forces text to render in a strict right-to-left or left-to-right flow.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Text</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Hr.html" target="_blank" class="tag-card" data-category="text" data-name="hr" data-tags="horizontal rule divider break scene transition line">
+        <div class="card-header">
+          <span class="tag-badge">&lt;hr&gt;</span>
+          <span class="tag-type-pill void">Void Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Horizontal Rule</h3>
+          <p class="tag-desc">Represents a semantic thematic break between paragraph-level topics or scene transitions.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Text</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <!-- MEDIA & EMBEDDED -->
+      <a href="Img.html" target="_blank" class="tag-card" data-category="media" data-name="img" data-tags="image picture photo alt src responsive graphic">
+        <div class="card-header">
+          <span class="tag-badge">&lt;img&gt;</span>
+          <span class="tag-type-pill void">Void Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Image tag</h3>
+          <p class="tag-desc">Embeds visual images into documents with responsive srcset, loading attributes, and alt text.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Media</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Picture.html" target="_blank" class="tag-card" data-category="media" data-name="picture" data-tags="picture source webp avif art direction responsive image">
+        <div class="card-header">
+          <span class="tag-badge">&lt;picture&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Picture tag</h3>
+          <p class="tag-desc">Wrapper allowing responsive art direction and multi-format image fallbacks (WebP, AVIF, PNG).</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Media</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Figure.html" target="_blank" class="tag-card" data-category="media" data-name="figure" data-tags="figure figcaption caption illustration diagram code chart">
+        <div class="card-header">
+          <span class="tag-badge">&lt;figure&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Figure &amp; Figcaption</h3>
+          <p class="tag-desc">Encapsulates self-contained visual media, illustrations, or code snippets with an optional caption.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Media</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Audio.html" target="_blank" class="tag-card" data-category="media" data-name="audio" data-tags="audio sound music mp3 player controls wav">
+        <div class="card-header">
+          <span class="tag-badge">&lt;audio&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Audio tag</h3>
+          <p class="tag-desc">Embeds native sound players with playback controls, multiple formats, and autoplay configuration.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Media</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Video.html" target="_blank" class="tag-card" data-category="media" data-name="video" data-tags="video movie clip mp4 player controls poster">
+        <div class="card-header">
+          <span class="tag-badge">&lt;video&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Video tag</h3>
+          <p class="tag-desc">Embeds video streams and clips with native player controls, subtitle tracks, and poster thumbnails.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Media</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Iframe.html" target="_blank" class="tag-card" data-category="media" data-name="iframe" data-tags="iframe frame embed youtube map sandboxed security">
+        <div class="card-header">
+          <span class="tag-badge">&lt;iframe&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Inline Frame tag</h3>
+          <p class="tag-desc">Sandboxed embedded browsing frame for external resources like YouTube videos and interactive maps.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Media</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Svg.html" target="_blank" class="tag-card" data-category="media" data-name="svg" data-tags="svg vector graphics icon path circle xml">
+        <div class="card-header">
+          <span class="tag-badge">&lt;svg&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">SVG tag</h3>
+          <p class="tag-desc">Container for crisp Scalable Vector Graphics, icons, illustrations, and animatable XML vector paths.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Media</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Embed.html" target="_blank" class="tag-card" data-category="media" data-name="embed" data-tags="embed plugin pdf multimedia external flash replacement">
+        <div class="card-header">
+          <span class="tag-badge">&lt;embed&gt;</span>
+          <span class="tag-type-pill void">Void Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Embed tag</h3>
+          <p class="tag-desc">Integration point for external applications, PDF documents, or interactive multimedia plugins.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Media</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Object.html" target="_blank" class="tag-card" data-category="media" data-name="object" data-tags="object param fallback plugin embed media">
+        <div class="card-header">
+          <span class="tag-badge">&lt;object&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Object tag</h3>
+          <p class="tag-desc">General-purpose external resource embedder with elegant nested fallback content support.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Media</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Area.html" target="_blank" class="tag-card" data-category="media" data-name="area" data-tags="area map coords hotspot image clickable">
+        <div class="card-header">
+          <span class="tag-badge">&lt;area&gt;</span>
+          <span class="tag-type-pill void">Void Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Area tag</h3>
+          <p class="tag-desc">Defines clickable geometric hotspot coordinates inside an image map container.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Media</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <!-- TABLES & LISTS -->
+      <a href="Table.html" target="_blank" class="tag-card" data-category="tables" data-name="table" data-tags="table thead tbody tfoot tr td th data grid matrix">
+        <div class="card-header">
+          <span class="tag-badge">&lt;table&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Table tag</h3>
+          <p class="tag-desc">Tabular structured data matrix with headers (&lt;th&gt;), rows (&lt;tr&gt;), and data cells (&lt;td&gt;).</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Tables</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Caption.html" target="_blank" class="tag-card" data-category="tables" data-name="caption" data-tags="caption table title description accessibility">
+        <div class="card-header">
+          <span class="tag-badge">&lt;caption&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Caption tag</h3>
+          <p class="tag-desc">Accessible title and context description placed directly at the top of a &lt;table&gt;.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Tables</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Col.html" target="_blank" class="tag-card" data-category="tables" data-name="col" data-tags="col column table span style width">
+        <div class="card-header">
+          <span class="tag-badge">&lt;col&gt;</span>
+          <span class="tag-type-pill void">Void Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Col tag</h3>
+          <p class="tag-desc">Specifies column-level attributes, spans, and widths for columns inside a table.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Tables</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Colgroup.html" target="_blank" class="tag-card" data-category="tables" data-name="colgroup" data-tags="colgroup column group table styling span">
+        <div class="card-header">
+          <span class="tag-badge">&lt;colgroup&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Colgroup tag</h3>
+          <p class="tag-desc">Specifies a structural group of one or more columns in a table for bulk CSS column styling.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Tables</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="List.html" target="_blank" class="tag-card" data-category="tables" data-name="list" data-tags="ul ol li list bullet numbers items">
+        <div class="card-header">
+          <span class="tag-badge">&lt;ul&gt; / &lt;ol&gt; / &lt;li&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">List tags</h3>
+          <p class="tag-desc">Unordered bullet lists (&lt;ul&gt;) and ordered numerical sequences (&lt;ol&gt;) containing &lt;li&gt; items.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Tables</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="DescriptionList.html" target="_blank" class="tag-card" data-category="tables" data-name="dl" data-tags="dl dt dd description list glossary key value dictionary">
+        <div class="card-header">
+          <span class="tag-badge">&lt;dl&gt; / &lt;dt&gt; / &lt;dd&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Description List</h3>
+          <p class="tag-desc">Encloses key-value term (&lt;dt&gt;) and definition (&lt;dd&gt;) metadata pairs and glossaries.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Tables</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <!-- DOCUMENT & METADATA -->
+      <a href="Head.html" target="_blank" class="tag-card" data-category="meta" data-name="head" data-tags="head metadata title meta link seo container">
+        <div class="card-header">
+          <span class="tag-badge">&lt;head&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Head tag</h3>
+          <p class="tag-desc">Metadata container housing page title, character set, responsive viewport, stylesheets, and SEO tags.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Metadata</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Base.html" target="_blank" class="tag-card" data-category="meta" data-name="base" data-tags="base url target relative default link">
+        <div class="card-header">
+          <span class="tag-badge">&lt;base&gt;</span>
+          <span class="tag-type-pill void">Void Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Base tag</h3>
+          <p class="tag-desc">Specifies the base URL and default browsing target for all relative URLs across a document.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Metadata</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Script.html" target="_blank" class="tag-card" data-category="meta" data-name="script" data-tags="script javascript js defer async module programming">
+        <div class="card-header">
+          <span class="tag-badge">&lt;script&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Script tag</h3>
+          <p class="tag-desc">Integrates clientside JavaScript programs with complete performance analysis of defer vs async.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Metadata</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Style.html" target="_blank" class="tag-card" data-category="meta" data-name="style" data-tags="style css styling design colors layout">
+        <div class="card-header">
+          <span class="tag-badge">&lt;style&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Style tag</h3>
+          <p class="tag-desc">Contains embedded document CSS style declarations applying visual layout rules to HTML.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Metadata</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Noscript.html" target="_blank" class="tag-card" data-category="meta" data-name="noscript" data-tags="noscript fallback disabled javascript fallback">
+        <div class="card-header">
+          <span class="tag-badge">&lt;noscript&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Noscript tag</h3>
+          <p class="tag-desc">Graceful fallback HTML content rendered specifically when JavaScript is disabled in the browser.</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Metadata</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <a href="Data.html" target="_blank" class="tag-card" data-category="meta" data-name="data" data-tags="data value machine readable sku product id price">
+        <div class="card-header">
+          <span class="tag-badge">&lt;data&gt;</span>
+          <span class="tag-type-pill paired">Paired Tag</span>
+        </div>
+        <div class="card-body">
+          <h3 class="tag-title">Data tag</h3>
+          <p class="tag-desc">Links human-readable content with a machine-readable value attribute (ideal for SKU identifiers).</p>
+        </div>
+        <div class="card-footer">
+          <span class="category-tag">Metadata</span>
+          <span class="action-link">Explore Tag &rarr;</span>
+        </div>
+      </a>
+
+      <!-- Empty state when no cards match -->
+      <div class="empty-state" id="emptyState">
+        <h3>No matching HTML tags found</h3>
+        <p>Try searching for another keyword, tag name (e.g., "button"), or clear your filters.</p>
+      </div>
+
+    </main>
+
+    <!-- Master Footer -->
+    <footer class="master-footer">
+      <h3>HTML5 Master Reference &amp; Cheat Sheet</h3>
+      <p>
+        Designed and engineered by Kaustubh Singh. All tags strictly follow modern W3C and WHATWG living specifications.
+      </p>
+      <address>
+        Author: <strong>Kaustubh Singh</strong> &bull;
+        Instagram: <a href="https://instagram.com/__kaustubh_singh" target="_blank">@__kaustubh_singh</a> &bull;
+        Contact: <strong>+91 7000919343</strong>
+      </address>
+      <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">&uarr; Back to Top</button>
+      <p style="margin-top: 20px; font-size: 0.85rem; color: #64748b;">
+        &copy; 2026 Kaustubh's HTML Guide. Built for modern web development pair programming.
+      </p>
+    </footer>
+
+    <!-- Interactive Search & Filtering Script -->
+    <script>
+      (function () {
+        const searchInput = document.getElementById('tagSearch');
+        const clearBtn = document.getElementById('clearSearch');
+        const categoryFilter = document.getElementById('categoryFilter');
+        const tagsGrid = document.getElementById('tagsGrid');
+        const tagCards = document.querySelectorAll('.tag-card');
+        const resultCount = document.getElementById('resultCount');
+        const emptyState = document.getElementById('emptyState');
+        const btnGridView = document.getElementById('btnGridView');
+        const btnListView = document.getElementById('btnListView');
+
+        let currentCategory = 'all';
+        let currentSearchQuery = '';
+
+        function filterTags() {
+          let visibleCount = 0;
+          const query = currentSearchQuery.toLowerCase().trim();
+
+          tagCards.forEach((card) => {
+            const cardCategory = card.getAttribute('data-category');
+            const cardName = card.getAttribute('data-name') || '';
+            const cardTags = card.getAttribute('data-tags') || '';
+            const cardText = card.textContent.toLowerCase();
+
+            const matchesCategory = currentCategory === 'all' || cardCategory === currentCategory;
+            const matchesSearch =
+              !query ||
+              cardName.includes(query) ||
+              cardTags.includes(query) ||
+              cardText.includes(query);
+
+            if (matchesCategory && matchesSearch) {
+              card.style.display = '';
+              visibleCount++;
+            } else {
+              card.style.display = 'none';
+            }
+          });
+
+          // Update result counter
+          if (visibleCount === 60) {
+            resultCount.textContent = 'Showing all 60 tags';
+          } else {
+            resultCount.textContent = `Showing ${visibleCount} of 60 tags`;
+          }
+
+          // Toggle empty state
+          emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        // Search Input handler
+        searchInput.addEventListener('input', (e) => {
+          currentSearchQuery = e.target.value;
+          clearBtn.style.display = currentSearchQuery ? 'inline-flex' : 'none';
+          filterTags();
+        });
+
+        // Clear Search button
+        clearBtn.addEventListener('click', () => {
+          searchInput.value = '';
+          currentSearchQuery = '';
+          clearBtn.style.display = 'none';
+          searchInput.focus();
+          filterTags();
+        });
+
+        // Category Filter buttons
+        categoryFilter.addEventListener('click', (e) => {
+          const btn = e.target.closest('.category-pill');
+          if (!btn) return;
+
+          categoryFilter.querySelectorAll('.category-pill').forEach((p) => p.classList.remove('active'));
+          btn.classList.add('active');
+
+          currentCategory = btn.getAttribute('data-category');
+          filterTags();
+        });
+
+        // View toggle (Grid vs List)
+        btnGridView.addEventListener('click', () => {
+          btnGridView.classList.add('active');
+          btnListView.classList.remove('active');
+          tagsGrid.classList.remove('list-view');
+        });
+
+        btnListView.addEventListener('click', () => {
+          btnListView.classList.add('active');
+          btnGridView.classList.remove('active');
+          tagsGrid.classList.add('list-view');
+        });
+
+        // Hotkey: press '/' to focus search bar
+        document.addEventListener('keydown', (e) => {
+          if (e.key === '/' && document.activeElement !== searchInput) {
+            e.preventDefault();
+            searchInput.focus();
+          }
+        });
+      })();
+    </script>
+      <script>
+      // Interactive mouse-tracking background spotlight
+      document.addEventListener('mousemove', function (e) {
+        var x = (e.clientX / window.innerWidth) * 100;
+        var y = (e.clientY / window.innerHeight) * 100;
+        document.body.style.setProperty('--mouse-x', x + '%');
+        document.body.style.setProperty('--mouse-y', y + '%');
+      });
+    </script>
+  </body>
+</html>

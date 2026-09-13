@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="kaustubh singh" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>HTML Tags Cheat Sheet</title>
+  <link rel="stylesheet" href="style.css" />
+  
+    
+    <style>
+      .demo-box { background: #f9f9f9; border-left: 4px solid #795548; padding: 15px 20px; margin: 20px 0; border-radius: 4px; }
+   
+   dt { font-weight: bold; color: #5d4037; margin-top: 10px; font-size: 1.05rem; }
+   dd { margin-left: 20px; color: #555; }
+    </style>
+     <meta property="og:title" content="HTML Description List Tag (<dl>) - Cheat Sheet" />
+    <meta property="og:description" content="Complete guide to the HTML Description List tag with live examples, use cases, attributes, and W3C standards." />
+    <meta property="og:type" content="article" />
+    <link rel="prev" href="Del.html" />
+    <link rel="next" href="Details.html" />
+    <script src="app.js" defer></script>
+  </head>
+ <body>
+  <header>
+   <h1>Description List tags (dl, dt, dd)</h1>
+   <p>Learn tags with description, use cases, and examples</p>
+  </header>
+  <main>
+      <nav class="quick-nav">
+        <a href="index.html" class="home-btn">&larr; All Tags (Index)</a>
+        <div class="nav-selector">
+          <label for="tagJump"><strong>Jump to Tag:</strong></label>
+          <select id="tagJump" onchange="if(this.value) window.location.href=this.value;">
+            <option value="">-- Choose a Tag to Switch --</option>
+            <option value="Abbreviation.html">&lt;abbr&gt; Abbreviation</option>
+            <option value="Address.html">&lt;address&gt; Address</option>
+            <option value="Anchor.html">&lt;a&gt; Anchor</option>
+            <option value="Area.html">&lt;area&gt; Area</option>
+            <option value="Article.html">&lt;article&gt; Article</option>
+            <option value="Aside.html">&lt;aside&gt; Aside</option>
+            <option value="Audio.html">&lt;audio&gt; Audio</option>
+            <option value="Base.html">&lt;base&gt; Base</option>
+            <option value="Bdo.html">&lt;bdo&gt; Bdo</option>
+            <option value="Blockquote.html">&lt;blockquote&gt; Blockquote</option>
+            <option value="Body.html">&lt;body&gt; Body</option>
+            <option value="Br.html">&lt;br&gt; Line Break</option>
+            <option value="Button.html">&lt;button&gt; Button</option>
+            <option value="Caption.html">&lt;caption&gt; Caption</option>
+            <option value="Cite.html">&lt;cite&gt; Citation</option>
+            <option value="Code.html">&lt;code&gt; Code</option>
+            <option value="Col.html">&lt;col&gt; Column</option>
+            <option value="Colgroup.html">&lt;colgroup&gt; Column Group</option>
+            <option value="Data.html">&lt;data&gt; Machine Data</option>
+            <option value="Datalist.html">&lt;datalist&gt; Datalist</option>
+            <option value="Del.html">&lt;del&gt; Deleted Text</option>
+            <option value="DescriptionList.html" selected="selected">&lt;dl&gt; Description List</option>
+            <option value="Details.html">&lt;details&gt; Details & Summary</option>
+            <option value="Dfn.html">&lt;dfn&gt; Definition Term</option>
+            <option value="Dialog.html">&lt;dialog&gt; Dialog Modal</option>
+            <option value="Div.html">&lt;div&gt; Division</option>
+            <option value="Em.html">&lt;em&gt; Emphasis</option>
+            <option value="Embed.html">&lt;embed&gt; Embed Plugin</option>
+            <option value="Fieldset.html">&lt;fieldset&gt; Fieldset & Legend</option>
+            <option value="Figure.html">&lt;figure&gt; Figure & Figcaption</option>
+            <option value="Footer.html">&lt;footer&gt; Footer</option>
+            <option value="Form.html">&lt;form&gt; Form & Enctype</option>
+            <option value="Head.html">&lt;head&gt; Document Head</option>
+            <option value="Header.html">&lt;header&gt; Header</option>
+            <option value="Heading.html">&lt;h1&gt;-&lt;h6&gt; Headings</option>
+            <option value="Hr.html">&lt;hr&gt; Horizontal Rule</option>
+            <option value="Iframe.html">&lt;iframe&gt; Inline Frame</option>
+            <option value="Img.html">&lt;img&gt; Image</option>
+            <option value="Input.html">&lt;input&gt; Input Types</option>
+            <option value="Label.html">&lt;label&gt; Form Label</option>
+            <option value="List.html">&lt;ul&gt;/&lt;ol&gt;/&lt;li&gt; Lists</option>
+            <option value="Main.html">&lt;main&gt; Main Content</option>
+            <option value="Mark.html">&lt;mark&gt; Highlight Mark</option>
+            <option value="Meter.html">&lt;meter&gt; Scalar Meter</option>
+            <option value="Nav.html">&lt;nav&gt; Navigation</option>
+            <option value="Noscript.html">&lt;noscript&gt; Noscript Fallback</option>
+            <option value="Object.html">&lt;object&gt; Embedded Object</option>
+            <option value="Picture.html">&lt;picture&gt; Responsive Picture</option>
+            <option value="Pre.html">&lt;pre&gt; Preformatted Text</option>
+            <option value="Progress.html">&lt;progress&gt; Progress Bar</option>
+            <option value="Ruby.html">&lt;ruby&gt; Ruby Annotations</option>
+            <option value="Script.html">&lt;script&gt; Script</option>
+            <option value="Section.html">&lt;section&gt; Section</option>
+            <option value="Select.html">&lt;select&gt; Select Dropdown</option>
+            <option value="Span.html">&lt;span&gt; Span</option>
+            <option value="Style.html">&lt;style&gt; Style</option>
+            <option value="Subscript.html">&lt;sub&gt;/&lt;sup&gt; Sub & Super</option>
+            <option value="Svg.html">&lt;svg&gt; Vector Graphics</option>
+            <option value="Table.html">&lt;table&gt; Data Table</option>
+            <option value="Video.html">&lt;video&gt; Video Player</option>
+          </select>
+        </div>
+      </nav>
+
+   <h2>Description List tags ("&lt;dl&gt;", "&lt;dt&gt;", "&lt;dd&gt;") - [Both Opening &amp; Closing tags required]</h2>
+   <p>
+    <strong>Description:- </strong> The <code>&lt;dl&gt;</code> (Description List) element encloses
+    a list of term-description groups. It uses <code>&lt;dt&gt;</code> to specify a term or name,
+    and <code>&lt;dd&gt;</code> to provide the definition, description, or value of that term.
+   </p>
+
+   <div class="note-box">
+    <strong>Semantic Evolution Note:</strong>
+    <p style="margin: 5px 0 0 0;">
+     In HTML4, <code>&lt;dl&gt;</code> was strictly called a "Definition List". In HTML5, it was broadened
+     into a "Description List", making it semantically appropriate for any key-value pair, metadata lists,
+     author info, FAQs, and product specs, not just dictionary definitions.
+    </p>
+   </div>
+
+   <p><strong>Example:-</strong> Web Technology Glossary created with &lt;dl&gt;, &lt;dt&gt;, and &lt;dd&gt;:</p>
+
+   <div class="demo-box">
+    <dl>
+     <dt>HTML</dt>
+     <dd>HyperText Markup Language - the standard language for creating the structure of web pages.</dd>
+     <dt>CSS</dt>
+     <dd>Cascading Style Sheets - used to style layout, colors, and visual presentation.</dd>
+     <dt>JavaScript</dt>
+     <dd>A lightweight, interpreted programming language that adds interactivity and logic to websites.</dd>
+    </dl>
+   </div>
+
+   <h3>Elements in this Group:-</h3>
+   <ul>
+    <li><strong>&lt;dl&gt; :-</strong> Wrapper container for the entire description list.</li>
+    <li><strong>&lt;dt&gt; :-</strong> Description Term (the word, question, or key).</li>
+    <li><strong>&lt;dd&gt; :-</strong> Description Details (the explanation, answer, or value).</li>
+   </ul>
+
+   <p><strong>Use cases:-</strong></p>
+   <ul>
+    <li>Creating technical glossaries and dictionary definitions.</li>
+    <li>Building FAQ (Frequently Asked Questions) sections.</li>
+    <li>Displaying metadata key-value pairs (e.g. Director: Christopher Nolan, Release: 2026).</li>
+   </ul>
+
+   <h2>Complete code for the Description List section</h2>
+   <pre><code>&lt;header&gt;
+ &lt;h1&gt;Description List tags&lt;/h1&gt;
+ &lt;p&gt;Learn tags with description, use cases, and examples&lt;/p&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+ &lt;h2&gt;Description List tags (&amp;lt;dl&amp;gt;, &amp;lt;dt&amp;gt;, &amp;lt;dd&amp;gt;) - [Both Opening &amp;amp; Closing tags required]&lt;/h2&gt;
+ &lt;p&gt;
+  &lt;strong&gt; Description:- &lt;/strong&gt; Represents key-value or term-description pairs.
+ &lt;/p&gt;
+
+ &lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;Structure of web pages.&lt;/dd&gt;
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;Styling and design.&lt;/dd&gt;
+ &lt;/dl&gt;
+
+ &lt;p&gt;&lt;strong&gt;Use cases:-&lt;/strong&gt;&lt;/p&gt;
+ &lt;ul&gt;
+  &lt;li&gt;Glossaries, FAQs, and key-value metadata pairs.&lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/main&gt;</code></pre>
+        <nav class="page-step-nav">
+        <a href="Del.html" class="step-btn prev" title="Keyboard Shortcut: Left Arrow">&larr; Previous: &lt;del&gt; Deleted Text</a>
+        <a href="index.html" class="step-btn home">&#9776; All 60 Tags (Index)</a>
+        <a href="Details.html" class="step-btn next" title="Keyboard Shortcut: Right Arrow">Next: &lt;details&gt; Details &rarr;</a>
+      </nav>
+    </main>
+  <footer>
+   <address>
+    Author's name :- kaustubh singh. Instagram:- __kaustubh_singh. Contact Number :- 7000919343;
+   </address>
+   <p>&copy; 2026 Kaustubh's HTML Guide</p>
+  </footer>
+     <script>
+      // Interactive mouse-tracking background spotlight
+      document.addEventListener('mousemove', function (e) {
+        var x = (e.clientX / window.innerWidth) * 100;
+        var y = (e.clientY / window.innerHeight) * 100;
+        document.body.style.setProperty('--mouse-x', x + '%');
+        document.body.style.setProperty('--mouse-y', y + '%');
+      });
+    </script>
+  </body>
+</html>

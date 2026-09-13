@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="kaustubh singh" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>HTML Tags Cheat Sheet</title>
+  <link rel="stylesheet" href="style.css" />
+  
+    
+    <style>
+      .hr-demo { background: #fafafa; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; margin: 20px 0; }
+   hr.gradient { border: 0; height: 3px; background-image: linear-gradient(to right, #00b4db, #0083b0); margin: 20px 0; }
+   hr.dashed { border: none; border-top: 2px dashed #ff9800; margin: 20px 0; }
+    </style>
+     <meta property="og:title" content="HTML Horizontal Rule Tag (<hr>) - Cheat Sheet" />
+    <meta property="og:description" content="Complete guide to the HTML Horizontal Rule tag with live examples, use cases, attributes, and W3C standards." />
+    <meta property="og:type" content="article" />
+    <link rel="prev" href="Heading.html" />
+    <link rel="next" href="Iframe.html" />
+    <script src="app.js" defer></script>
+  </head>
+ <body>
+  <header>
+   <h1>Hr tag</h1>
+   <p>Learn tags with description, use cases, and examples</p>
+  </header>
+  <main>
+      <nav class="quick-nav">
+        <a href="index.html" class="home-btn">&larr; All Tags (Index)</a>
+        <div class="nav-selector">
+          <label for="tagJump"><strong>Jump to Tag:</strong></label>
+          <select id="tagJump" onchange="if(this.value) window.location.href=this.value;">
+            <option value="">-- Choose a Tag to Switch --</option>
+            <option value="Abbreviation.html">&lt;abbr&gt; Abbreviation</option>
+            <option value="Address.html">&lt;address&gt; Address</option>
+            <option value="Anchor.html">&lt;a&gt; Anchor</option>
+            <option value="Area.html">&lt;area&gt; Area</option>
+            <option value="Article.html">&lt;article&gt; Article</option>
+            <option value="Aside.html">&lt;aside&gt; Aside</option>
+            <option value="Audio.html">&lt;audio&gt; Audio</option>
+            <option value="Base.html">&lt;base&gt; Base</option>
+            <option value="Bdo.html">&lt;bdo&gt; Bdo</option>
+            <option value="Blockquote.html">&lt;blockquote&gt; Blockquote</option>
+            <option value="Body.html">&lt;body&gt; Body</option>
+            <option value="Br.html">&lt;br&gt; Line Break</option>
+            <option value="Button.html">&lt;button&gt; Button</option>
+            <option value="Caption.html">&lt;caption&gt; Caption</option>
+            <option value="Cite.html">&lt;cite&gt; Citation</option>
+            <option value="Code.html">&lt;code&gt; Code</option>
+            <option value="Col.html">&lt;col&gt; Column</option>
+            <option value="Colgroup.html">&lt;colgroup&gt; Column Group</option>
+            <option value="Data.html">&lt;data&gt; Machine Data</option>
+            <option value="Datalist.html">&lt;datalist&gt; Datalist</option>
+            <option value="Del.html">&lt;del&gt; Deleted Text</option>
+            <option value="DescriptionList.html">&lt;dl&gt; Description List</option>
+            <option value="Details.html">&lt;details&gt; Details & Summary</option>
+            <option value="Dfn.html">&lt;dfn&gt; Definition Term</option>
+            <option value="Dialog.html">&lt;dialog&gt; Dialog Modal</option>
+            <option value="Div.html">&lt;div&gt; Division</option>
+            <option value="Em.html">&lt;em&gt; Emphasis</option>
+            <option value="Embed.html">&lt;embed&gt; Embed Plugin</option>
+            <option value="Fieldset.html">&lt;fieldset&gt; Fieldset & Legend</option>
+            <option value="Figure.html">&lt;figure&gt; Figure & Figcaption</option>
+            <option value="Footer.html">&lt;footer&gt; Footer</option>
+            <option value="Form.html">&lt;form&gt; Form & Enctype</option>
+            <option value="Head.html">&lt;head&gt; Document Head</option>
+            <option value="Header.html">&lt;header&gt; Header</option>
+            <option value="Heading.html">&lt;h1&gt;-&lt;h6&gt; Headings</option>
+            <option value="Hr.html" selected="selected">&lt;hr&gt; Horizontal Rule</option>
+            <option value="Iframe.html">&lt;iframe&gt; Inline Frame</option>
+            <option value="Img.html">&lt;img&gt; Image</option>
+            <option value="Input.html">&lt;input&gt; Input Types</option>
+            <option value="Label.html">&lt;label&gt; Form Label</option>
+            <option value="List.html">&lt;ul&gt;/&lt;ol&gt;/&lt;li&gt; Lists</option>
+            <option value="Main.html">&lt;main&gt; Main Content</option>
+            <option value="Mark.html">&lt;mark&gt; Highlight Mark</option>
+            <option value="Meter.html">&lt;meter&gt; Scalar Meter</option>
+            <option value="Nav.html">&lt;nav&gt; Navigation</option>
+            <option value="Noscript.html">&lt;noscript&gt; Noscript Fallback</option>
+            <option value="Object.html">&lt;object&gt; Embedded Object</option>
+            <option value="Picture.html">&lt;picture&gt; Responsive Picture</option>
+            <option value="Pre.html">&lt;pre&gt; Preformatted Text</option>
+            <option value="Progress.html">&lt;progress&gt; Progress Bar</option>
+            <option value="Ruby.html">&lt;ruby&gt; Ruby Annotations</option>
+            <option value="Script.html">&lt;script&gt; Script</option>
+            <option value="Section.html">&lt;section&gt; Section</option>
+            <option value="Select.html">&lt;select&gt; Select Dropdown</option>
+            <option value="Span.html">&lt;span&gt; Span</option>
+            <option value="Style.html">&lt;style&gt; Style</option>
+            <option value="Subscript.html">&lt;sub&gt;/&lt;sup&gt; Sub & Super</option>
+            <option value="Svg.html">&lt;svg&gt; Vector Graphics</option>
+            <option value="Table.html">&lt;table&gt; Data Table</option>
+            <option value="Video.html">&lt;video&gt; Video Player</option>
+          </select>
+        </div>
+      </nav>
+
+   <h2>Hr tag ("&lt;hr&gt;") - [Void Tag / Self-Closing (No Closing tag required)]</h2>
+   <p>
+    <strong>Description:- </strong> The <code>&lt;hr&gt;</code> (Horizontal Rule) tag represents
+    a <strong>thematic break</strong> between paragraph-level elements in an HTML page (such as a
+    shift of topic in an essay, or a transition between scenes in a story). It is a void element
+    and is rendered as a horizontal divider line by default.
+   </p>
+
+   <div class="note-box">
+    <strong>Semantic Evolution & Discontinued Attributes:</strong>
+    <p style="margin: 5px 0 0 0;">
+     In HTML4, <code>&lt;hr&gt;</code> was merely a visual presentation line with attributes like
+     <code>align</code>, <code>noshade</code>, <code>size</code>, and <code>width</code>.
+     In HTML5, all those attributes are <strong>obsolete</strong>. The <code>&lt;hr&gt;</code> is now
+     a true <em>semantic thematic break</em>, and all visual styling (colors, gradients, thickness, dashes)
+     must be done using modern CSS.
+    </p>
+   </div>
+
+   <p><strong>Example:-</strong> A thematic break with modern CSS styling:</p>
+
+   <div class="hr-demo">
+    <p><strong>Part 1: The Foundations of Frontend Development</strong></p>
+    <p>HTML provides the skeletal structure and semantic meaning of every page on the World Wide Web.</p>
+
+    <hr class="gradient" />
+
+    <p><strong>Part 2: The Art of Visual Styling with CSS</strong></p>
+    <p>CSS transforms raw semantic HTML into beautiful, responsive, and animated user interfaces.</p>
+
+    <hr class="dashed" />
+
+    <p><strong>Part 3: Interactive Logic with JavaScript</strong></p>
+    <p>JavaScript empowers web apps to handle events, APIs, and real-time state changes.</p>
+   </div>
+
+   <h3>Attributes:-</h3>
+   <ul>
+    <li><strong>Global Attributes :-</strong> <code>class</code>, <code>id</code>, <code>style</code>.</li>
+    <li><strong>Obsolete Attributes :-</strong> <code>align</code>, <code>noshade</code>, <code>size</code>, <code>width</code> (all replaced by CSS).</li>
+   </ul>
+
+   <p><strong>Use cases:-</strong></p>
+   <ul>
+    <li>Scene transitions in stories or books.</li>
+    <li>Dividing chapters, topics, or distinct sections in articles.</li>
+    <li>Separating terms and conditions or disclaimers at the bottom of forms.</li>
+   </ul>
+
+   <h2>Complete code for the Hr tag section</h2>
+   <pre><code>&lt;header&gt;
+ &lt;h1&gt;Hr tag&lt;/h1&gt;
+ &lt;p&gt;Learn tags with description, use cases, and examples&lt;/p&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+ &lt;h2&gt;Hr tag ("&amp;lt;hr&amp;gt;") - [Void Tag / Self-Closing (No Closing tag required)]&lt;/h2&gt;
+ &lt;p&gt;
+  &lt;strong&gt; Description:- &lt;/strong&gt; The &amp;lt;hr&amp;gt; tag represents a thematic break between topics.
+ &lt;/p&gt;
+
+ &lt;p&gt;Topic A: Intro to HTML&lt;/p&gt;
+ &lt;!-- Modern CSS styled thematic break --&gt;
+ &lt;hr style="border: none; height: 2px; background: #0083b0;" /&gt;
+ &lt;p&gt;Topic B: Intro to CSS&lt;/p&gt;
+
+ &lt;h3&gt;Attributes:-&lt;/h3&gt;
+ &lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;CSS Styling :-&lt;/strong&gt; Use border and background instead of obsolete size/color attributes.&lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/main&gt;</code></pre>
+        <nav class="page-step-nav">
+        <a href="Heading.html" class="step-btn prev" title="Keyboard Shortcut: Left Arrow">&larr; Previous: &lt;h1&gt;-&lt;h6&gt; Headings</a>
+        <a href="index.html" class="step-btn home">&#9776; All 60 Tags (Index)</a>
+        <a href="Iframe.html" class="step-btn next" title="Keyboard Shortcut: Right Arrow">Next: &lt;iframe&gt; Inline Frame &rarr;</a>
+      </nav>
+    </main>
+  <footer>
+   <address>
+    Author's name :- kaustubh singh. Instagram:- __kaustubh_singh. Contact Number :- 7000919343;
+   </address>
+   <p>&copy; 2026 Kaustubh's HTML Guide</p>
+  </footer>
+     <script>
+      // Interactive mouse-tracking background spotlight
+      document.addEventListener('mousemove', function (e) {
+        var x = (e.clientX / window.innerWidth) * 100;
+        var y = (e.clientY / window.innerHeight) * 100;
+        document.body.style.setProperty('--mouse-x', x + '%');
+        document.body.style.setProperty('--mouse-y', y + '%');
+      });
+    </script>
+  </body>
+</html>

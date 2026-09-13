@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="kaustubh singh" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>HTML Tags Cheat Sheet</title>
+  <link rel="stylesheet" href="style.css" />
+  
+    
+    <style>
+      .form-card { background: #fafafa; border: 2px solid #00897b; border-radius: 8px; padding: 20px; margin: 20px 0; max-width: 520px; }
+   .form-group { margin-bottom: 15px; }
+   .form-group label { display: block; font-weight: bold; margin-bottom: 4px; color: #333; }
+   .form-group input, .form-group select { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+   .enctype-table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+   .enctype-table th, .enctype-table td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+   .enctype-table th { background: #e0f2f1; color: #004d40; }
+   .btn-submit { background: #00897b; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; }
+    </style>
+     <meta property="og:title" content="HTML Form & Enctype Tag (<form>) - Cheat Sheet" />
+    <meta property="og:description" content="Complete guide to the HTML Form & Enctype tag with live examples, use cases, attributes, and W3C standards." />
+    <meta property="og:type" content="article" />
+    <link rel="prev" href="Footer.html" />
+    <link rel="next" href="Head.html" />
+    <script src="app.js" defer></script>
+  </head>
+ <body>
+  <header>
+   <h1>Form tag</h1>
+   <p>Learn tags with description, use cases, and examples</p>
+  </header>
+  <main>
+      <nav class="quick-nav">
+        <a href="index.html" class="home-btn">&larr; All Tags (Index)</a>
+        <div class="nav-selector">
+          <label for="tagJump"><strong>Jump to Tag:</strong></label>
+          <select id="tagJump" onchange="if(this.value) window.location.href=this.value;">
+            <option value="">-- Choose a Tag to Switch --</option>
+            <option value="Abbreviation.html">&lt;abbr&gt; Abbreviation</option>
+            <option value="Address.html">&lt;address&gt; Address</option>
+            <option value="Anchor.html">&lt;a&gt; Anchor</option>
+            <option value="Area.html">&lt;area&gt; Area</option>
+            <option value="Article.html">&lt;article&gt; Article</option>
+            <option value="Aside.html">&lt;aside&gt; Aside</option>
+            <option value="Audio.html">&lt;audio&gt; Audio</option>
+            <option value="Base.html">&lt;base&gt; Base</option>
+            <option value="Bdo.html">&lt;bdo&gt; Bdo</option>
+            <option value="Blockquote.html">&lt;blockquote&gt; Blockquote</option>
+            <option value="Body.html">&lt;body&gt; Body</option>
+            <option value="Br.html">&lt;br&gt; Line Break</option>
+            <option value="Button.html">&lt;button&gt; Button</option>
+            <option value="Caption.html">&lt;caption&gt; Caption</option>
+            <option value="Cite.html">&lt;cite&gt; Citation</option>
+            <option value="Code.html">&lt;code&gt; Code</option>
+            <option value="Col.html">&lt;col&gt; Column</option>
+            <option value="Colgroup.html">&lt;colgroup&gt; Column Group</option>
+            <option value="Data.html">&lt;data&gt; Machine Data</option>
+            <option value="Datalist.html">&lt;datalist&gt; Datalist</option>
+            <option value="Del.html">&lt;del&gt; Deleted Text</option>
+            <option value="DescriptionList.html">&lt;dl&gt; Description List</option>
+            <option value="Details.html">&lt;details&gt; Details & Summary</option>
+            <option value="Dfn.html">&lt;dfn&gt; Definition Term</option>
+            <option value="Dialog.html">&lt;dialog&gt; Dialog Modal</option>
+            <option value="Div.html">&lt;div&gt; Division</option>
+            <option value="Em.html">&lt;em&gt; Emphasis</option>
+            <option value="Embed.html">&lt;embed&gt; Embed Plugin</option>
+            <option value="Fieldset.html">&lt;fieldset&gt; Fieldset & Legend</option>
+            <option value="Figure.html">&lt;figure&gt; Figure & Figcaption</option>
+            <option value="Footer.html">&lt;footer&gt; Footer</option>
+            <option value="Form.html" selected="selected">&lt;form&gt; Form & Enctype</option>
+            <option value="Head.html">&lt;head&gt; Document Head</option>
+            <option value="Header.html">&lt;header&gt; Header</option>
+            <option value="Heading.html">&lt;h1&gt;-&lt;h6&gt; Headings</option>
+            <option value="Hr.html">&lt;hr&gt; Horizontal Rule</option>
+            <option value="Iframe.html">&lt;iframe&gt; Inline Frame</option>
+            <option value="Img.html">&lt;img&gt; Image</option>
+            <option value="Input.html">&lt;input&gt; Input Types</option>
+            <option value="Label.html">&lt;label&gt; Form Label</option>
+            <option value="List.html">&lt;ul&gt;/&lt;ol&gt;/&lt;li&gt; Lists</option>
+            <option value="Main.html">&lt;main&gt; Main Content</option>
+            <option value="Mark.html">&lt;mark&gt; Highlight Mark</option>
+            <option value="Meter.html">&lt;meter&gt; Scalar Meter</option>
+            <option value="Nav.html">&lt;nav&gt; Navigation</option>
+            <option value="Noscript.html">&lt;noscript&gt; Noscript Fallback</option>
+            <option value="Object.html">&lt;object&gt; Embedded Object</option>
+            <option value="Picture.html">&lt;picture&gt; Responsive Picture</option>
+            <option value="Pre.html">&lt;pre&gt; Preformatted Text</option>
+            <option value="Progress.html">&lt;progress&gt; Progress Bar</option>
+            <option value="Ruby.html">&lt;ruby&gt; Ruby Annotations</option>
+            <option value="Script.html">&lt;script&gt; Script</option>
+            <option value="Section.html">&lt;section&gt; Section</option>
+            <option value="Select.html">&lt;select&gt; Select Dropdown</option>
+            <option value="Span.html">&lt;span&gt; Span</option>
+            <option value="Style.html">&lt;style&gt; Style</option>
+            <option value="Subscript.html">&lt;sub&gt;/&lt;sup&gt; Sub & Super</option>
+            <option value="Svg.html">&lt;svg&gt; Vector Graphics</option>
+            <option value="Table.html">&lt;table&gt; Data Table</option>
+            <option value="Video.html">&lt;video&gt; Video Player</option>
+          </select>
+        </div>
+      </nav>
+
+   <h2>Form tag ("&lt;form&gt;"....."&lt;/form&gt;") - [Both Opening &amp; Closing tags required]</h2>
+   <p>
+    <strong>Description:- </strong> The <code>&lt;form&gt;</code> tag is used to create an HTML
+    form for user input. It acts as a container for interactive controls (inputs, checkboxes,
+    radio buttons, file uploads, textareas, and submit buttons), packing their data and sending
+    it to a web server for processing.
+   </p>
+
+   <!-- Detailed Enctype Breakdown -->
+   <div class="note-box">
+    <strong>Deep Dive: Understanding the <code>enctype</code> Attribute (Form Encoding Types):</strong>
+    <p>The <code>enctype</code> attribute specifies how form data is encoded before sending it to the server (only works when <code>method="POST"</code>):</p>
+    
+    <table class="enctype-table">
+     <thead>
+      <tr>
+       <th>enctype Value</th>
+       <th>When to Use It</th>
+       <th>How Data is Encoded</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td><code>application/x-www-form-urlencoded</code> <em>(Default)</em></td>
+       <td>Standard text forms (login, sign up, contact).</td>
+       <td>All characters are encoded (spaces become <code>+</code>, special symbols converted to ASCII HEX).</td>
+      </tr>
+      <tr>
+       <td><code>multipart/form-data</code> <strong>(CRITICAL)</strong></td>
+       <td>Forms that upload <strong>files, images, or binary data</strong> (<code>&lt;input type="file"&gt;</code>).</td>
+       <td>No characters are encoded. Data is split into separate parts with boundaries so the server can reconstruct files. <em>Without this, file uploads will fail!</em></td>
+      </tr>
+      <tr>
+       <td><code>text/plain</code></td>
+       <td>Debugging or sending raw email forms via <code>mailto:</code>.</td>
+       <td>Spaces converted to <code>+</code>, but no special characters are encoded. (Rarely used in production).</td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <p><strong>Example:-</strong> File Upload & Profile Form demonstrating <code>enctype="multipart/form-data"</code>:</p>
+
+   <div class="form-card">
+    <form action="/upload-profile" method="POST" enctype="multipart/form-data" onsubmit="event.preventDefault(); alert('Form with enctype=multipart/form-data submitted!');">
+     <div class="form-group">
+      <label for="studentName">Student Name (Text Input):</label>
+      <input type="text" id="studentName" name="studentName" placeholder="Kaustubh Singh" required />
+     </div>
+
+     <div class="form-group">
+      <label for="studentDoc">Upload Assignment File / Document (File Input):</label>
+      <input type="file" id="studentDoc" name="studentDoc" required />
+     </div>
+
+     <button type="submit" class="btn-submit">Submit with multipart/form-data</button>
+    </form>
+   </div>
+
+   <h3>Key Form Attributes:-</h3>
+   <ul>
+    <li><strong>action :-</strong> The server endpoint URL where form data is sent upon submission.</li>
+    <li><strong>method :-</strong> HTTP method used: <code>POST</code> (secure, sends data in request body) or <code>GET</code> (appends data to URL query string).</li>
+    <li><strong>enctype :-</strong> Specifies data encoding: <code>application/x-www-form-urlencoded</code>, <code>multipart/form-data</code>, or <code>text/plain</code>.</li>
+    <li><strong>target :-</strong> Where to display response: <code>_self</code>, <code>_blank</code>.</li>
+    <li><strong>autocomplete :-</strong> <code>on</code> or <code>off</code> for browser form autofill.</li>
+    <li><strong>novalidate :-</strong> Bypasses browser client-side HTML5 validation when submitting.</li>
+   </ul>
+
+   <p><strong>Use cases:-</strong></p>
+   <ul>
+    <li>User registration, login, and authentication flows.</li>
+    <li>Uploading resumes, profile photos, and documents via <code>multipart/form-data</code>.</li>
+    <li>Search bars and contact forms.</li>
+   </ul>
+
+   <h2>Complete code for the Form tag section</h2>
+   <pre><code>&lt;header&gt;
+ &lt;h1&gt;Form tag&lt;/h1&gt;
+ &lt;p&gt;Learn tags with description, use cases, and examples&lt;/p&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+ &lt;h2&gt;Form tag ("&amp;lt;form&amp;gt;"....."&amp;lt;/form&amp;gt;") - [Both Opening &amp;amp; Closing tags required]&lt;/h2&gt;
+ &lt;p&gt;
+  &lt;strong&gt; Description:- &lt;/strong&gt; The &amp;lt;form&amp;gt; tag collects user input and submits it to a server.
+ &lt;/p&gt;
+
+ &lt;!-- Form with file upload requiring multipart/form-data --&gt;
+ &lt;form action="/submit-profile" method="POST" enctype="multipart/form-data"&gt;
+  &lt;label for="username"&gt;Username:&lt;/label&gt;
+  &lt;input type="text" id="username" name="username" required /&gt;
+
+  &lt;label for="avatar"&gt;Profile Picture:&lt;/label&gt;
+  &lt;input type="file" id="avatar" name="avatar" required /&gt;
+
+  &lt;button type="submit"&gt;Upload Profile&lt;/button&gt;
+ &lt;/form&gt;
+
+ &lt;h3&gt;Enctype Options:-&lt;/h3&gt;
+ &lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;application/x-www-form-urlencoded :-&lt;/strong&gt; Default text encoding.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;multipart/form-data :-&lt;/strong&gt; Required when uploading files/binary data.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;text/plain :-&lt;/strong&gt; Raw unencoded text.&lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/main&gt;</code></pre>
+        <nav class="page-step-nav">
+        <a href="Footer.html" class="step-btn prev" title="Keyboard Shortcut: Left Arrow">&larr; Previous: &lt;footer&gt; Footer</a>
+        <a href="index.html" class="step-btn home">&#9776; All 60 Tags (Index)</a>
+        <a href="Head.html" class="step-btn next" title="Keyboard Shortcut: Right Arrow">Next: &lt;head&gt; Document Head &rarr;</a>
+      </nav>
+    </main>
+  <footer>
+   <address>
+    Author's name :- kaustubh singh. Instagram:- __kaustubh_singh. Contact Number :- 7000919343;
+   </address>
+   <p>&copy; 2026 Kaustubh's HTML Guide</p>
+  </footer>
+     <script>
+      // Interactive mouse-tracking background spotlight
+      document.addEventListener('mousemove', function (e) {
+        var x = (e.clientX / window.innerWidth) * 100;
+        var y = (e.clientY / window.innerHeight) * 100;
+        document.body.style.setProperty('--mouse-x', x + '%');
+        document.body.style.setProperty('--mouse-y', y + '%');
+      });
+    </script>
+  </body>
+</html>
