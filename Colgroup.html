@@ -1,0 +1,226 @@
+﻿<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="kaustubh singh" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>HTML Tags Cheat Sheet</title>
+  <link rel="stylesheet" href="style.css" />
+  
+    
+    <style>
+      table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px 0;
+   }
+   th, td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: left;
+   }
+    </style>
+     <meta property="og:title" content="HTML Column Group Tag (<colgroup>) - Cheat Sheet" />
+    <meta property="og:description" content="Complete guide to the HTML Column Group tag with live examples, use cases, attributes, and W3C standards." />
+    <meta property="og:type" content="article" />
+    <link rel="prev" href="Col.html" />
+    <link rel="next" href="Data.html" />
+    <script src="app.js" defer></script>
+  </head>
+ <body>
+  <header>
+   <h1>Colgroup tag</h1>
+   <p>Learn tags with description, use cases, and examples</p>
+  </header>
+
+  <main>
+      <nav class="quick-nav">
+        <a href="../index.html" class="home-btn">&larr; All Tags (Index)</a>
+        <div class="nav-selector">
+          <label for="tagJump"><strong>Jump to Tag:</strong></label>
+          <select id="tagJump" onchange="if(this.value) window.location.href=this.value;">
+            <option value="">-- Choose a Tag to Switch --</option>
+            <option value="Abbreviation.html">&lt;abbr&gt; Abbreviation</option>
+            <option value="Address.html">&lt;address&gt; Address</option>
+            <option value="Anchor.html">&lt;a&gt; Anchor</option>
+            <option value="Area.html">&lt;area&gt; Area</option>
+            <option value="Article.html">&lt;article&gt; Article</option>
+            <option value="Aside.html">&lt;aside&gt; Aside</option>
+            <option value="Audio.html">&lt;audio&gt; Audio</option>
+            <option value="Base.html">&lt;base&gt; Base</option>
+            <option value="Bdo.html">&lt;bdo&gt; Bdo</option>
+            <option value="Blockquote.html">&lt;blockquote&gt; Blockquote</option>
+            <option value="Body.html">&lt;body&gt; Body</option>
+            <option value="Br.html">&lt;br&gt; Line Break</option>
+            <option value="Button.html">&lt;button&gt; Button</option>
+            <option value="Caption.html">&lt;caption&gt; Caption</option>
+            <option value="Cite.html">&lt;cite&gt; Citation</option>
+            <option value="Code.html">&lt;code&gt; Code</option>
+            <option value="Col.html">&lt;col&gt; Column</option>
+            <option value="Colgroup.html" selected="selected">&lt;colgroup&gt; Column Group</option>
+            <option value="Data.html">&lt;data&gt; Machine Data</option>
+            <option value="Datalist.html">&lt;datalist&gt; Datalist</option>
+            <option value="Del.html">&lt;del&gt; Deleted Text</option>
+            <option value="DescriptionList.html">&lt;dl&gt; Description List</option>
+            <option value="Details.html">&lt;details&gt; Details & Summary</option>
+            <option value="Dfn.html">&lt;dfn&gt; Definition Term</option>
+            <option value="Dialog.html">&lt;dialog&gt; Dialog Modal</option>
+            <option value="Div.html">&lt;div&gt; Division</option>
+            <option value="Em.html">&lt;em&gt; Emphasis</option>
+            <option value="Embed.html">&lt;embed&gt; Embed Plugin</option>
+            <option value="Fieldset.html">&lt;fieldset&gt; Fieldset & Legend</option>
+            <option value="Figure.html">&lt;figure&gt; Figure & Figcaption</option>
+            <option value="Footer.html">&lt;footer&gt; Footer</option>
+            <option value="Form.html">&lt;form&gt; Form & Enctype</option>
+            <option value="Head.html">&lt;head&gt; Document Head</option>
+            <option value="Header.html">&lt;header&gt; Header</option>
+            <option value="Heading.html">&lt;h1&gt;-&lt;h6&gt; Headings</option>
+            <option value="Hr.html">&lt;hr&gt; Horizontal Rule</option>
+            <option value="Iframe.html">&lt;iframe&gt; Inline Frame</option>
+            <option value="Img.html">&lt;img&gt; Image</option>
+            <option value="Input.html">&lt;input&gt; Input Types</option>
+            <option value="Label.html">&lt;label&gt; Form Label</option>
+            <option value="List.html">&lt;ul&gt;/&lt;ol&gt;/&lt;li&gt; Lists</option>
+            <option value="Main.html">&lt;main&gt; Main Content</option>
+            <option value="Mark.html">&lt;mark&gt; Highlight Mark</option>
+            <option value="Meter.html">&lt;meter&gt; Scalar Meter</option>
+            <option value="Nav.html">&lt;nav&gt; Navigation</option>
+            <option value="Noscript.html">&lt;noscript&gt; Noscript Fallback</option>
+            <option value="Object.html">&lt;object&gt; Embedded Object</option>
+            <option value="Picture.html">&lt;picture&gt; Responsive Picture</option>
+            <option value="Pre.html">&lt;pre&gt; Preformatted Text</option>
+            <option value="Progress.html">&lt;progress&gt; Progress Bar</option>
+            <option value="Ruby.html">&lt;ruby&gt; Ruby Annotations</option>
+            <option value="Script.html">&lt;script&gt; Script</option>
+            <option value="Section.html">&lt;section&gt; Section</option>
+            <option value="Select.html">&lt;select&gt; Select Dropdown</option>
+            <option value="Span.html">&lt;span&gt; Span</option>
+            <option value="Style.html">&lt;style&gt; Style</option>
+            <option value="Subscript.html">&lt;sub&gt;/&lt;sup&gt; Sub & Super</option>
+            <option value="Svg.html">&lt;svg&gt; Vector Graphics</option>
+            <option value="Table.html">&lt;table&gt; Data Table</option>
+            <option value="Video.html">&lt;video&gt; Video Player</option>
+          </select>
+        </div>
+      </nav>
+
+   <h2>Colgroup tag ("&lt;colgroup&gt;"....."&lt;/colgroup&gt;") - [Both Opening &amp; Closing tags required]</h2>
+   <p>
+    <strong>Description:- </strong> The <code>&lt;colgroup&gt;</code> tag is
+    used to specify a group of one or more columns in an HTML table for structural
+    grouping and formatting. It must appear directly inside a <code>&lt;table&gt;</code>,
+    after any <code>&lt;caption&gt;</code> element and before any <code>&lt;thead&gt;</code>,
+    <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code>, or <code>&lt;tr&gt;</code> tags.
+   </p>
+
+   <div class="note-box">
+    <strong>Standards & Modern Usage Note:</strong>
+    <p style="margin: 5px 0 0 0;">
+     A <code>&lt;colgroup&gt;</code> can either hold individual <code>&lt;col&gt;</code>
+     elements or use the <code>span</code> attribute directly on the
+     <code>&lt;colgroup span="2"&gt;</code>. Like <code>&lt;col&gt;</code>, obsolete HTML4
+     alignment attributes (<code>align</code>, <code>valign</code>) have been discontinued
+     in HTML5 in favor of CSS.
+    </p>
+   </div>
+
+   <p>
+    <strong>Example:-</strong> In the table below, columns are grouped into personal details
+    and scores:
+   </p>
+
+   <table>
+    <colgroup span="2" style="background-color: #f3e5f5;"></colgroup>
+    <colgroup style="background-color: #e8f5e9;"></colgroup>
+    <thead>
+     <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Grade</th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>Kaustubh</td>
+      <td>Singh</td>
+      <td>A+</td>
+     </tr>
+     <tr>
+      <td>Rahul</td>
+      <td>Kumar</td>
+      <td>A</td>
+     </tr>
+    </tbody>
+   </table>
+
+   <h3>Attributes:-</h3>
+   <ul>
+    <li>
+     <strong>span :-</strong> Specifies the number of columns in the group (default is 1).
+    </li>
+   </ul>
+
+   <p><strong>Use cases:-</strong></p>
+   <ul>
+    <li>Grouping related data columns visually in financial and performance reports.</li>
+    <li>Applying batch background colors or borders to multiple table columns at once.</li>
+   </ul>
+
+   <h2>Complete code for the Colgroup tag section</h2>
+   <pre><code>&lt;header&gt;
+ &lt;h1&gt;Colgroup tag&lt;/h1&gt;
+ &lt;p&gt;Learn tags with description, use cases, and examples&lt;/p&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+ &lt;h2&gt;Colgroup tag ("&amp;lt;colgroup&amp;gt;"....."&amp;lt;/colgroup&amp;gt;") - [Both Opening &amp;amp; Closing tags required]&lt;/h2&gt;
+ &lt;p&gt;
+  &lt;strong&gt; Description:- &lt;/strong&gt; The &amp;lt;colgroup&amp;gt; tag groups table columns.
+ &lt;/p&gt;
+
+ &lt;table&gt;
+  &lt;colgroup span="2" style="background-color: #f3e5f5;"&gt;&lt;/colgroup&gt;
+  &lt;colgroup style="background-color: #e8f5e9;"&gt;&lt;/colgroup&gt;
+  &lt;tr&gt;
+   &lt;th&gt;First Name&lt;/th&gt;
+   &lt;th&gt;Last Name&lt;/th&gt;
+   &lt;th&gt;Grade&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td&gt;Kaustubh&lt;/td&gt;
+   &lt;td&gt;Singh&lt;/td&gt;
+   &lt;td&gt;A+&lt;/td&gt;
+  &lt;/tr&gt;
+ &lt;/table&gt;
+
+ &lt;h3&gt;Attributes:-&lt;/h3&gt;
+ &lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;span :-&lt;/strong&gt; Number of columns grouped together.&lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/main&gt;</code></pre>
+        <nav class="page-step-nav">
+        <a href="Col.html" class="step-btn prev" title="Keyboard Shortcut: Left Arrow">&larr; Previous: &lt;col&gt; Column</a>
+        <a href="index.html" class="step-btn home">&#9776; All 60 Tags (Index)</a>
+        <a href="Data.html" class="step-btn next" title="Keyboard Shortcut: Right Arrow">Next: &lt;data&gt; Data &rarr;</a>
+      </nav>
+    </main>
+
+  <footer>
+   <address>
+    Author's name :- kaustubh singh. Instagram:- __kaustubh_singh.
+   </address>
+   <p>&copy; 2026 Kaustubh's HTML Guide</p>
+  </footer>
+     <script>
+      // Interactive mouse-tracking background spotlight
+      document.addEventListener('mousemove', function (e) {
+        var x = (e.clientX / window.innerWidth) * 100;
+        var y = (e.clientY / window.innerHeight) * 100;
+        document.body.style.setProperty('--mouse-x', x + '%');
+        document.body.style.setProperty('--mouse-y', y + '%');
+      });
+    </script>
+  </body>
+</html>

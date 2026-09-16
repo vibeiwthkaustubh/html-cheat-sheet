@@ -1,0 +1,244 @@
+﻿<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="kaustubh singh" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Html tags</title>
+  <link rel="stylesheet" href="style.css" />
+     <meta property="og:title" content="HTML Anchor Tag (<a>) - Cheat Sheet" />
+    <meta property="og:description" content="Complete guide to the HTML Anchor tag with live examples, use cases, attributes, and W3C standards." />
+    <meta property="og:type" content="article" />
+    <link rel="prev" href="Address.html" />
+    <link rel="next" href="Area.html" />
+    <script src="app.js" defer></script>
+  </head>
+ <body>
+  <header>
+   <h1>Anchor tag</h1>
+   <p>Learn tags with description, use cases, and examples</p>
+  </header>
+  <main>
+      <nav class="quick-nav">
+        <a href="../index.html" class="home-btn">&larr; All Tags (Index)</a>
+        <div class="nav-selector">
+          <label for="tagJump"><strong>Jump to Tag:</strong></label>
+          <select id="tagJump" onchange="if(this.value) window.location.href=this.value;">
+            <option value="">-- Choose a Tag to Switch --</option>
+            <option value="Abbreviation.html">&lt;abbr&gt; Abbreviation</option>
+            <option value="Address.html">&lt;address&gt; Address</option>
+            <option value="Anchor.html" selected="selected">&lt;a&gt; Anchor</option>
+            <option value="Area.html">&lt;area&gt; Area</option>
+            <option value="Article.html">&lt;article&gt; Article</option>
+            <option value="Aside.html">&lt;aside&gt; Aside</option>
+            <option value="Audio.html">&lt;audio&gt; Audio</option>
+            <option value="Base.html">&lt;base&gt; Base</option>
+            <option value="Bdo.html">&lt;bdo&gt; Bdo</option>
+            <option value="Blockquote.html">&lt;blockquote&gt; Blockquote</option>
+            <option value="Body.html">&lt;body&gt; Body</option>
+            <option value="Br.html">&lt;br&gt; Line Break</option>
+            <option value="Button.html">&lt;button&gt; Button</option>
+            <option value="Caption.html">&lt;caption&gt; Caption</option>
+            <option value="Cite.html">&lt;cite&gt; Citation</option>
+            <option value="Code.html">&lt;code&gt; Code</option>
+            <option value="Col.html">&lt;col&gt; Column</option>
+            <option value="Colgroup.html">&lt;colgroup&gt; Column Group</option>
+            <option value="Data.html">&lt;data&gt; Machine Data</option>
+            <option value="Datalist.html">&lt;datalist&gt; Datalist</option>
+            <option value="Del.html">&lt;del&gt; Deleted Text</option>
+            <option value="DescriptionList.html">&lt;dl&gt; Description List</option>
+            <option value="Details.html">&lt;details&gt; Details & Summary</option>
+            <option value="Dfn.html">&lt;dfn&gt; Definition Term</option>
+            <option value="Dialog.html">&lt;dialog&gt; Dialog Modal</option>
+            <option value="Div.html">&lt;div&gt; Division</option>
+            <option value="Em.html">&lt;em&gt; Emphasis</option>
+            <option value="Embed.html">&lt;embed&gt; Embed Plugin</option>
+            <option value="Fieldset.html">&lt;fieldset&gt; Fieldset & Legend</option>
+            <option value="Figure.html">&lt;figure&gt; Figure & Figcaption</option>
+            <option value="Footer.html">&lt;footer&gt; Footer</option>
+            <option value="Form.html">&lt;form&gt; Form & Enctype</option>
+            <option value="Head.html">&lt;head&gt; Document Head</option>
+            <option value="Header.html">&lt;header&gt; Header</option>
+            <option value="Heading.html">&lt;h1&gt;-&lt;h6&gt; Headings</option>
+            <option value="Hr.html">&lt;hr&gt; Horizontal Rule</option>
+            <option value="Iframe.html">&lt;iframe&gt; Inline Frame</option>
+            <option value="Img.html">&lt;img&gt; Image</option>
+            <option value="Input.html">&lt;input&gt; Input Types</option>
+            <option value="Label.html">&lt;label&gt; Form Label</option>
+            <option value="List.html">&lt;ul&gt;/&lt;ol&gt;/&lt;li&gt; Lists</option>
+            <option value="Main.html">&lt;main&gt; Main Content</option>
+            <option value="Mark.html">&lt;mark&gt; Highlight Mark</option>
+            <option value="Meter.html">&lt;meter&gt; Scalar Meter</option>
+            <option value="Nav.html">&lt;nav&gt; Navigation</option>
+            <option value="Noscript.html">&lt;noscript&gt; Noscript Fallback</option>
+            <option value="Object.html">&lt;object&gt; Embedded Object</option>
+            <option value="Picture.html">&lt;picture&gt; Responsive Picture</option>
+            <option value="Pre.html">&lt;pre&gt; Preformatted Text</option>
+            <option value="Progress.html">&lt;progress&gt; Progress Bar</option>
+            <option value="Ruby.html">&lt;ruby&gt; Ruby Annotations</option>
+            <option value="Script.html">&lt;script&gt; Script</option>
+            <option value="Section.html">&lt;section&gt; Section</option>
+            <option value="Select.html">&lt;select&gt; Select Dropdown</option>
+            <option value="Span.html">&lt;span&gt; Span</option>
+            <option value="Style.html">&lt;style&gt; Style</option>
+            <option value="Subscript.html">&lt;sub&gt;/&lt;sup&gt; Sub & Super</option>
+            <option value="Svg.html">&lt;svg&gt; Vector Graphics</option>
+            <option value="Table.html">&lt;table&gt; Data Table</option>
+            <option value="Video.html">&lt;video&gt; Video Player</option>
+          </select>
+        </div>
+      </nav>
+
+   <section id="Anchortag">
+    <!-- Anchor Tag Section -->
+    <h2>1.Anchor Tag ("&lt;a&gt;"....."&lt;/a&gt;") - [Both Opening &amp; Closing tags required]</h2>
+    <p>
+     <strong>Description:-</strong> It is used to create the hyperlinks. If
+     you wish to add an external link in a web page you can use anchor tag
+     to do so.
+    </p>
+    <p>
+     <strong
+      ><a
+       href="https://www.geeksforgeeks.org/html/html-a-tag/"
+       target="_blank"
+       title="This box will appear with the help of the Title attribute and the text inside is the value given to the title attribute"
+       >Example:-</a
+      ></strong
+     >
+     If you will click on the Example you will go to the geekforgeeks
+     wesites anchor tag page.
+    </p>
+    <h3>Attributes:-</h3>
+    <ol>
+     <li>
+      Target :- It tells the browser whether to open the link in the same
+      tab, a new tab, or in a specific frame/iframe.
+      <ul>
+       <u>Values and their use case :-</u>
+       <li>_Blank :- Opens the link in a new tab/window</li>
+       <li>_self (Default) :- Opens the link in the same tab/window</li>
+       <li>
+        _parent :- Opens the link in the full window, breaking out of
+        all frames
+       </li>
+       <li>_top :- Opens the link in a specific named frame/iframe</li>
+      </ul>
+     </li>
+
+     <li>
+      Title :- One can put a value which will will appear while hovering
+      the mouse on the link. For example hover the mouse on the Example
+      link
+     </li>
+
+     <li>
+      Download :- The download attribute in the anchor tag is used to tell
+      the browser: "Instead of opening this link, download the file."
+
+      <ul>
+       <li>
+        The value inside this will be the name for the file that will be
+        shown after downloading.
+       </li>
+      </ul>
+     </li>
+    </ol>
+    <p><strong>Use case :-</strong></p>
+    <ul>
+     <li>Linking to another webpage</li>
+     <li>Linking to a section within the same page (internal link)</li>
+     <li>Linking to an email address</li>
+     <li>Linking to a phone number (mobile-friendly)</li>
+     <li>Downloading a file directly</li>
+    </ul>
+
+    <h2>Complete code of the Anchor tag section</h2>
+    <pre><code>&lt;section id="Anchortag"&gt;
+    &lt;!-- Anchor Tag Section --&gt;
+    &lt;h2&gt;1.Anchor Tag ("&amp;lt;a&amp;gt;"....."&amp;lt;/a&amp;gt;")&lt;/h2&gt;
+    &lt;p&gt;
+     &lt;strong&gt;Description:-&lt;/strong&gt; It is used to create the hyperlinks. If
+     you wish to add an external link in a web page you can use anchor tag
+     to do so.
+    &lt;/p&gt;
+    &lt;p&gt;
+     &lt;strong
+      &gt;&lt;a
+       href="https://www.geeksforgeeks.org/html/html-a-tag/"
+       target="_blank"
+       title="This box will appear with the help of the Title attribute and the text inside is the value given to the title attribute"
+       &gt;Example:-&lt;/a
+      &gt;&lt;/strong
+     &gt;
+     If you will click on the Example you will go to the geekforgeeks
+     wesites anchor tag page.
+    &lt;/p&gt;
+    &lt;h3&gt;Attributes:-&lt;/h3&gt;
+    &lt;ol&gt;
+     &lt;li&gt;
+      &lt;u
+       &gt;Target :- It tells the browser whether to open the link in the
+       same tab, a new tab, or in a specific frame/iframe.&lt;/u
+      &gt;
+      &lt;ul&gt;
+       &lt;u&gt;Values and their use case :-&lt;/u&gt;
+       &lt;li&gt;_Blank :- Opens the link in a new tab/window&lt;/li&gt;
+       &lt;li&gt;_self (Default) :- Opens the link in the same tab/window&lt;/li&gt;
+       &lt;li&gt;
+        _parent :- Opens the link in the full window, breaking out of
+        all frames
+       &lt;/li&gt;
+       &lt;li&gt;_top :- Opens the link in a specific named frame/iframe&lt;/li&gt;
+      &lt;/ul&gt;
+     &lt;/li&gt;
+
+     &lt;li margin-bottom: 10px;&gt;
+      &lt;u&gt;
+       Title :- One can put a value which will will appear while hovering
+       the mouse on the link. For example hover the mouse on the Example
+       link
+      &lt;/u&gt;
+     &lt;/li&gt;
+
+     &lt;li&gt;
+      &lt;u
+       &gt;Download :- The download attribute in the anchor tag is used to
+       tell the browser: "Instead of opening this link, download the
+       file."
+      &lt;/u&gt;
+      &lt;ul&gt;
+       &lt;li&gt;
+        The value inside this will be the name for the file that will be
+        shown after downloading.
+       &lt;/li&gt;
+      &lt;/ul&gt;
+     &lt;/li&gt;
+    &lt;/ol&gt;
+
+    </code></pre>
+   </section>
+        <nav class="page-step-nav">
+        <a href="Address.html" class="step-btn prev" title="Keyboard Shortcut: Left Arrow">&larr; Previous: &lt;address&gt; Address</a>
+        <a href="index.html" class="step-btn home">&#9776; All 60 Tags (Index)</a>
+        <a href="Area.html" class="step-btn next" title="Keyboard Shortcut: Right Arrow">Next: &lt;area&gt; Area &rarr;</a>
+      </nav>
+    </main>
+  <footer>
+   <address>
+    Author's name :- kaustubh singh. Instagram:- __kaustubh_singh.
+   </address>
+   <p>&copy; 2026 Kaustubh's HTML Guide</p>
+  </footer>
+     <script>
+      // Interactive mouse-tracking background spotlight
+      document.addEventListener('mousemove', function (e) {
+        var x = (e.clientX / window.innerWidth) * 100;
+        var y = (e.clientY / window.innerHeight) * 100;
+        document.body.style.setProperty('--mouse-x', x + '%');
+        document.body.style.setProperty('--mouse-y', y + '%');
+      });
+    </script>
+  </body>
+</html>

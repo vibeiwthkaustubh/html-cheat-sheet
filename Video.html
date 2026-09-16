@@ -1,0 +1,178 @@
+﻿<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="kaustubh singh" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>HTML Tags Cheat Sheet</title>
+  <link rel="stylesheet" href="style.css" />
+  
+    
+    <style>
+      video { width: 100%; max-width: 480px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); margin: 20px 0; display: block; }
+    </style>
+     <meta property="og:title" content="HTML Video Tag (<video>) - Cheat Sheet" />
+    <meta property="og:description" content="Complete guide to the HTML Video tag with live examples, use cases, attributes, and W3C standards." />
+    <meta property="og:type" content="article" />
+    <link rel="prev" href="Table.html" />
+    <link rel="next" href="Abbreviation.html" />
+    <script src="app.js" defer></script>
+  </head>
+ <body>
+  <header>
+   <h1>Video tag</h1>
+   <p>Learn tags with description, use cases, and examples</p>
+  </header>
+  <main>
+      <nav class="quick-nav">
+        <a href="../index.html" class="home-btn">&larr; All Tags (Index)</a>
+        <div class="nav-selector">
+          <label for="tagJump"><strong>Jump to Tag:</strong></label>
+          <select id="tagJump" onchange="if(this.value) window.location.href=this.value;">
+            <option value="">-- Choose a Tag to Switch --</option>
+            <option value="Abbreviation.html">&lt;abbr&gt; Abbreviation</option>
+            <option value="Address.html">&lt;address&gt; Address</option>
+            <option value="Anchor.html">&lt;a&gt; Anchor</option>
+            <option value="Area.html">&lt;area&gt; Area</option>
+            <option value="Article.html">&lt;article&gt; Article</option>
+            <option value="Aside.html">&lt;aside&gt; Aside</option>
+            <option value="Audio.html">&lt;audio&gt; Audio</option>
+            <option value="Base.html">&lt;base&gt; Base</option>
+            <option value="Bdo.html">&lt;bdo&gt; Bdo</option>
+            <option value="Blockquote.html">&lt;blockquote&gt; Blockquote</option>
+            <option value="Body.html">&lt;body&gt; Body</option>
+            <option value="Br.html">&lt;br&gt; Line Break</option>
+            <option value="Button.html">&lt;button&gt; Button</option>
+            <option value="Caption.html">&lt;caption&gt; Caption</option>
+            <option value="Cite.html">&lt;cite&gt; Citation</option>
+            <option value="Code.html">&lt;code&gt; Code</option>
+            <option value="Col.html">&lt;col&gt; Column</option>
+            <option value="Colgroup.html">&lt;colgroup&gt; Column Group</option>
+            <option value="Data.html">&lt;data&gt; Machine Data</option>
+            <option value="Datalist.html">&lt;datalist&gt; Datalist</option>
+            <option value="Del.html">&lt;del&gt; Deleted Text</option>
+            <option value="DescriptionList.html">&lt;dl&gt; Description List</option>
+            <option value="Details.html">&lt;details&gt; Details & Summary</option>
+            <option value="Dfn.html">&lt;dfn&gt; Definition Term</option>
+            <option value="Dialog.html">&lt;dialog&gt; Dialog Modal</option>
+            <option value="Div.html">&lt;div&gt; Division</option>
+            <option value="Em.html">&lt;em&gt; Emphasis</option>
+            <option value="Embed.html">&lt;embed&gt; Embed Plugin</option>
+            <option value="Fieldset.html">&lt;fieldset&gt; Fieldset & Legend</option>
+            <option value="Figure.html">&lt;figure&gt; Figure & Figcaption</option>
+            <option value="Footer.html">&lt;footer&gt; Footer</option>
+            <option value="Form.html">&lt;form&gt; Form & Enctype</option>
+            <option value="Head.html">&lt;head&gt; Document Head</option>
+            <option value="Header.html">&lt;header&gt; Header</option>
+            <option value="Heading.html">&lt;h1&gt;-&lt;h6&gt; Headings</option>
+            <option value="Hr.html">&lt;hr&gt; Horizontal Rule</option>
+            <option value="Iframe.html">&lt;iframe&gt; Inline Frame</option>
+            <option value="Img.html">&lt;img&gt; Image</option>
+            <option value="Input.html">&lt;input&gt; Input Types</option>
+            <option value="Label.html">&lt;label&gt; Form Label</option>
+            <option value="List.html">&lt;ul&gt;/&lt;ol&gt;/&lt;li&gt; Lists</option>
+            <option value="Main.html">&lt;main&gt; Main Content</option>
+            <option value="Mark.html">&lt;mark&gt; Highlight Mark</option>
+            <option value="Meter.html">&lt;meter&gt; Scalar Meter</option>
+            <option value="Nav.html">&lt;nav&gt; Navigation</option>
+            <option value="Noscript.html">&lt;noscript&gt; Noscript Fallback</option>
+            <option value="Object.html">&lt;object&gt; Embedded Object</option>
+            <option value="Picture.html">&lt;picture&gt; Responsive Picture</option>
+            <option value="Pre.html">&lt;pre&gt; Preformatted Text</option>
+            <option value="Progress.html">&lt;progress&gt; Progress Bar</option>
+            <option value="Ruby.html">&lt;ruby&gt; Ruby Annotations</option>
+            <option value="Script.html">&lt;script&gt; Script</option>
+            <option value="Section.html">&lt;section&gt; Section</option>
+            <option value="Select.html">&lt;select&gt; Select Dropdown</option>
+            <option value="Span.html">&lt;span&gt; Span</option>
+            <option value="Style.html">&lt;style&gt; Style</option>
+            <option value="Subscript.html">&lt;sub&gt;/&lt;sup&gt; Sub & Super</option>
+            <option value="Svg.html">&lt;svg&gt; Vector Graphics</option>
+            <option value="Table.html">&lt;table&gt; Data Table</option>
+            <option value="Video.html" selected="selected">&lt;video&gt; Video Player</option>
+          </select>
+        </div>
+      </nav>
+
+   <h2>Video tag ("&lt;video&gt;"....."&lt;/video&gt;") - [Both Opening &amp; Closing tags required]</h2>
+   <p>
+    <strong>Description:- </strong> The <code>&lt;video&gt;</code> tag is used to embed video content
+    into an HTML document, such as movie clips, tutorials, or promotional reels. Introduced in HTML5,
+    it eliminated the historical need for proprietary Flash plugins.
+   </p>
+
+   <div class="note-box">
+    <strong>Autoplay Policies & Accessibility Tracks:</strong>
+    <p style="margin: 5px 0 0 0;">
+     &bull; <strong>Autoplay Rule:</strong> Modern browsers block videos with <code>autoplay</code> unless the <code>muted</code> attribute is also present (e.g. <code>&lt;video autoplay muted loop&gt;</code>).
+     <br />&bull; <strong>Subtitles & Captions (&lt;track&gt;):</strong> Always use nested <code>&lt;track kind="subtitles"&gt;</code> or <code>&lt;track kind="captions"&gt;</code> for deaf and hard-of-hearing accessibility!
+     <br />&bull; <strong>Multiple Formats:</strong> Use nested <code>&lt;source&gt;</code> elements (MP4, WebM) for cross-browser playback.
+    </p>
+   </div>
+
+   <p><strong>Example:-</strong> Video player with poster thumbnail and controls:</p>
+
+   <video controls poster="The Avengers.jpg">
+    <source src="sample.mp4" type="video/mp4" />
+    <source src="sample.webm" type="video/webm" />
+    Your browser does not support the video tag.
+   </video>
+
+   <h3>Key Attributes:-</h3>
+   <ul>
+    <li><strong>controls :-</strong> Displays built-in browser play/pause/volume controls.</li>
+    <li><strong>poster :-</strong> URL of an image thumbnail shown while the video downloads or before playback begins.</li>
+    <li><strong>autoplay &amp; muted :-</strong> Automatically plays video (must be muted).</li>
+    <li><strong>loop :-</strong> Restarts video automatically upon reaching the end.</li>
+    <li><strong>preload :-</strong> Hints how much to pre-buffer (<code>none</code>, <code>metadata</code>, <code>auto</code>).</li>
+   </ul>
+
+   <p><strong>Use cases:-</strong></p>
+   <ul>
+    <li>Hero section background video banners (using <code>autoplay muted loop</code>).</li>
+    <li>Product demonstration videos and e-learning lectures.</li>
+   </ul>
+
+   <h2>Complete code for the Video tag section</h2>
+   <pre><code>&lt;header&gt;
+ &lt;h1&gt;Video tag&lt;/h1&gt;
+ &lt;p&gt;Learn tags with description, use cases, and examples&lt;/p&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+ &lt;h2&gt;Video tag ("&amp;lt;video&amp;gt;"....."&amp;lt;/video&amp;gt;") - [Both Opening &amp;amp; Closing tags required]&lt;/h2&gt;
+ &lt;p&gt;
+  &lt;strong&gt; Description:- &lt;/strong&gt; Embeds video content.
+ &lt;/p&gt;
+
+ &lt;video controls poster="poster.jpg" width="640" height="360"&gt;
+  &lt;source src="movie.mp4" type="video/mp4" /&gt;
+  &lt;source src="movie.webm" type="video/webm" /&gt;
+  &lt;track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English" /&gt;
+  Your browser does not support the video tag.
+ &lt;/video&gt;
+&lt;/main&gt;</code></pre>
+        <nav class="page-step-nav">
+        <a href="Table.html" class="step-btn prev" title="Keyboard Shortcut: Left Arrow">&larr; Previous: &lt;table&gt; Table</a>
+        <a href="index.html" class="step-btn home">&#9776; All 60 Tags (Index)</a>
+        <a href="Abbreviation.html" class="step-btn next" title="Keyboard Shortcut: Right Arrow">Next: &lt;abbr&gt; Abbreviation &rarr;</a>
+      </nav>
+    </main>
+  <footer>
+   <address>
+    Author's name :- kaustubh singh. Instagram:- __kaustubh_singh.
+   </address>
+   <p>&copy; 2026 Kaustubh's HTML Guide</p>
+  </footer>
+     <script>
+      // Interactive mouse-tracking background spotlight
+      document.addEventListener('mousemove', function (e) {
+        var x = (e.clientX / window.innerWidth) * 100;
+        var y = (e.clientY / window.innerHeight) * 100;
+        document.body.style.setProperty('--mouse-x', x + '%');
+        document.body.style.setProperty('--mouse-y', y + '%');
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,364 @@
+﻿<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="kaustubh singh" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>HTML Tags Cheat Sheet</title>
+  <link rel="stylesheet" href="style.css" />
+  
+    
+    <style>
+      .btn-demo {
+    display: inline-block;
+    padding: 9px 18px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 8px;
+    margin-top: 5px;
+    transition: background 0.2s ease, transform 0.1s ease;
+   }
+   .btn-primary {
+    background-color: #007bff;
+    color: white;
+   }
+   .btn-primary:hover {
+    background-color: #0056b3;
+   }
+   .btn-danger {
+    background-color: #dc3545;
+    color: white;
+   }
+   .btn-danger:hover {
+    background-color: #c82333;
+   }
+   .btn-success {
+    background-color: #28a745;
+    color: white;
+   }
+   .btn-success:hover {
+    background-color: #218838;
+   }
+   .btn-disabled {
+    background-color: #e0e0e0;
+    color: #888;
+    cursor: not-allowed;
+   }
+   .form-box {
+    background: #fdfdfd;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 480px;
+    margin: 20px 0;
+   }
+   .form-group {
+    margin-bottom: 15px;
+   }
+   .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #444;
+   }
+   .form-group input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+   }
+   
+   kbd {
+    background: #eee;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 2px 6px;
+    font-family: monospace;
+    font-size: 13px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+   }
+    </style>
+     <meta property="og:title" content="HTML Button Tag (<button>) - Cheat Sheet" />
+    <meta property="og:description" content="Complete guide to the HTML Button tag with live examples, use cases, attributes, and W3C standards." />
+    <meta property="og:type" content="article" />
+    <link rel="prev" href="Br.html" />
+    <link rel="next" href="Caption.html" />
+    <script src="app.js" defer></script>
+  </head>
+ <body>
+  <header>
+   <h1>Button tag</h1>
+   <p>Learn tags with description, use cases, and examples</p>
+  </header>
+
+  <main>
+      <nav class="quick-nav">
+        <a href="../index.html" class="home-btn">&larr; All Tags (Index)</a>
+        <div class="nav-selector">
+          <label for="tagJump"><strong>Jump to Tag:</strong></label>
+          <select id="tagJump" onchange="if(this.value) window.location.href=this.value;">
+            <option value="">-- Choose a Tag to Switch --</option>
+            <option value="Abbreviation.html">&lt;abbr&gt; Abbreviation</option>
+            <option value="Address.html">&lt;address&gt; Address</option>
+            <option value="Anchor.html">&lt;a&gt; Anchor</option>
+            <option value="Area.html">&lt;area&gt; Area</option>
+            <option value="Article.html">&lt;article&gt; Article</option>
+            <option value="Aside.html">&lt;aside&gt; Aside</option>
+            <option value="Audio.html">&lt;audio&gt; Audio</option>
+            <option value="Base.html">&lt;base&gt; Base</option>
+            <option value="Bdo.html">&lt;bdo&gt; Bdo</option>
+            <option value="Blockquote.html">&lt;blockquote&gt; Blockquote</option>
+            <option value="Body.html">&lt;body&gt; Body</option>
+            <option value="Br.html">&lt;br&gt; Line Break</option>
+            <option value="Button.html" selected="selected">&lt;button&gt; Button</option>
+            <option value="Caption.html">&lt;caption&gt; Caption</option>
+            <option value="Cite.html">&lt;cite&gt; Citation</option>
+            <option value="Code.html">&lt;code&gt; Code</option>
+            <option value="Col.html">&lt;col&gt; Column</option>
+            <option value="Colgroup.html">&lt;colgroup&gt; Column Group</option>
+            <option value="Data.html">&lt;data&gt; Machine Data</option>
+            <option value="Datalist.html">&lt;datalist&gt; Datalist</option>
+            <option value="Del.html">&lt;del&gt; Deleted Text</option>
+            <option value="DescriptionList.html">&lt;dl&gt; Description List</option>
+            <option value="Details.html">&lt;details&gt; Details & Summary</option>
+            <option value="Dfn.html">&lt;dfn&gt; Definition Term</option>
+            <option value="Dialog.html">&lt;dialog&gt; Dialog Modal</option>
+            <option value="Div.html">&lt;div&gt; Division</option>
+            <option value="Em.html">&lt;em&gt; Emphasis</option>
+            <option value="Embed.html">&lt;embed&gt; Embed Plugin</option>
+            <option value="Fieldset.html">&lt;fieldset&gt; Fieldset & Legend</option>
+            <option value="Figure.html">&lt;figure&gt; Figure & Figcaption</option>
+            <option value="Footer.html">&lt;footer&gt; Footer</option>
+            <option value="Form.html">&lt;form&gt; Form & Enctype</option>
+            <option value="Head.html">&lt;head&gt; Document Head</option>
+            <option value="Header.html">&lt;header&gt; Header</option>
+            <option value="Heading.html">&lt;h1&gt;-&lt;h6&gt; Headings</option>
+            <option value="Hr.html">&lt;hr&gt; Horizontal Rule</option>
+            <option value="Iframe.html">&lt;iframe&gt; Inline Frame</option>
+            <option value="Img.html">&lt;img&gt; Image</option>
+            <option value="Input.html">&lt;input&gt; Input Types</option>
+            <option value="Label.html">&lt;label&gt; Form Label</option>
+            <option value="List.html">&lt;ul&gt;/&lt;ol&gt;/&lt;li&gt; Lists</option>
+            <option value="Main.html">&lt;main&gt; Main Content</option>
+            <option value="Mark.html">&lt;mark&gt; Highlight Mark</option>
+            <option value="Meter.html">&lt;meter&gt; Scalar Meter</option>
+            <option value="Nav.html">&lt;nav&gt; Navigation</option>
+            <option value="Noscript.html">&lt;noscript&gt; Noscript Fallback</option>
+            <option value="Object.html">&lt;object&gt; Embedded Object</option>
+            <option value="Picture.html">&lt;picture&gt; Responsive Picture</option>
+            <option value="Pre.html">&lt;pre&gt; Preformatted Text</option>
+            <option value="Progress.html">&lt;progress&gt; Progress Bar</option>
+            <option value="Ruby.html">&lt;ruby&gt; Ruby Annotations</option>
+            <option value="Script.html">&lt;script&gt; Script</option>
+            <option value="Section.html">&lt;section&gt; Section</option>
+            <option value="Select.html">&lt;select&gt; Select Dropdown</option>
+            <option value="Span.html">&lt;span&gt; Span</option>
+            <option value="Style.html">&lt;style&gt; Style</option>
+            <option value="Subscript.html">&lt;sub&gt;/&lt;sup&gt; Sub & Super</option>
+            <option value="Svg.html">&lt;svg&gt; Vector Graphics</option>
+            <option value="Table.html">&lt;table&gt; Data Table</option>
+            <option value="Video.html">&lt;video&gt; Video Player</option>
+          </select>
+        </div>
+      </nav>
+
+   <h2>Button tag ("&lt;button&gt;"....."&lt;/button&gt;") - [Both Opening &amp; Closing tags required]</h2>
+   <p>
+    <strong>Description:- </strong> The <code>&lt;button&gt;</code> tag defines
+    an interactive, clickable button. Unlike older input buttons, the
+    <code>&lt;button&gt;</code> element can contain rich content inside it, such
+    as text, icons, images, or formatted HTML elements.
+   </p>
+
+   <!-- Standards & Modern Alternatives Note -->
+   <div class="note-box">
+    <strong>Keyboard Shortcuts & Accessibility Best Practices:</strong>
+    <ul style="margin: 5px 0 0 0; padding-left: 20px;">
+     <li>
+      <strong>Native <kbd>Enter</kbd> Submission:</strong> When typing inside any
+      input field in a form, hitting the <kbd>Enter</kbd> key automatically submits
+      the form by activating the first <code>&lt;button type="submit"&gt;</code>
+      (known as <em>Implicit Submission</em> in HTML).
+     </li>
+     <li>
+      <strong>The <code>accesskey</code> Attribute:</strong> You can assign a custom
+      keyboard shortcut using the <code>accesskey</code> attribute (e.g.
+      <code>accesskey="s"</code> for Submit and <code>accesskey="r"</code> for Reset).
+      On Windows browsers, press <kbd>Alt</kbd> + <kbd>s</kbd> (or <kbd>Alt</kbd> +
+      <kbd>Shift</kbd> + <kbd>s</kbd> in Chrome) to trigger that button directly.
+     </li>
+     <li>
+      <strong>Why <kbd>Enter</kbd> itself cannot be an <code>accesskey</code> value:</strong>
+      The HTML specification specifies that <code>accesskey</code> only takes single
+      characters/letters (like <code>s</code>, <code>r</code>, <code>1</code>). Special
+      keys like <kbd>Enter</kbd> are handled natively by the browser for forms!
+     </li>
+    </ul>
+   </div>
+
+   <p>
+    <strong>Example:-</strong> Fill in some information in the form below.
+    You can press <kbd>Enter</kbd> to submit, click <strong>" Reset Form"</strong>,
+    or use <kbd>Alt</kbd>+<kbd>R</kbd> (shortcut):
+   </p>
+
+   <!-- Interactive Form with Submit, Reset, and Regular Buttons -->
+   <div class="form-box">
+    <form id="studentForm" onsubmit="event.preventDefault(); alert('Form submitted successfully!');">
+     <div class="form-group">
+      <label for="userName">Student Name:</label>
+      <input type="text" id="userName" name="userName" placeholder="Enter your full name..." required />
+     </div>
+
+     <div class="form-group">
+      <label for="userEmail">Email Address:</label>
+      <input type="email" id="userEmail" name="userEmail" placeholder="Enter your email..." required />
+     </div>
+
+     <div class="form-group">
+      <label for="courseName">Course / Subject:</label>
+      <input type="text" id="courseName" name="courseName" placeholder="e.g. Web Development" />
+     </div>
+
+     <!-- Submit Button (triggers on Enter or Alt+S) -->
+     <button
+      type="submit"
+      class="btn-demo btn-primary"
+      accesskey="s"
+      title="Press Enter or Alt+S"
+     >
+       <u>S</u>ubmit Form
+     </button>
+
+     <!-- Reset Button (triggers on Alt+R) -->
+     <button
+      type="reset"
+      class="btn-demo btn-danger"
+      accesskey="r"
+      title="Press Alt+R"
+     >
+       <u>R</u>eset Form
+     </button>
+
+     <!-- General Button -->
+     <button
+      type="button"
+      class="btn-demo btn-success"
+      accesskey="i"
+      title="Press Alt+I"
+      onclick="alert('Hello Kaustubh! This is a type=button event.')"
+     >
+       <u>I</u>nfo
+     </button>
+    </form>
+   </div>
+
+   <h3>Attributes:-</h3>
+   <ul>
+    <li>
+     <strong>type :-</strong> Specifies the button behavior:
+     <ul>
+      <li><code>submit</code>: Submits form data to the server (default behavior inside forms; triggered natively by the <kbd>Enter</kbd> key).</li>
+      <li><code>reset</code>: Resets all controls in the form back to their initial values.</li>
+      <li><code>button</code>: General clickable button with no default behavior (ideal for JavaScript).</li>
+     </ul>
+    </li>
+    <li>
+     <strong>accesskey :-</strong> Assigns a shortcut key to activate or focus the button (e.g. <code>accesskey="s"</code> activated via <kbd>Alt</kbd>+<kbd>S</kbd>).
+    </li>
+    <li>
+     <strong>disabled :-</strong> Disables the button, preventing click events and keyboard focus.
+    </li>
+    <li>
+     <strong>name &amp; value :-</strong> The name and value submitted with the form when clicked.
+    </li>
+    <li>
+     <strong>form :-</strong> Associates the button with a specific <code>&lt;form&gt;</code> ID, even if placed outside the form tags.
+    </li>
+   </ul>
+
+   <p><strong>Use cases:-</strong></p>
+   <ul>
+    <li>Submitting forms securely to backend servers.</li>
+    <li>Resetting complex multi-field forms with a single click or shortcut.</li>
+    <li>Enabling keyboard accessibility for power users with <code>accesskey</code>.</li>
+    <li>Opening modals, popups, dropdown menus, and navigation drawers.</li>
+   </ul>
+
+   <h2>Complete code for the Button tag section</h2>
+   <pre><code>&lt;header&gt;
+ &lt;h1&gt;Button tag&lt;/h1&gt;
+ &lt;p&gt;Learn tags with description, use cases, and examples&lt;/p&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+ &lt;h2&gt;Button tag ("&amp;lt;button&amp;gt;"....."&amp;lt;/button&amp;gt;")&lt;/h2&gt;
+ &lt;p&gt;
+  &lt;strong&gt; Description:- &lt;/strong&gt; The &amp;lt;button&amp;gt; tag defines an
+  interactive button that can contain text, icons, and HTML formatting.
+ &lt;/p&gt;
+
+ &lt;p&gt;&lt;strong&gt;Example Form with Reset Button &amp; Accesskeys:-&lt;/strong&gt;&lt;/p&gt;
+
+ &lt;!-- Form demonstration with submit, reset, and accesskeys --&gt;
+ &lt;form action="/submit-data" method="POST"&gt;
+  &lt;label for="name"&gt;Full Name:&lt;/label&gt;
+  &lt;input type="text" id="name" name="name" required /&gt;
+
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email" required /&gt;
+
+  &lt;!-- Submit Button: Triggers natively on Enter key, or via Alt+S --&gt;
+  &lt;button type="submit" accesskey="s"&gt; Submit Form (Alt+S)&lt;/button&gt;
+
+  &lt;!-- Reset Button: Clears fields, triggers via Alt+R --&gt;
+  &lt;button type="reset" accesskey="r"&gt; Reset Form (Alt+R)&lt;/button&gt;
+
+  &lt;!-- General Button: Triggers via Alt+I --&gt;
+  &lt;button type="button" accesskey="i" onclick="alert('Hello!')"&gt; Info (Alt+I)&lt;/button&gt;
+ &lt;/form&gt;
+
+ &lt;h3&gt;Attributes:-&lt;/h3&gt;
+ &lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;type="submit" :-&lt;/strong&gt; Submits form (triggers on Enter).&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;type="reset" :-&lt;/strong&gt; Restores form fields to initial values.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;accesskey :-&lt;/strong&gt; Specifies a keyboard shortcut key (e.g. "s", "r").&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;disabled :-&lt;/strong&gt; Disables the button.&lt;/li&gt;
+ &lt;/ul&gt;
+
+ &lt;p&gt;&lt;strong&gt;Use cases:-&lt;/strong&gt;&lt;/p&gt;
+ &lt;ul&gt;
+  &lt;li&gt;Submitting and resetting user forms.&lt;/li&gt;
+  &lt;li&gt;Fast keyboard accessibility shortcuts using accesskeys.&lt;/li&gt;
+  &lt;li&gt;Interactive UI controls.&lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/main&gt;</code></pre>
+        <nav class="page-step-nav">
+        <a href="Br.html" class="step-btn prev" title="Keyboard Shortcut: Left Arrow">&larr; Previous: &lt;br&gt; Line Break</a>
+        <a href="index.html" class="step-btn home">&#9776; All 60 Tags (Index)</a>
+        <a href="Caption.html" class="step-btn next" title="Keyboard Shortcut: Right Arrow">Next: &lt;caption&gt; Caption &rarr;</a>
+      </nav>
+    </main>
+
+  <footer>
+   <address>
+    Author's name :- kaustubh singh. Instagram:- __kaustubh_singh.
+   </address>
+   <p>&copy; 2026 Kaustubh's HTML Guide</p>
+  </footer>
+     <script>
+      // Interactive mouse-tracking background spotlight
+      document.addEventListener('mousemove', function (e) {
+        var x = (e.clientX / window.innerWidth) * 100;
+        var y = (e.clientY / window.innerHeight) * 100;
+        document.body.style.setProperty('--mouse-x', x + '%');
+        document.body.style.setProperty('--mouse-y', y + '%');
+      });
+    </script>
+  </body>
+</html>

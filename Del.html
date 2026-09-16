@@ -1,0 +1,187 @@
+﻿<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="kaustubh singh" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>HTML Tags Cheat Sheet</title>
+  <link rel="stylesheet" href="style.css" />
+  
+    
+    <style>
+      .demo-box { background: #f9f9f9; border-left: 4px solid #f44336; padding: 15px 20px; margin: 20px 0; border-radius: 4px; }
+   
+   del { color: #d32f2f; background: #ffebee; padding: 2px 4px; }
+   ins { color: #2e7d32; background: #e8f5e9; padding: 2px 4px; text-decoration: underline; font-weight: bold; }
+    </style>
+     <meta property="og:title" content="HTML Deleted Text Tag (<del>) - Cheat Sheet" />
+    <meta property="og:description" content="Complete guide to the HTML Deleted Text tag with live examples, use cases, attributes, and W3C standards." />
+    <meta property="og:type" content="article" />
+    <link rel="prev" href="Datalist.html" />
+    <link rel="next" href="DescriptionList.html" />
+    <script src="app.js" defer></script>
+  </head>
+ <body>
+  <header>
+   <h1>Del tag</h1>
+   <p>Learn tags with description, use cases, and examples</p>
+  </header>
+  <main>
+      <nav class="quick-nav">
+        <a href="../index.html" class="home-btn">&larr; All Tags (Index)</a>
+        <div class="nav-selector">
+          <label for="tagJump"><strong>Jump to Tag:</strong></label>
+          <select id="tagJump" onchange="if(this.value) window.location.href=this.value;">
+            <option value="">-- Choose a Tag to Switch --</option>
+            <option value="Abbreviation.html">&lt;abbr&gt; Abbreviation</option>
+            <option value="Address.html">&lt;address&gt; Address</option>
+            <option value="Anchor.html">&lt;a&gt; Anchor</option>
+            <option value="Area.html">&lt;area&gt; Area</option>
+            <option value="Article.html">&lt;article&gt; Article</option>
+            <option value="Aside.html">&lt;aside&gt; Aside</option>
+            <option value="Audio.html">&lt;audio&gt; Audio</option>
+            <option value="Base.html">&lt;base&gt; Base</option>
+            <option value="Bdo.html">&lt;bdo&gt; Bdo</option>
+            <option value="Blockquote.html">&lt;blockquote&gt; Blockquote</option>
+            <option value="Body.html">&lt;body&gt; Body</option>
+            <option value="Br.html">&lt;br&gt; Line Break</option>
+            <option value="Button.html">&lt;button&gt; Button</option>
+            <option value="Caption.html">&lt;caption&gt; Caption</option>
+            <option value="Cite.html">&lt;cite&gt; Citation</option>
+            <option value="Code.html">&lt;code&gt; Code</option>
+            <option value="Col.html">&lt;col&gt; Column</option>
+            <option value="Colgroup.html">&lt;colgroup&gt; Column Group</option>
+            <option value="Data.html">&lt;data&gt; Machine Data</option>
+            <option value="Datalist.html">&lt;datalist&gt; Datalist</option>
+            <option value="Del.html" selected="selected">&lt;del&gt; Deleted Text</option>
+            <option value="DescriptionList.html">&lt;dl&gt; Description List</option>
+            <option value="Details.html">&lt;details&gt; Details & Summary</option>
+            <option value="Dfn.html">&lt;dfn&gt; Definition Term</option>
+            <option value="Dialog.html">&lt;dialog&gt; Dialog Modal</option>
+            <option value="Div.html">&lt;div&gt; Division</option>
+            <option value="Em.html">&lt;em&gt; Emphasis</option>
+            <option value="Embed.html">&lt;embed&gt; Embed Plugin</option>
+            <option value="Fieldset.html">&lt;fieldset&gt; Fieldset & Legend</option>
+            <option value="Figure.html">&lt;figure&gt; Figure & Figcaption</option>
+            <option value="Footer.html">&lt;footer&gt; Footer</option>
+            <option value="Form.html">&lt;form&gt; Form & Enctype</option>
+            <option value="Head.html">&lt;head&gt; Document Head</option>
+            <option value="Header.html">&lt;header&gt; Header</option>
+            <option value="Heading.html">&lt;h1&gt;-&lt;h6&gt; Headings</option>
+            <option value="Hr.html">&lt;hr&gt; Horizontal Rule</option>
+            <option value="Iframe.html">&lt;iframe&gt; Inline Frame</option>
+            <option value="Img.html">&lt;img&gt; Image</option>
+            <option value="Input.html">&lt;input&gt; Input Types</option>
+            <option value="Label.html">&lt;label&gt; Form Label</option>
+            <option value="List.html">&lt;ul&gt;/&lt;ol&gt;/&lt;li&gt; Lists</option>
+            <option value="Main.html">&lt;main&gt; Main Content</option>
+            <option value="Mark.html">&lt;mark&gt; Highlight Mark</option>
+            <option value="Meter.html">&lt;meter&gt; Scalar Meter</option>
+            <option value="Nav.html">&lt;nav&gt; Navigation</option>
+            <option value="Noscript.html">&lt;noscript&gt; Noscript Fallback</option>
+            <option value="Object.html">&lt;object&gt; Embedded Object</option>
+            <option value="Picture.html">&lt;picture&gt; Responsive Picture</option>
+            <option value="Pre.html">&lt;pre&gt; Preformatted Text</option>
+            <option value="Progress.html">&lt;progress&gt; Progress Bar</option>
+            <option value="Ruby.html">&lt;ruby&gt; Ruby Annotations</option>
+            <option value="Script.html">&lt;script&gt; Script</option>
+            <option value="Section.html">&lt;section&gt; Section</option>
+            <option value="Select.html">&lt;select&gt; Select Dropdown</option>
+            <option value="Span.html">&lt;span&gt; Span</option>
+            <option value="Style.html">&lt;style&gt; Style</option>
+            <option value="Subscript.html">&lt;sub&gt;/&lt;sup&gt; Sub & Super</option>
+            <option value="Svg.html">&lt;svg&gt; Vector Graphics</option>
+            <option value="Table.html">&lt;table&gt; Data Table</option>
+            <option value="Video.html">&lt;video&gt; Video Player</option>
+          </select>
+        </div>
+      </nav>
+
+   <h2>Del tag ("&lt;del&gt;"....."&lt;/del&gt;") - [Both Opening &amp; Closing tags required]</h2>
+   <p>
+    <strong>Description:- </strong> The <code>&lt;del&gt;</code> (Deleted Text) tag is used
+    to represent a range of text that has been removed or deleted from a document. Browsers
+    render it with a strikethrough (line through the text) by default. It is frequently paired
+    with the <code>&lt;ins&gt;</code> (Inserted Text) tag to track editorial revisions.
+   </p>
+
+   <div class="note-box">
+    <strong>Standards & Discontinued Alternatives Note:</strong>
+    <p style="margin: 5px 0 0 0;">
+     In HTML4, <code>&lt;strike&gt;</code> was used to strike out text. In HTML5,
+     <code>&lt;strike&gt;</code> is <strong>obsolete and discontinued</strong>.
+     The <code>&lt;s&gt;</code> tag is now used for text that is no longer accurate/relevant
+     (like an old price), while <code>&lt;del&gt;</code> has full semantic meaning for document
+     edits and revisions, supporting citation and timestamp attributes.
+    </p>
+   </div>
+
+   <p><strong>Example:-</strong> Tracking product price discount and text changes:</p>
+
+   <div class="demo-box">
+    <p>Special Festival Offer: <del>$99.99</del> <ins>$49.99</ins> (50% Off!)</p>
+    <p>Meeting schedule: We will meet on <del datetime="2026-09-10">Thursday</del> <ins datetime="2026-09-13">Sunday</ins>.</p>
+   </div>
+
+   <h3>Attributes:-</h3>
+   <ul>
+    <li><strong>cite :-</strong> URL pointing to a document explaining why the text was deleted.</li>
+    <li><strong>datetime :-</strong> Specifies the machine-readable date/time when the text was removed (YYYY-MM-DDThh:mm:ss).</li>
+   </ul>
+
+   <p><strong>Use cases:-</strong></p>
+   <ul>
+    <li>Displaying original vs discounted sale prices on e-commerce sites.</li>
+    <li>Documenting legal contracts, terms of service, and Wikipedia editorial revision histories.</li>
+    <li>To-do lists showing completed/struck-through tasks.</li>
+   </ul>
+
+   <h2>Complete code for the Del tag section</h2>
+   <pre><code>&lt;header&gt;
+ &lt;h1&gt;Del tag&lt;/h1&gt;
+ &lt;p&gt;Learn tags with description, use cases, and examples&lt;/p&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+ &lt;h2&gt;Del tag ("&amp;lt;del&amp;gt;"....."&amp;lt;/del&amp;gt;") - [Both Opening &amp;amp; Closing tags required]&lt;/h2&gt;
+ &lt;p&gt;
+  &lt;strong&gt; Description:- &lt;/strong&gt; The &amp;lt;del&amp;gt; tag represents text deleted from a document.
+ &lt;/p&gt;
+
+ &lt;p&gt;Original Price: &lt;del&gt;$99.00&lt;/del&gt; &lt;ins&gt;$49.00&lt;/ins&gt;&lt;/p&gt;
+
+ &lt;h3&gt;Attributes:-&lt;/h3&gt;
+ &lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;cite :-&lt;/strong&gt; URL explaining reason for deletion.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;datetime :-&lt;/strong&gt; Date and time of deletion.&lt;/li&gt;
+ &lt;/ul&gt;
+
+ &lt;p&gt;&lt;strong&gt;Use cases:-&lt;/strong&gt;&lt;/p&gt;
+ &lt;ul&gt;
+  &lt;li&gt;Discount pricing and revision history.&lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/main&gt;</code></pre>
+        <nav class="page-step-nav">
+        <a href="Datalist.html" class="step-btn prev" title="Keyboard Shortcut: Left Arrow">&larr; Previous: &lt;datalist&gt; Datalist</a>
+        <a href="index.html" class="step-btn home">&#9776; All 60 Tags (Index)</a>
+        <a href="DescriptionList.html" class="step-btn next" title="Keyboard Shortcut: Right Arrow">Next: &lt;dl&gt; Description List &rarr;</a>
+      </nav>
+    </main>
+  <footer>
+   <address>
+    Author's name :- kaustubh singh. Instagram:- __kaustubh_singh.
+   </address>
+   <p>&copy; 2026 Kaustubh's HTML Guide</p>
+  </footer>
+     <script>
+      // Interactive mouse-tracking background spotlight
+      document.addEventListener('mousemove', function (e) {
+        var x = (e.clientX / window.innerWidth) * 100;
+        var y = (e.clientY / window.innerHeight) * 100;
+        document.body.style.setProperty('--mouse-x', x + '%');
+        document.body.style.setProperty('--mouse-y', y + '%');
+      });
+    </script>
+  </body>
+</html>

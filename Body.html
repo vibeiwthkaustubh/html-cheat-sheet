@@ -1,0 +1,212 @@
+﻿<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="kaustubh singh" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>HTML Tags Cheat Sheet</title>
+  <link rel="stylesheet" href="style.css" />
+  
+    
+    <style>
+      .visual-tree {
+    background: #fafafa;
+    border: 2px dashed #ff9800;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+   }
+   .visual-box {
+    background: #fff3e0;
+    border: 1px solid #ffb74d;
+    border-radius: 6px;
+    padding: 12px;
+    margin: 10px 0;
+   }
+    </style>
+     <meta property="og:title" content="HTML Body Tag (<body>) - Cheat Sheet" />
+    <meta property="og:description" content="Complete guide to the HTML Body tag with live examples, use cases, attributes, and W3C standards." />
+    <meta property="og:type" content="article" />
+    <link rel="prev" href="Blockquote.html" />
+    <link rel="next" href="Br.html" />
+    <script src="app.js" defer></script>
+  </head>
+ <body>
+  <header>
+   <h1>Body tag</h1>
+   <p>Learn tags with description, use cases, and examples</p>
+  </header>
+
+  <main>
+      <nav class="quick-nav">
+        <a href="../index.html" class="home-btn">&larr; All Tags (Index)</a>
+        <div class="nav-selector">
+          <label for="tagJump"><strong>Jump to Tag:</strong></label>
+          <select id="tagJump" onchange="if(this.value) window.location.href=this.value;">
+            <option value="">-- Choose a Tag to Switch --</option>
+            <option value="Abbreviation.html">&lt;abbr&gt; Abbreviation</option>
+            <option value="Address.html">&lt;address&gt; Address</option>
+            <option value="Anchor.html">&lt;a&gt; Anchor</option>
+            <option value="Area.html">&lt;area&gt; Area</option>
+            <option value="Article.html">&lt;article&gt; Article</option>
+            <option value="Aside.html">&lt;aside&gt; Aside</option>
+            <option value="Audio.html">&lt;audio&gt; Audio</option>
+            <option value="Base.html">&lt;base&gt; Base</option>
+            <option value="Bdo.html">&lt;bdo&gt; Bdo</option>
+            <option value="Blockquote.html">&lt;blockquote&gt; Blockquote</option>
+            <option value="Body.html" selected="selected">&lt;body&gt; Body</option>
+            <option value="Br.html">&lt;br&gt; Line Break</option>
+            <option value="Button.html">&lt;button&gt; Button</option>
+            <option value="Caption.html">&lt;caption&gt; Caption</option>
+            <option value="Cite.html">&lt;cite&gt; Citation</option>
+            <option value="Code.html">&lt;code&gt; Code</option>
+            <option value="Col.html">&lt;col&gt; Column</option>
+            <option value="Colgroup.html">&lt;colgroup&gt; Column Group</option>
+            <option value="Data.html">&lt;data&gt; Machine Data</option>
+            <option value="Datalist.html">&lt;datalist&gt; Datalist</option>
+            <option value="Del.html">&lt;del&gt; Deleted Text</option>
+            <option value="DescriptionList.html">&lt;dl&gt; Description List</option>
+            <option value="Details.html">&lt;details&gt; Details & Summary</option>
+            <option value="Dfn.html">&lt;dfn&gt; Definition Term</option>
+            <option value="Dialog.html">&lt;dialog&gt; Dialog Modal</option>
+            <option value="Div.html">&lt;div&gt; Division</option>
+            <option value="Em.html">&lt;em&gt; Emphasis</option>
+            <option value="Embed.html">&lt;embed&gt; Embed Plugin</option>
+            <option value="Fieldset.html">&lt;fieldset&gt; Fieldset & Legend</option>
+            <option value="Figure.html">&lt;figure&gt; Figure & Figcaption</option>
+            <option value="Footer.html">&lt;footer&gt; Footer</option>
+            <option value="Form.html">&lt;form&gt; Form & Enctype</option>
+            <option value="Head.html">&lt;head&gt; Document Head</option>
+            <option value="Header.html">&lt;header&gt; Header</option>
+            <option value="Heading.html">&lt;h1&gt;-&lt;h6&gt; Headings</option>
+            <option value="Hr.html">&lt;hr&gt; Horizontal Rule</option>
+            <option value="Iframe.html">&lt;iframe&gt; Inline Frame</option>
+            <option value="Img.html">&lt;img&gt; Image</option>
+            <option value="Input.html">&lt;input&gt; Input Types</option>
+            <option value="Label.html">&lt;label&gt; Form Label</option>
+            <option value="List.html">&lt;ul&gt;/&lt;ol&gt;/&lt;li&gt; Lists</option>
+            <option value="Main.html">&lt;main&gt; Main Content</option>
+            <option value="Mark.html">&lt;mark&gt; Highlight Mark</option>
+            <option value="Meter.html">&lt;meter&gt; Scalar Meter</option>
+            <option value="Nav.html">&lt;nav&gt; Navigation</option>
+            <option value="Noscript.html">&lt;noscript&gt; Noscript Fallback</option>
+            <option value="Object.html">&lt;object&gt; Embedded Object</option>
+            <option value="Picture.html">&lt;picture&gt; Responsive Picture</option>
+            <option value="Pre.html">&lt;pre&gt; Preformatted Text</option>
+            <option value="Progress.html">&lt;progress&gt; Progress Bar</option>
+            <option value="Ruby.html">&lt;ruby&gt; Ruby Annotations</option>
+            <option value="Script.html">&lt;script&gt; Script</option>
+            <option value="Section.html">&lt;section&gt; Section</option>
+            <option value="Select.html">&lt;select&gt; Select Dropdown</option>
+            <option value="Span.html">&lt;span&gt; Span</option>
+            <option value="Style.html">&lt;style&gt; Style</option>
+            <option value="Subscript.html">&lt;sub&gt;/&lt;sup&gt; Sub & Super</option>
+            <option value="Svg.html">&lt;svg&gt; Vector Graphics</option>
+            <option value="Table.html">&lt;table&gt; Data Table</option>
+            <option value="Video.html">&lt;video&gt; Video Player</option>
+          </select>
+        </div>
+      </nav>
+
+   <h2>Body tag ("&lt;body&gt;"....."&lt;/body&gt;") - [Both Opening &amp; Closing tags required]</h2>
+   <p>
+    <strong>Description:- </strong> The <code>&lt;body&gt;</code> tag defines
+    the main body of an HTML document. It encloses all the visible contents of
+    the web page, including headers, headings, paragraphs, images, tables,
+    lists, audio, video, and hyperlinks. Every HTML document must have exactly
+    one <code>&lt;body&gt;</code> element, and it is placed directly below the
+    <code>&lt;head&gt;</code> tag inside the root <code>&lt;html&gt;</code> element.
+   </p>
+
+   <p>
+    <strong>Example:-</strong> The entire visible page you are looking at right
+    now is located inside the <code>&lt;body&gt;</code> tag. Here is a visual
+    representation of how the document is structured:
+   </p>
+
+   <div class="visual-tree">
+    <strong>Document Layout Hierarchy:</strong>
+    <div class="visual-box">
+     <code>&lt;html&gt;</code> (The Root Element)
+     <div class="visual-box" style="background: #e3f2fd; border-color: #90caf9;">
+      <code>&lt;head&gt;</code> - Contains invisible metadata, titles, styles, and scripts.
+     </div>
+     <div class="visual-box" style="background: #e8f5e9; border-color: #a5d6a7;">
+      <code>&lt;body&gt;</code> - Contains <strong>ALL</strong> visible components
+      (Header, Main, Article, Footer, etc.).
+     </div>
+    </div>
+   </div>
+
+   <h3>Attributes:-</h3>
+   <ul>
+    <li>
+     <strong>Global Attributes :-</strong> The <code>&lt;body&gt;</code> tag
+     supports all global HTML attributes such as <code>class</code>,
+     <code>id</code>, <code>style</code>, and <code>lang</code> (often used to
+     toggle themes like <code>&lt;body class="dark-theme"&gt;</code>).
+    </li>
+    <li>
+     <strong>Window Event Attributes :-</strong> Can trigger scripts upon page
+     actions, such as <code>onload</code> (fires when the page finishes loading),
+     <code>onresize</code> (fires when the window is resized), and
+     <code>onscroll</code>.
+    </li>
+   </ul>
+
+   <p><strong>Use cases:-</strong></p>
+   <ul>
+    <li>Containing the entirety of a website's renderable UI and contents.</li>
+    <li>Setting default page-wide CSS rules such as font family, base text color, and background styling.</li>
+    <li>Implementing light/dark mode toggles by adding state classes to the body tag.</li>
+    <li>Executing JavaScript code as soon as the DOM and assets finish loading using the <code>onload</code> event.</li>
+   </ul>
+
+   <h2>Complete code for the Body tag section</h2>
+   <pre><code>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+ &lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;title&gt;Page Title&lt;/title&gt;
+ &lt;/head&gt;
+
+ &lt;!-- The body tag encapsulates all visible elements --&gt;
+ &lt;body class="light-mode"&gt;
+  &lt;header&gt;
+   &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+   &lt;p&gt;This is visible text rendered inside the body element.&lt;/p&gt;
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+   &lt;p&gt;&amp;copy; 2026 Kaustubh's HTML Guide&lt;/p&gt;
+  &lt;/footer&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <nav class="page-step-nav">
+        <a href="Blockquote.html" class="step-btn prev" title="Keyboard Shortcut: Left Arrow">&larr; Previous: &lt;blockquote&gt; Blockquote</a>
+        <a href="index.html" class="step-btn home">&#9776; All 60 Tags (Index)</a>
+        <a href="Br.html" class="step-btn next" title="Keyboard Shortcut: Right Arrow">Next: &lt;br&gt; Line Break &rarr;</a>
+      </nav>
+    </main>
+
+  <footer>
+   <address>
+    Author's name :- kaustubh singh. Instagram:- __kaustubh_singh.
+   </address>
+   <p>&copy; 2026 Kaustubh's HTML Guide</p>
+  </footer>
+     <script>
+      // Interactive mouse-tracking background spotlight
+      document.addEventListener('mousemove', function (e) {
+        var x = (e.clientX / window.innerWidth) * 100;
+        var y = (e.clientY / window.innerHeight) * 100;
+        document.body.style.setProperty('--mouse-x', x + '%');
+        document.body.style.setProperty('--mouse-y', y + '%');
+      });
+    </script>
+  </body>
+</html>

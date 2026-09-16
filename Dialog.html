@@ -1,0 +1,196 @@
+﻿<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="kaustubh singh" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>HTML Tags Cheat Sheet</title>
+  <link rel="stylesheet" href="style.css" />
+  
+    
+    <style>
+      dialog { border: none; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.25); padding: 20px 30px; max-width: 400px; text-align: center; }
+   dialog::backdrop { background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(2px); }
+   .btn { background: #007bff; color: white; border: none; padding: 10px 18px; border-radius: 5px; cursor: pointer; font-weight: bold; }
+   .btn-close { background: #dc3545; }
+    </style>
+     <meta property="og:title" content="HTML Dialog Modal Tag (<dialog>) - Cheat Sheet" />
+    <meta property="og:description" content="Complete guide to the HTML Dialog Modal tag with live examples, use cases, attributes, and W3C standards." />
+    <meta property="og:type" content="article" />
+    <link rel="prev" href="Dfn.html" />
+    <link rel="next" href="Div.html" />
+    <script src="app.js" defer></script>
+  </head>
+ <body>
+  <header>
+   <h1>Dialog tag</h1>
+   <p>Learn tags with description, use cases, and examples</p>
+  </header>
+  <main>
+      <nav class="quick-nav">
+        <a href="../index.html" class="home-btn">&larr; All Tags (Index)</a>
+        <div class="nav-selector">
+          <label for="tagJump"><strong>Jump to Tag:</strong></label>
+          <select id="tagJump" onchange="if(this.value) window.location.href=this.value;">
+            <option value="">-- Choose a Tag to Switch --</option>
+            <option value="Abbreviation.html">&lt;abbr&gt; Abbreviation</option>
+            <option value="Address.html">&lt;address&gt; Address</option>
+            <option value="Anchor.html">&lt;a&gt; Anchor</option>
+            <option value="Area.html">&lt;area&gt; Area</option>
+            <option value="Article.html">&lt;article&gt; Article</option>
+            <option value="Aside.html">&lt;aside&gt; Aside</option>
+            <option value="Audio.html">&lt;audio&gt; Audio</option>
+            <option value="Base.html">&lt;base&gt; Base</option>
+            <option value="Bdo.html">&lt;bdo&gt; Bdo</option>
+            <option value="Blockquote.html">&lt;blockquote&gt; Blockquote</option>
+            <option value="Body.html">&lt;body&gt; Body</option>
+            <option value="Br.html">&lt;br&gt; Line Break</option>
+            <option value="Button.html">&lt;button&gt; Button</option>
+            <option value="Caption.html">&lt;caption&gt; Caption</option>
+            <option value="Cite.html">&lt;cite&gt; Citation</option>
+            <option value="Code.html">&lt;code&gt; Code</option>
+            <option value="Col.html">&lt;col&gt; Column</option>
+            <option value="Colgroup.html">&lt;colgroup&gt; Column Group</option>
+            <option value="Data.html">&lt;data&gt; Machine Data</option>
+            <option value="Datalist.html">&lt;datalist&gt; Datalist</option>
+            <option value="Del.html">&lt;del&gt; Deleted Text</option>
+            <option value="DescriptionList.html">&lt;dl&gt; Description List</option>
+            <option value="Details.html">&lt;details&gt; Details & Summary</option>
+            <option value="Dfn.html">&lt;dfn&gt; Definition Term</option>
+            <option value="Dialog.html" selected="selected">&lt;dialog&gt; Dialog Modal</option>
+            <option value="Div.html">&lt;div&gt; Division</option>
+            <option value="Em.html">&lt;em&gt; Emphasis</option>
+            <option value="Embed.html">&lt;embed&gt; Embed Plugin</option>
+            <option value="Fieldset.html">&lt;fieldset&gt; Fieldset & Legend</option>
+            <option value="Figure.html">&lt;figure&gt; Figure & Figcaption</option>
+            <option value="Footer.html">&lt;footer&gt; Footer</option>
+            <option value="Form.html">&lt;form&gt; Form & Enctype</option>
+            <option value="Head.html">&lt;head&gt; Document Head</option>
+            <option value="Header.html">&lt;header&gt; Header</option>
+            <option value="Heading.html">&lt;h1&gt;-&lt;h6&gt; Headings</option>
+            <option value="Hr.html">&lt;hr&gt; Horizontal Rule</option>
+            <option value="Iframe.html">&lt;iframe&gt; Inline Frame</option>
+            <option value="Img.html">&lt;img&gt; Image</option>
+            <option value="Input.html">&lt;input&gt; Input Types</option>
+            <option value="Label.html">&lt;label&gt; Form Label</option>
+            <option value="List.html">&lt;ul&gt;/&lt;ol&gt;/&lt;li&gt; Lists</option>
+            <option value="Main.html">&lt;main&gt; Main Content</option>
+            <option value="Mark.html">&lt;mark&gt; Highlight Mark</option>
+            <option value="Meter.html">&lt;meter&gt; Scalar Meter</option>
+            <option value="Nav.html">&lt;nav&gt; Navigation</option>
+            <option value="Noscript.html">&lt;noscript&gt; Noscript Fallback</option>
+            <option value="Object.html">&lt;object&gt; Embedded Object</option>
+            <option value="Picture.html">&lt;picture&gt; Responsive Picture</option>
+            <option value="Pre.html">&lt;pre&gt; Preformatted Text</option>
+            <option value="Progress.html">&lt;progress&gt; Progress Bar</option>
+            <option value="Ruby.html">&lt;ruby&gt; Ruby Annotations</option>
+            <option value="Script.html">&lt;script&gt; Script</option>
+            <option value="Section.html">&lt;section&gt; Section</option>
+            <option value="Select.html">&lt;select&gt; Select Dropdown</option>
+            <option value="Span.html">&lt;span&gt; Span</option>
+            <option value="Style.html">&lt;style&gt; Style</option>
+            <option value="Subscript.html">&lt;sub&gt;/&lt;sup&gt; Sub & Super</option>
+            <option value="Svg.html">&lt;svg&gt; Vector Graphics</option>
+            <option value="Table.html">&lt;table&gt; Data Table</option>
+            <option value="Video.html">&lt;video&gt; Video Player</option>
+          </select>
+        </div>
+      </nav>
+
+   <h2>Dialog tag ("&lt;dialog&gt;"....."&lt;/dialog&gt;") - [Both Opening &amp; Closing tags required]</h2>
+   <p>
+    <strong>Description:- </strong> The <code>&lt;dialog&gt;</code> tag defines a native modal
+    or non-modal dialog box / popup window. It represents a part of an application that a user
+    interacts with to perform a task or receive information, complete with built-in accessibility
+    and native backdrop dimming.
+   </p>
+
+   <div class="note-box">
+    <strong>Modern HTML5 Feature: Replaces Custom JavaScript Modal Divs!</strong>
+    <p style="margin: 5px 0 0 0;">
+     Historically, developers had to construct complex <code>&lt;div class="modal"&gt;</code> structures,
+     trap keyboard focus manually, and write tricky backdrop overlay CSS. The <code>&lt;dialog&gt;</code>
+     element provides <code>showModal()</code>, native focus trapping, the <kbd>Esc</kbd> key dismiss,
+     and the <code>::backdrop</code> pseudo-element automatically!
+    </p>
+   </div>
+
+   <p><strong>Example:-</strong> Click the button below to open a native HTML5 modal dialog:</p>
+
+   <div style="margin: 20px 0;">
+    <button type="button" class="btn" onclick="document.getElementById('myModal').showModal()">
+     Open Native Modal Dialog
+    </button>
+
+    <dialog id="myModal">
+     <h3 style="margin-top: 0; color: #007bff;">Native HTML5 Modal</h3>
+     <p>This dialog was opened using the native <code>showModal()</code> method!</p>
+     <p>Press <kbd>Esc</kbd> or click the button below to close it.</p>
+     <button type="button" class="btn btn-close" onclick="document.getElementById('myModal').close()">
+      Close Dialog
+     </button>
+    </dialog>
+   </div>
+
+   <h3>Attributes & Methods:-</h3>
+   <ul>
+    <li><strong>open :-</strong> Boolean attribute that renders the dialog visible as a non-modal box.</li>
+    <li><strong>showModal() :-</strong> JavaScript method that opens the dialog as a true modal with focus trap and backdrop.</li>
+    <li><strong>close() :-</strong> JavaScript method that closes the dialog.</li>
+   </ul>
+
+   <p><strong>Use cases:-</strong></p>
+   <ul>
+    <li>Confirmation prompts (e.g. "Are you sure you want to delete this?").</li>
+    <li>Alert popups, login forms, and newsletter subscription boxes.</li>
+   </ul>
+
+   <h2>Complete code for the Dialog tag section</h2>
+   <pre><code>&lt;header&gt;
+ &lt;h1&gt;Dialog tag&lt;/h1&gt;
+ &lt;p&gt;Learn tags with description, use cases, and examples&lt;/p&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+ &lt;h2&gt;Dialog tag ("&amp;lt;dialog&amp;gt;"....."&amp;lt;/dialog&amp;gt;") - [Both Opening &amp;amp; Closing tags required]&lt;/h2&gt;
+ &lt;p&gt;
+  &lt;strong&gt; Description:- &lt;/strong&gt; Native modal or dialog window.
+ &lt;/p&gt;
+
+ &lt;button onclick="document.getElementById('favDialog').showModal()"&gt;Open Modal&lt;/button&gt;
+
+ &lt;dialog id="favDialog"&gt;
+  &lt;p&gt;This is a native dialog!&lt;/p&gt;
+  &lt;button onclick="document.getElementById('favDialog').close()"&gt;Close&lt;/button&gt;
+ &lt;/dialog&gt;
+
+ &lt;h3&gt;Methods:-&lt;/h3&gt;
+ &lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;showModal() :-&lt;/strong&gt; Opens dialog as modal with backdrop.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;close() :-&lt;/strong&gt; Closes dialog.&lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/main&gt;</code></pre>
+        <nav class="page-step-nav">
+        <a href="Dfn.html" class="step-btn prev" title="Keyboard Shortcut: Left Arrow">&larr; Previous: &lt;dfn&gt; Definition Term</a>
+        <a href="index.html" class="step-btn home">&#9776; All 60 Tags (Index)</a>
+        <a href="Div.html" class="step-btn next" title="Keyboard Shortcut: Right Arrow">Next: &lt;div&gt; Division &rarr;</a>
+      </nav>
+    </main>
+  <footer>
+   <address>
+    Author's name :- kaustubh singh. Instagram:- __kaustubh_singh.
+   </address>
+   <p>&copy; 2026 Kaustubh's HTML Guide</p>
+  </footer>
+     <script>
+      // Interactive mouse-tracking background spotlight
+      document.addEventListener('mousemove', function (e) {
+        var x = (e.clientX / window.innerWidth) * 100;
+        var y = (e.clientY / window.innerHeight) * 100;
+        document.body.style.setProperty('--mouse-x', x + '%');
+        document.body.style.setProperty('--mouse-y', y + '%');
+      });
+    </script>
+  </body>
+</html>

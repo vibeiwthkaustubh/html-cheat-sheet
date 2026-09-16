@@ -1,0 +1,245 @@
+﻿<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="kaustubh singh" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>HTML Tags Cheat Sheet</title>
+  <link rel="stylesheet" href="style.css" />
+  
+    
+    <style>
+      .demo-box {
+    background-color: #fdfdfd;
+    border: 2px dashed #007acc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+   }
+   .demo-box h4 {
+    margin-top: 0;
+    color: #007acc;
+   }
+    </style>
+     <meta property="og:title" content="HTML Base Tag (<base>) - Cheat Sheet" />
+    <meta property="og:description" content="Complete guide to the HTML Base tag with live examples, use cases, attributes, and W3C standards." />
+    <meta property="og:type" content="article" />
+    <link rel="prev" href="Audio.html" />
+    <link rel="next" href="Bdo.html" />
+    <script src="app.js" defer></script>
+  </head>
+ <body>
+  <header>
+   <h1>Base tag</h1>
+   <p>Learn tags with description, use cases, and examples</p>
+  </header>
+
+  <main>
+      <nav class="quick-nav">
+        <a href="../index.html" class="home-btn">&larr; All Tags (Index)</a>
+        <div class="nav-selector">
+          <label for="tagJump"><strong>Jump to Tag:</strong></label>
+          <select id="tagJump" onchange="if(this.value) window.location.href=this.value;">
+            <option value="">-- Choose a Tag to Switch --</option>
+            <option value="Abbreviation.html">&lt;abbr&gt; Abbreviation</option>
+            <option value="Address.html">&lt;address&gt; Address</option>
+            <option value="Anchor.html">&lt;a&gt; Anchor</option>
+            <option value="Area.html">&lt;area&gt; Area</option>
+            <option value="Article.html">&lt;article&gt; Article</option>
+            <option value="Aside.html">&lt;aside&gt; Aside</option>
+            <option value="Audio.html">&lt;audio&gt; Audio</option>
+            <option value="Base.html" selected="selected">&lt;base&gt; Base</option>
+            <option value="Bdo.html">&lt;bdo&gt; Bdo</option>
+            <option value="Blockquote.html">&lt;blockquote&gt; Blockquote</option>
+            <option value="Body.html">&lt;body&gt; Body</option>
+            <option value="Br.html">&lt;br&gt; Line Break</option>
+            <option value="Button.html">&lt;button&gt; Button</option>
+            <option value="Caption.html">&lt;caption&gt; Caption</option>
+            <option value="Cite.html">&lt;cite&gt; Citation</option>
+            <option value="Code.html">&lt;code&gt; Code</option>
+            <option value="Col.html">&lt;col&gt; Column</option>
+            <option value="Colgroup.html">&lt;colgroup&gt; Column Group</option>
+            <option value="Data.html">&lt;data&gt; Machine Data</option>
+            <option value="Datalist.html">&lt;datalist&gt; Datalist</option>
+            <option value="Del.html">&lt;del&gt; Deleted Text</option>
+            <option value="DescriptionList.html">&lt;dl&gt; Description List</option>
+            <option value="Details.html">&lt;details&gt; Details & Summary</option>
+            <option value="Dfn.html">&lt;dfn&gt; Definition Term</option>
+            <option value="Dialog.html">&lt;dialog&gt; Dialog Modal</option>
+            <option value="Div.html">&lt;div&gt; Division</option>
+            <option value="Em.html">&lt;em&gt; Emphasis</option>
+            <option value="Embed.html">&lt;embed&gt; Embed Plugin</option>
+            <option value="Fieldset.html">&lt;fieldset&gt; Fieldset & Legend</option>
+            <option value="Figure.html">&lt;figure&gt; Figure & Figcaption</option>
+            <option value="Footer.html">&lt;footer&gt; Footer</option>
+            <option value="Form.html">&lt;form&gt; Form & Enctype</option>
+            <option value="Head.html">&lt;head&gt; Document Head</option>
+            <option value="Header.html">&lt;header&gt; Header</option>
+            <option value="Heading.html">&lt;h1&gt;-&lt;h6&gt; Headings</option>
+            <option value="Hr.html">&lt;hr&gt; Horizontal Rule</option>
+            <option value="Iframe.html">&lt;iframe&gt; Inline Frame</option>
+            <option value="Img.html">&lt;img&gt; Image</option>
+            <option value="Input.html">&lt;input&gt; Input Types</option>
+            <option value="Label.html">&lt;label&gt; Form Label</option>
+            <option value="List.html">&lt;ul&gt;/&lt;ol&gt;/&lt;li&gt; Lists</option>
+            <option value="Main.html">&lt;main&gt; Main Content</option>
+            <option value="Mark.html">&lt;mark&gt; Highlight Mark</option>
+            <option value="Meter.html">&lt;meter&gt; Scalar Meter</option>
+            <option value="Nav.html">&lt;nav&gt; Navigation</option>
+            <option value="Noscript.html">&lt;noscript&gt; Noscript Fallback</option>
+            <option value="Object.html">&lt;object&gt; Embedded Object</option>
+            <option value="Picture.html">&lt;picture&gt; Responsive Picture</option>
+            <option value="Pre.html">&lt;pre&gt; Preformatted Text</option>
+            <option value="Progress.html">&lt;progress&gt; Progress Bar</option>
+            <option value="Ruby.html">&lt;ruby&gt; Ruby Annotations</option>
+            <option value="Script.html">&lt;script&gt; Script</option>
+            <option value="Section.html">&lt;section&gt; Section</option>
+            <option value="Select.html">&lt;select&gt; Select Dropdown</option>
+            <option value="Span.html">&lt;span&gt; Span</option>
+            <option value="Style.html">&lt;style&gt; Style</option>
+            <option value="Subscript.html">&lt;sub&gt;/&lt;sup&gt; Sub & Super</option>
+            <option value="Svg.html">&lt;svg&gt; Vector Graphics</option>
+            <option value="Table.html">&lt;table&gt; Data Table</option>
+            <option value="Video.html">&lt;video&gt; Video Player</option>
+          </select>
+        </div>
+      </nav>
+
+   <h2>Base tag ("&lt;base&gt;") - [Void Tag / Self-Closing (No Closing tag required)]</h2>
+   <p>
+    <strong>Description:- </strong> The <code>&lt;base&gt;</code> tag is
+    used to specify a default URL and a default target for all relative
+    links and assets (like images, scripts, and stylesheets) in an HTML
+    document. It must be written inside the <code>&lt;head&gt;</code> element,
+    and an HTML document can contain at most one <code>&lt;base&gt;</code> element.
+   </p>
+   <p>
+    <strong>Example:-</strong>
+    If you define a base URL, any relative link on the page will automatically
+    combine with this base address instead of the current page location.
+   </p>
+
+   <div class="demo-box">
+    <h4>Simulated Demonstration:</h4>
+    <p>
+     Assume the head contains:
+     <code>&lt;base href="https://www.example.com/assets/" target="_blank" /&gt;</code>
+    </p>
+    <p>
+     Now, when you write:
+     <code>&lt;a href="products.html"&gt;View Products&lt;/a&gt;</code>
+    </p>
+    <p>
+     The browser will automatically navigate to:
+     <strong>https://www.example.com/assets/products.html</strong> in a
+     <strong>new tab</strong> (because <code>target="_blank"</code> was set).
+    </p>
+   </div>
+
+   <h3>Attributes:-</h3>
+   <ul>
+    <li>
+     <strong>href :-</strong> Specifies the base URL for all relative URLs in
+     the document.
+    </li>
+    <li>
+     <strong>target :-</strong> Specifies the default target browsing context
+     for all hyperlinks and forms on the page (such as <code>_blank</code>,
+     <code>_self</code>, <code>_parent</code>, or <code>_top</code>).
+    </li>
+   </ul>
+
+   <p><strong>Use cases:-</strong></p>
+   <ul>
+    <li>
+     Setting a centralized base domain so you don't have to repeat long
+     absolute paths for every image or link.
+    </li>
+    <li>
+     Opening all page links in a new tab by default using
+     <code>target="_blank"</code> without needing to write it on every
+     anchor tag.
+    </li>
+    <li>
+     Moving files between local staging and CDN servers by simply changing
+     a single base URL.
+    </li>
+    <li>
+     Handling client-side routing and relative subdirectories cleanly in
+     complex web applications.
+    </li>
+   </ul>
+
+   <h2>Complete code for the Base tag section</h2>
+   <pre><code>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+ &lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;title&gt;Base Tag Example&lt;/title&gt;
+  &lt;!-- Base tag specifying default URL and default target --&gt;
+  &lt;base href="https://www.example.com/assets/" target="_blank" /&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;header&gt;
+   &lt;h1&gt;Base tag&lt;/h1&gt;
+   &lt;p&gt;Learn tags with description, use cases, and examples&lt;/p&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+   &lt;h2&gt;Base tag ("&amp;lt;base&amp;gt;")&lt;/h2&gt;
+   &lt;p&gt;
+    &lt;strong&gt; Description:- &lt;/strong&gt; The &amp;lt;base&amp;gt; tag specifies the default
+    URL and target for all relative links in the document.
+   &lt;/p&gt;
+   &lt;p&gt;
+    &lt;strong&gt;Example:-&lt;/strong&gt;
+    Clicking the link below will resolve to: https://www.example.com/assets/products.html
+   &lt;/p&gt;
+
+   &lt;!-- Relative link resolved against base href --&gt;
+   &lt;a href="products.html"&gt;View Products (Opens in new tab)&lt;/a&gt;
+
+   &lt;h3&gt;Attributes:-&lt;/h3&gt;
+   &lt;ul&gt;
+    &lt;li&gt;
+     &lt;strong&gt;href :-&lt;/strong&gt; Specifies the base URL for all relative URLs.
+    &lt;/li&gt;
+    &lt;li&gt;
+     &lt;strong&gt;target :-&lt;/strong&gt; Specifies the default target window/tab.
+    &lt;/li&gt;
+   &lt;/ul&gt;
+
+   &lt;p&gt;&lt;strong&gt;Use cases:-&lt;/strong&gt;&lt;/p&gt;
+   &lt;ul&gt;
+    &lt;li&gt;Setting a centralized domain for all relative URLs.&lt;/li&gt;
+    &lt;li&gt;Defaulting link behavior to open in a new tab.&lt;/li&gt;
+    &lt;li&gt;Managing paths when deploying to CDNs.&lt;/li&gt;
+   &lt;/ul&gt;
+  &lt;/main&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <nav class="page-step-nav">
+        <a href="Audio.html" class="step-btn prev" title="Keyboard Shortcut: Left Arrow">&larr; Previous: &lt;audio&gt; Audio</a>
+        <a href="index.html" class="step-btn home">&#9776; All 60 Tags (Index)</a>
+        <a href="Bdo.html" class="step-btn next" title="Keyboard Shortcut: Right Arrow">Next: &lt;bdo&gt; Bdo &rarr;</a>
+      </nav>
+    </main>
+
+  <footer>
+   <address>
+    Author's name :- kaustubh singh. Instagram:- __kaustubh_singh.
+   </address>
+   <p>&copy; 2026 Kaustubh's HTML Guide</p>
+  </footer>
+     <script>
+      // Interactive mouse-tracking background spotlight
+      document.addEventListener('mousemove', function (e) {
+        var x = (e.clientX / window.innerWidth) * 100;
+        var y = (e.clientY / window.innerHeight) * 100;
+        document.body.style.setProperty('--mouse-x', x + '%');
+        document.body.style.setProperty('--mouse-y', y + '%');
+      });
+    </script>
+  </body>
+</html>

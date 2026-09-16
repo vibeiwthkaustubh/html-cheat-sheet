@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quick Navigation Component - Documentation & Source Code</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 20mm 15mm;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #1e293b;
+      margin: 0;
+      padding: 20px;
+      background: #ffffff;
+    }
+    .header-box {
+      border-bottom: 3px solid #2563eb;
+      padding-bottom: 15px;
+      margin-bottom: 25px;
+    }
+    h1 {
+      color: #0f172a;
+      font-size: 24pt;
+      margin: 0 0 6pt 0;
+    }
+    .meta {
+      color: #64748b;
+      font-size: 11pt;
+    }
+    h2 {
+      color: #1e293b;
+      font-size: 15pt;
+      margin-top: 24pt;
+      margin-bottom: 10pt;
+      border-bottom: 1.5px solid #e2e8f0;
+      padding-bottom: 4pt;
+    }
+    p, li {
+      font-size: 10.5pt;
+      color: #334155;
+    }
+    .preview-box {
+      background: #f8fafc;
+      border: 1.5px dashed #94a3b8;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 15px 0 25px 0;
+    }
+    /* Live component styles */
+    .quick-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffffff;
+      padding: 12px 18px;
+      border-radius: 8px;
+      border: 1.5px solid #e2e8f0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .quick-nav .home-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #eff6ff;
+      color: #2563eb;
+      border: 1px solid #bfdbfe;
+      padding: 8px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 9.5pt;
+    }
+    .quick-nav .nav-selector {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .quick-nav select {
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: 1.5px solid #cbd5e1;
+      font-size: 9.5pt;
+      font-weight: 500;
+      color: #0f172a;
+      background-color: #ffffff;
+      max-width: 250px;
+    }
+    pre {
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 16px 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: Consolas, "Fira Code", monospace;
+      font-size: 9.5pt;
+      line-height: 1.5;
+      page-break-inside: avoid;
+    }
+    code {
+      font-family: Consolas, monospace;
+      background: #eff6ff;
+      color: #2563eb;
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-size: 9.5pt;
+    }
+    pre code {
+      background: transparent;
+      color: #38bdf8;
+      padding: 0;
+    }
+    .badge {
+      display: inline-block;
+      background: #22c55e;
+      color: white;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 8.5pt;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .page-break {
+      page-break-before: always;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-box">
+    <h1>Quick Navigation Component</h1>
+    <div class="meta">
+      <strong>Project:</strong> HTML Tags Cheat Sheet &bull; 
+      <strong>Author:</strong> Kaustubh Singh &bull; 
+      <strong>Format:</strong> Reusable Component Specification
+    </div>
+  </div>
+
+  <h2>1. Overview & Architecture</h2>
+  <p>
+    The <strong>Quick Navigation Component</strong> is an interactive header bar integrated across all 60 HTML tag pages. 
+    It enables users to jump directly between any HTML tag page instantly using a native dropdown menu, or return to <code>index.html</code> with a single click without using browser history back buttons.
+  </p>
+
+  <h2>2. Live Component Visual Preview</h2>
+  <div class="preview-box">
+    <nav class="quick-nav">
+      <a href="#" class="home-btn">&larr; All Tags (Index)</a>
+      <div class="nav-selector">
+        <label for="sampleJump"><strong>Jump to Tag:</strong></label>
+        <select id="sampleJump">
+          <option value="">&lt;abbr&gt; Abbreviation</option>
+          <option value="" selected="selected">&lt;dialog&gt; Dialog Modal</option>
+          <option value="">&lt;form&gt; Form &amp; Enctype</option>
+          <option value="">&lt;video&gt; Video Player</option>
+          <option value="">... (All 60 Tags)</option>
+        </select>
+      </div>
+    </nav>
+  </div>
+
+  <h2>3. HTML Component Code</h2>
+  <p>Place this markup inside the <code>&lt;main&gt;</code> container at the top of each tag page:</p>
+
+  <pre><code>&lt;!-- Quick Navigation Component --&gt;
+&lt;nav class="quick-nav"&gt;
+  &lt;a href="index.html" class="home-btn"&gt;&amp;larr; All Tags (Index)&lt;/a&gt;
+  
+  &lt;div class="nav-selector"&gt;
+    &lt;label for="tagJump"&gt;&lt;strong&gt;Jump to Tag:&lt;/strong&gt;&lt;/label&gt;
+    &lt;select id="tagJump" onchange="if(this.value) window.location.href=this.value;"&gt;
+      &lt;option value=""&gt;-- Choose a Tag to Switch --&lt;/option&gt;
+      &lt;option value="Abbreviation.html"&gt;&amp;lt;abbr&amp;gt; Abbreviation&lt;/option&gt;
+      &lt;option value="Address.html"&gt;&amp;lt;address&amp;gt; Address&lt;/option&gt;
+      &lt;option value="Anchor.html"&gt;&amp;lt;a&amp;gt; Anchor&lt;/option&gt;
+      &lt;!-- Highlight active page --&gt;
+      &lt;option value="Dialog.html" selected="selected"&gt;&amp;lt;dialog&amp;gt; Dialog Modal&lt;/option&gt;
+      &lt;!-- ... remaining 56 tag options ... --&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+
+  <div class="page-break"></div>
+
+  <h2>4. CSS Stylesheet (style.css)</h2>
+  <p>The styling is fully responsive and integrates with standard CSS design variables:</p>
+
+  <pre><code>/* ==========================================
+   Quick Navigation Component Styles
+   ========================================== */
+.quick-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 12px 18px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  border: 1.5px solid #e2e8f0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.07);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.quick-nav .home-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #eff6ff;
+  color: #2563eb;
+  border: 1px solid #bfdbfe;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+  transition: all 0.2s ease;
+}
+
+.quick-nav .home-btn:hover {
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.25);
+}
+
+.quick-nav .nav-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quick-nav .nav-selector label {
+  font-weight: 600;
+  color: #0f172a;
+  font-size: 0.92rem;
+}
+
+.quick-nav select {
+  margin: 0;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1.5px solid #cbd5e1;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #0f172a;
+  background-color: #ffffff;
+  cursor: pointer;
+  max-width: 280px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.quick-nav select:focus {
+  border-color: #3b82f6;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* Mobile Responsive Optimization */
+@media (max-width: 600px) {
+  .quick-nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .quick-nav .nav-selector {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .quick-nav select {
+    max-width: 100%;
+  }
+}</code></pre>
+
+  <h2>5. Key Technical Highlights</h2>
+  <ul>
+    <li><strong>Instant Navigation (Zero-Library JavaScript)</strong>: Uses inline <code>onchange="if(this.value) window.location.href=this.value;"</code> for immediate zero-dependency URL redirection.</li>
+    <li><strong>Active Page State</strong>: Automatically marks the current page with <code>selected="selected"</code> in the dropdown so the user always knows their current location.</li>
+    <li><strong>Mobile &amp; Desktop Responsive</strong>: Flexbox container gracefully wraps on small screens, ensuring full touch accessibility.</li>
+  </ul>
+
+    <script>
+      // Interactive mouse-tracking background spotlight
+      document.addEventListener('mousemove', function (e) {
+        var x = (e.clientX / window.innerWidth) * 100;
+        var y = (e.clientY / window.innerHeight) * 100;
+        document.body.style.setProperty('--mouse-x', x + '%');
+        document.body.style.setProperty('--mouse-y', y + '%');
+      });
+    </script>
+  </body>
+</html>

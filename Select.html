@@ -1,0 +1,193 @@
+﻿<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="kaustubh singh" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>HTML Tags Cheat Sheet</title>
+  <link rel="stylesheet" href="style.css" />
+  
+    
+    <style>
+      select { padding: 8px 12px; font-size: 15px; border: 1px solid #ccc; border-radius: 4px; width: 280px; }
+   .select-demo { background: #f9f9f9; border: 1px solid #ddd; border-radius: 8px; padding: 20px; margin: 20px 0; max-width: 450px; }
+    </style>
+     <meta property="og:title" content="HTML Select Tag (<select>) - Cheat Sheet" />
+    <meta property="og:description" content="Complete guide to the HTML Select tag with live examples, use cases, attributes, and W3C standards." />
+    <meta property="og:type" content="article" />
+    <link rel="prev" href="Section.html" />
+    <link rel="next" href="Span.html" />
+    <script src="app.js" defer></script>
+  </head>
+ <body>
+  <header>
+   <h1>Select, Optgroup &amp; Option tags</h1>
+   <p>Learn tags with description, use cases, and examples</p>
+  </header>
+  <main>
+      <nav class="quick-nav">
+        <a href="../index.html" class="home-btn">&larr; All Tags (Index)</a>
+        <div class="nav-selector">
+          <label for="tagJump"><strong>Jump to Tag:</strong></label>
+          <select id="tagJump" onchange="if(this.value) window.location.href=this.value;">
+            <option value="">-- Choose a Tag to Switch --</option>
+            <option value="Abbreviation.html">&lt;abbr&gt; Abbreviation</option>
+            <option value="Address.html">&lt;address&gt; Address</option>
+            <option value="Anchor.html">&lt;a&gt; Anchor</option>
+            <option value="Area.html">&lt;area&gt; Area</option>
+            <option value="Article.html">&lt;article&gt; Article</option>
+            <option value="Aside.html">&lt;aside&gt; Aside</option>
+            <option value="Audio.html">&lt;audio&gt; Audio</option>
+            <option value="Base.html">&lt;base&gt; Base</option>
+            <option value="Bdo.html">&lt;bdo&gt; Bdo</option>
+            <option value="Blockquote.html">&lt;blockquote&gt; Blockquote</option>
+            <option value="Body.html">&lt;body&gt; Body</option>
+            <option value="Br.html">&lt;br&gt; Line Break</option>
+            <option value="Button.html">&lt;button&gt; Button</option>
+            <option value="Caption.html">&lt;caption&gt; Caption</option>
+            <option value="Cite.html">&lt;cite&gt; Citation</option>
+            <option value="Code.html">&lt;code&gt; Code</option>
+            <option value="Col.html">&lt;col&gt; Column</option>
+            <option value="Colgroup.html">&lt;colgroup&gt; Column Group</option>
+            <option value="Data.html">&lt;data&gt; Machine Data</option>
+            <option value="Datalist.html">&lt;datalist&gt; Datalist</option>
+            <option value="Del.html">&lt;del&gt; Deleted Text</option>
+            <option value="DescriptionList.html">&lt;dl&gt; Description List</option>
+            <option value="Details.html">&lt;details&gt; Details & Summary</option>
+            <option value="Dfn.html">&lt;dfn&gt; Definition Term</option>
+            <option value="Dialog.html">&lt;dialog&gt; Dialog Modal</option>
+            <option value="Div.html">&lt;div&gt; Division</option>
+            <option value="Em.html">&lt;em&gt; Emphasis</option>
+            <option value="Embed.html">&lt;embed&gt; Embed Plugin</option>
+            <option value="Fieldset.html">&lt;fieldset&gt; Fieldset & Legend</option>
+            <option value="Figure.html">&lt;figure&gt; Figure & Figcaption</option>
+            <option value="Footer.html">&lt;footer&gt; Footer</option>
+            <option value="Form.html">&lt;form&gt; Form & Enctype</option>
+            <option value="Head.html">&lt;head&gt; Document Head</option>
+            <option value="Header.html">&lt;header&gt; Header</option>
+            <option value="Heading.html">&lt;h1&gt;-&lt;h6&gt; Headings</option>
+            <option value="Hr.html">&lt;hr&gt; Horizontal Rule</option>
+            <option value="Iframe.html">&lt;iframe&gt; Inline Frame</option>
+            <option value="Img.html">&lt;img&gt; Image</option>
+            <option value="Input.html">&lt;input&gt; Input Types</option>
+            <option value="Label.html">&lt;label&gt; Form Label</option>
+            <option value="List.html">&lt;ul&gt;/&lt;ol&gt;/&lt;li&gt; Lists</option>
+            <option value="Main.html">&lt;main&gt; Main Content</option>
+            <option value="Mark.html">&lt;mark&gt; Highlight Mark</option>
+            <option value="Meter.html">&lt;meter&gt; Scalar Meter</option>
+            <option value="Nav.html">&lt;nav&gt; Navigation</option>
+            <option value="Noscript.html">&lt;noscript&gt; Noscript Fallback</option>
+            <option value="Object.html">&lt;object&gt; Embedded Object</option>
+            <option value="Picture.html">&lt;picture&gt; Responsive Picture</option>
+            <option value="Pre.html">&lt;pre&gt; Preformatted Text</option>
+            <option value="Progress.html">&lt;progress&gt; Progress Bar</option>
+            <option value="Ruby.html">&lt;ruby&gt; Ruby Annotations</option>
+            <option value="Script.html">&lt;script&gt; Script</option>
+            <option value="Section.html">&lt;section&gt; Section</option>
+            <option value="Select.html" selected="selected">&lt;select&gt; Select Dropdown</option>
+            <option value="Span.html">&lt;span&gt; Span</option>
+            <option value="Style.html">&lt;style&gt; Style</option>
+            <option value="Subscript.html">&lt;sub&gt;/&lt;sup&gt; Sub & Super</option>
+            <option value="Svg.html">&lt;svg&gt; Vector Graphics</option>
+            <option value="Table.html">&lt;table&gt; Data Table</option>
+            <option value="Video.html">&lt;video&gt; Video Player</option>
+          </select>
+        </div>
+      </nav>
+
+   <h2>Select tags ("&lt;select&gt;", "&lt;optgroup&gt;", "&lt;option&gt;") - [Both Opening &amp; Closing tags required]</h2>
+   <p>
+    <strong>Description:- </strong> The <code>&lt;select&gt;</code> element is used to create a drop-down
+    selection menu in forms. It contains <code>&lt;option&gt;</code> elements representing selectable
+    choices. The <code>&lt;optgroup&gt;</code> element allows grouping related options under bold, non-selectable category headers.
+   </p>
+
+   <div class="note-box">
+    <strong>Multi-select & Disabled Categories:</strong>
+    <p style="margin: 5px 0 0 0;">
+     Adding the <code>multiple</code> attribute to <code>&lt;select&gt;</code> lets users select multiple
+     items holding <kbd>Ctrl</kbd> or <kbd>Shift</kbd>. You can also disable an entire group of choices
+     instantly by adding <code>&lt;optgroup label="..." disabled&gt;</code>!
+    </p>
+   </div>
+
+   <p><strong>Example:-</strong> Grouped dropdown menu with &lt;optgroup&gt;:</p>
+
+   <div class="select-demo">
+    <label for="techStack"><strong>Choose your primary technology:</strong></label><br /><br />
+    <select id="techStack" name="techStack">
+     <option value="" disabled selected>-- Select an option --</option>
+     <optgroup label="Frontend Frameworks">
+      <option value="react">React.js</option>
+      <option value="vue">Vue.js</option>
+      <option value="angular">Angular</option>
+     </optgroup>
+     <optgroup label="Backend Technologies">
+      <option value="nodejs">Node.js</option>
+      <option value="python">Python Django/FastAPI</option>
+      <option value="java">Java Spring Boot</option>
+     </optgroup>
+    </select>
+   </div>
+
+   <h3>Key Attributes:-</h3>
+   <ul>
+    <li><strong>&lt;select&gt; :-</strong> <code>name</code>, <code>required</code>, <code>multiple</code>, <code>size</code>.</li>
+    <li><strong>&lt;optgroup&gt; :-</strong> <code>label (Required)</code> (category title), <code>disabled</code>.</li>
+    <li><strong>&lt;option&gt; :-</strong> <code>value</code> (sent to server), <code>selected</code>, <code>disabled</code>.</li>
+   </ul>
+
+   <p><strong>Use cases:-</strong></p>
+   <ul>
+    <li>Country and state pickers.</li>
+    <li>Category selectors in e-commerce filters.</li>
+    <li>Account role and permission selectors.</li>
+   </ul>
+
+   <h2>Complete code for the Select tag section</h2>
+   <pre><code>&lt;header&gt;
+ &lt;h1&gt;Select tag&lt;/h1&gt;
+ &lt;p&gt;Learn tags with description, use cases, and examples&lt;/p&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+ &lt;h2&gt;Select tag ("&amp;lt;select&amp;gt;") - [Both Opening &amp;amp; Closing tags required]&lt;/h2&gt;
+ &lt;p&gt;
+  &lt;strong&gt; Description:- &lt;/strong&gt; Drop-down selection list.
+ &lt;/p&gt;
+
+ &lt;select name="cars" id="cars"&gt;
+  &lt;optgroup label="Swedish Cars"&gt;
+   &lt;option value="volvo"&gt;Volvo&lt;/option&gt;
+   &lt;option value="saab"&gt;Saab&lt;/option&gt;
+  &lt;/optgroup&gt;
+  &lt;optgroup label="German Cars"&gt;
+   &lt;option value="mercedes"&gt;Mercedes&lt;/option&gt;
+   &lt;option value="audi"&gt;Audi&lt;/option&gt;
+  &lt;/optgroup&gt;
+ &lt;/select&gt;
+&lt;/main&gt;</code></pre>
+        <nav class="page-step-nav">
+        <a href="Section.html" class="step-btn prev" title="Keyboard Shortcut: Left Arrow">&larr; Previous: &lt;section&gt; Section</a>
+        <a href="index.html" class="step-btn home">&#9776; All 60 Tags (Index)</a>
+        <a href="Span.html" class="step-btn next" title="Keyboard Shortcut: Right Arrow">Next: &lt;span&gt; Span &rarr;</a>
+      </nav>
+    </main>
+  <footer>
+   <address>
+    Author's name :- kaustubh singh. Instagram:- __kaustubh_singh.
+   </address>
+   <p>&copy; 2026 Kaustubh's HTML Guide</p>
+  </footer>
+     <script>
+      // Interactive mouse-tracking background spotlight
+      document.addEventListener('mousemove', function (e) {
+        var x = (e.clientX / window.innerWidth) * 100;
+        var y = (e.clientY / window.innerHeight) * 100;
+        document.body.style.setProperty('--mouse-x', x + '%');
+        document.body.style.setProperty('--mouse-y', y + '%');
+      });
+    </script>
+  </body>
+</html>
