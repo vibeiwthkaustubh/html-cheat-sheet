@@ -196,27 +196,46 @@
         gap: 12px;
       }
 
-      .search-shortcut-btn {
-        background: var(--bg-surface-elevated);
-        border: 1px solid var(--border-subtle);
-        color: var(--text-secondary);
-        padding: 7px 14px;
-        border-radius: 9px;
-        font-size: 0.85rem;
-        font-weight: 500;
+      .nav-search-container {
+        position: relative;
         display: flex;
         align-items: center;
-        gap: 8px;
-        cursor: pointer;
-        transition: all 0.2s ease;
       }
 
-      .search-shortcut-btn:hover {
-        border-color: var(--brand-cyan);
+      .nav-search-icon {
+        position: absolute;
+        left: 12px;
+        color: var(--text-muted);
+        pointer-events: none;
+        font-size: 0.95rem;
+      }
+
+      .nav-search-input {
+        background: var(--bg-surface-elevated);
+        border: 1px solid var(--border-subtle);
         color: var(--text-primary);
+        padding: 8px 36px 8px 34px;
+        border-radius: 9px;
+        font-size: 0.88rem;
+        font-family: var(--font-sans);
+        width: 190px;
+        transition: all 0.25s ease;
       }
 
-      .search-shortcut-btn kbd {
+      .nav-search-input:focus {
+        width: 270px;
+        border-color: var(--brand-green);
+        box-shadow: 0 0 0 3px var(--brand-green-glow);
+        outline: none;
+      }
+
+      .nav-search-input::placeholder {
+        color: var(--text-muted);
+      }
+
+      .nav-search-kbd {
+        position: absolute;
+        right: 10px;
         background: var(--bg-surface);
         border: 1px solid var(--border-subtle);
         border-radius: 5px;
@@ -224,6 +243,93 @@
         font-family: var(--font-mono);
         font-size: 0.75rem;
         color: var(--brand-cyan);
+        pointer-events: none;
+      }
+
+      .nav-search-clear {
+        position: absolute;
+        right: 8px;
+        background: transparent;
+        border: none;
+        color: var(--text-muted);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.15rem;
+        line-height: 1;
+      }
+
+      .nav-search-clear:hover {
+        color: var(--text-primary);
+      }
+
+      /* Quick Dropdown Results attached to Navbar Search */
+      .nav-search-dropdown {
+        position: absolute;
+        top: calc(100% + 8px);
+        right: 0;
+        width: 320px;
+        max-height: 380px;
+        overflow-y: auto;
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: 12px;
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+        z-index: 1200;
+        padding: 8px;
+        display: none;
+      }
+
+      .dropdown-header {
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--text-muted);
+        padding: 6px 10px 4px 10px;
+      }
+
+      .dropdown-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 9px 10px;
+        border-radius: 8px;
+        text-decoration: none;
+        color: var(--text-primary);
+        font-size: 0.88rem;
+        transition: background 0.15s ease;
+        cursor: pointer;
+      }
+
+      .dropdown-item:hover {
+        background: var(--bg-surface-elevated);
+      }
+
+      .dropdown-item-left {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .dropdown-tag {
+        font-family: var(--font-mono);
+        color: var(--brand-green);
+        font-weight: 700;
+        font-size: 0.85rem;
+      }
+
+      .dropdown-cat {
+        font-size: 0.72rem;
+        color: var(--text-muted);
+        background: var(--bg-card);
+        padding: 2px 6px;
+        border-radius: 4px;
+        border: 1px solid var(--border-subtle);
       }
 
       .theme-btn {
@@ -1409,10 +1515,23 @@
         </ul>
 
         <div class="nav-actions">
-          <button class="search-shortcut-btn" id="navSearchTrigger" title="Quick Search (Press /)">
-            <span>Search tags...</span>
-            <kbd>/</kbd>
-          </button>
+          <div class="nav-search-container" id="navSearchContainer">
+            <span class="nav-search-icon">&#128269;</span>
+            <input
+              type="text"
+              class="nav-search-input"
+              id="navSearchInput"
+              placeholder="Search tags..."
+              autocomplete="off"
+              aria-label="Search tags"
+            />
+            <kbd class="nav-search-kbd">/</kbd>
+            <button class="nav-search-clear" id="navSearchClear" title="Clear search">&times;</button>
+            <div class="nav-search-dropdown" id="navSearchDropdown">
+              <div class="dropdown-header">Quick Tag Results</div>
+              <div id="navDropdownResults"></div>
+            </div>
+          </div>
           <button class="theme-btn" id="themeToggleBtn" title="Toggle Theme" aria-label="Toggle Theme">
             &#9728;
           </button>
@@ -3289,7 +3408,7 @@
       * { box-sizing: border-box; }
     </style>
   </head>
-  <body>\${content}</body>
+  <body>${content}</body>
 </html>`);
           frameDoc.close();
         }
@@ -3334,7 +3453,12 @@
         const emptyStateEl = document.getElementById('catalogEmptyState');
         const btnViewGrid = document.getElementById('btnViewGrid');
         const btnViewCompact = document.getElementById('btnViewCompact');
-        const navSearchTrigger = document.getElementById('navSearchTrigger');
+        const navSearchInput = document.getElementById('navSearchInput');
+        const navSearchClear = document.getElementById('navSearchClear');
+        const navSearchKbd = document.querySelector('.nav-search-kbd');
+        const navSearchDropdown = document.getElementById('navSearchDropdown');
+        const navDropdownResults = document.getElementById('navDropdownResults');
+        const navSearchContainer = document.getElementById('navSearchContainer');
 
         let activeCategory = 'all';
         let searchQuery = '';
@@ -3342,6 +3466,7 @@
         function performFiltering() {
           let visibleElements = 0;
           const query = searchQuery.toLowerCase().trim();
+          let dropdownMatches = [];
 
           elementCards.forEach(card => {
             const cardCat = card.getAttribute('data-category');
@@ -3358,27 +3483,109 @@
             } else {
               card.style.display = 'none';
             }
+
+            if (query && (cardName.includes(query) || cardTags.includes(query))) {
+              if (dropdownMatches.length < 8) {
+                dropdownMatches.push({
+                  name: cardName,
+                  title: card.querySelector('.tag-display-name')?.textContent || cardName,
+                  category: card.querySelector('.domain-badge')?.textContent || cardCat,
+                  link: card.querySelector('.explore-link')?.getAttribute('href') || `${cardName}.html`
+                });
+              }
+            }
           });
 
+          // Update result counts
           if (visibleElements === 60) {
             resultCountEl.textContent = 'Showing all 60 elements';
           } else {
-            resultCountEl.textContent = \`Showing \${visibleElements} of 60 elements\`;
+            resultCountEl.textContent = `Showing ${visibleElements} of 60 elements`;
           }
 
           emptyStateEl.style.display = (visibleElements === 0) ? 'block' : 'none';
+
+          // Update quick dropdown
+          if (query && dropdownMatches.length > 0) {
+            navDropdownResults.innerHTML = dropdownMatches.map(m => `
+              <a href="${m.link}" target="_blank" class="dropdown-item">
+                <div class="dropdown-item-left">
+                  <span class="dropdown-tag">&lt;${m.name}&gt;</span>
+                  <span style="font-weight: 600;">${m.title}</span>
+                </div>
+                <span class="dropdown-cat">${m.category}</span>
+              </a>
+            `).join('');
+            if (document.activeElement === navSearchInput) {
+              navSearchDropdown.style.display = 'block';
+            }
+          } else if (query && dropdownMatches.length === 0) {
+            navDropdownResults.innerHTML = `<div style="padding: 12px; font-size: 0.85rem; color: var(--text-muted); text-align: center;">No quick matches found</div>`;
+            if (document.activeElement === navSearchInput) {
+              navSearchDropdown.style.display = 'block';
+            }
+          } else {
+            navSearchDropdown.style.display = 'none';
+          }
         }
 
+        // Navbar Search Input events
+        navSearchInput.addEventListener('input', (e) => {
+          searchQuery = e.target.value;
+          searchInput.value = searchQuery;
+          navSearchClear.style.display = searchQuery ? 'flex' : 'none';
+          if (navSearchKbd) navSearchKbd.style.display = searchQuery ? 'none' : 'block';
+          clearSearchBtn.style.display = searchQuery ? 'flex' : 'none';
+          performFiltering();
+        });
+
+        navSearchInput.addEventListener('focus', () => {
+          if (searchQuery) navSearchDropdown.style.display = 'block';
+        });
+
+        navSearchInput.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter') {
+            navSearchDropdown.style.display = 'none';
+            document.getElementById('catalog').scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+
+        navSearchClear.addEventListener('click', () => {
+          navSearchInput.value = '';
+          searchInput.value = '';
+          searchQuery = '';
+          navSearchClear.style.display = 'none';
+          if (navSearchKbd) navSearchKbd.style.display = 'block';
+          clearSearchBtn.style.display = 'none';
+          navSearchDropdown.style.display = 'none';
+          performFiltering();
+          navSearchInput.focus();
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+          if (navSearchContainer && !navSearchContainer.contains(e.target)) {
+            navSearchDropdown.style.display = 'none';
+          }
+        });
+
+        // In-page Catalog Search Input events
         searchInput.addEventListener('input', (e) => {
           searchQuery = e.target.value;
+          navSearchInput.value = searchQuery;
+          navSearchClear.style.display = searchQuery ? 'flex' : 'none';
+          if (navSearchKbd) navSearchKbd.style.display = searchQuery ? 'none' : 'block';
           clearSearchBtn.style.display = searchQuery ? 'flex' : 'none';
           performFiltering();
         });
 
         clearSearchBtn.addEventListener('click', () => {
           searchInput.value = '';
+          navSearchInput.value = '';
           searchQuery = '';
           clearSearchBtn.style.display = 'none';
+          navSearchClear.style.display = 'none';
+          if (navSearchKbd) navSearchKbd.style.display = 'block';
           searchInput.focus();
           performFiltering();
         });
@@ -3395,7 +3602,7 @@
         });
 
         window.selectCategory = function (cat) {
-          const pill = categoryPillList.querySelector(\`[data-category="\${cat}"]\`);
+          const pill = categoryPillList.querySelector(`[data-category="${cat}"]`);
           if (pill) {
             categoryPillList.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
             pill.classList.add('active');
@@ -3406,8 +3613,11 @@
 
         window.resetFilters = function () {
           searchInput.value = '';
+          navSearchInput.value = '';
           searchQuery = '';
           clearSearchBtn.style.display = 'none';
+          navSearchClear.style.display = 'none';
+          if (navSearchKbd) navSearchKbd.style.display = 'block';
           selectCategory('all');
         };
 
@@ -3424,21 +3634,14 @@
           elementsGrid.classList.add('compact-view');
         });
 
-        // Keyboard Shortcut: '/' to focus search
+        // Keyboard Shortcut: '/' to focus navbar search
         document.addEventListener('keydown', (e) => {
-          if (e.key === '/' && document.activeElement !== searchInput && document.activeElement !== playgroundCodeInput) {
+          if (e.key === '/' && document.activeElement !== navSearchInput && document.activeElement !== searchInput && document.activeElement !== playgroundCodeInput) {
             e.preventDefault();
-            searchInput.focus();
-            searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            navSearchInput.focus();
+            navSearchInput.select();
           }
         });
-
-        if (navSearchTrigger) {
-          navSearchTrigger.addEventListener('click', () => {
-            searchInput.focus();
-            searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          });
-        }
 
         // 4. Quick Element Inspector Modal
         const inspectorModal = document.getElementById('inspectorModal');
@@ -3452,7 +3655,7 @@
         const modalCopySnippetBtn = document.getElementById('modalCopySnippetBtn');
 
         window.openInspector = function (tag, nature, cat, guidance, code, link) {
-          modalTagTitle.textContent = \`<\${tag}>\`;
+          modalTagTitle.textContent = `<${tag}>`;
           modalElementType.textContent = nature;
           modalCategory.textContent = cat;
           modalGuidance.textContent = guidance;
