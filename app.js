@@ -31,7 +31,7 @@
 
   // --- Theme Toggle ---
   function initThemeToggle() {
-    var savedTheme = localStorage.getItem('html_guide_theme') || 'dark';
+    var savedTheme = localStorage.getItem('html5_dev_theme') || localStorage.getItem('html_guide_theme') || 'dark';
     if (savedTheme === 'light') {
       document.body.classList.add('light-theme');
     }
@@ -50,6 +50,7 @@
         var isLight = document.body.classList.toggle('light-theme');
         var newTheme = isLight ? 'light' : 'dark';
         localStorage.setItem('html_guide_theme', newTheme);
+        localStorage.setItem('html5_dev_theme', newTheme);
         toggleBtn.innerHTML = isLight ? '&#9790; Dark Mode' : '&#9728; Light Mode';
       });
 

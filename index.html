@@ -1822,7 +1822,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Semantic</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('header', 'Paired Element', 'Semantic & Layout', 'Commonly scoped at page or article level.', '<header>\n  <h1>Website Title</h1>\n  <nav>...</nav>\n</header>', 'Header.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="header" onclick="openInspector('header')">Inspect</button>
               <a href="Header.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -1845,7 +1845,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Semantic</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('nav', 'Paired Element', 'Semantic & Layout', 'Only for major navigational link clusters.', '<nav aria-label=\"Main Navigation\">\n  <ul>\n    <li><a href=\"#home\">Home</a></li>\n  </ul>\n</nav>', 'Nav.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="nav" onclick="openInspector('nav')">Inspect</button>
               <a href="Nav.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -1867,7 +1867,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Semantic</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('main', 'Paired Element', 'Semantic & Layout', 'Only one visible <main> tag allowed per page.', '<main id=\"content\">\n  <h2>Page Headline</h2>\n  <p>Dominant content...</p>\n</main>', 'Main.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="main" onclick="openInspector('main')">Inspect</button>
               <a href="Main.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -1890,7 +1890,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Semantic</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('article', 'Paired Element', 'Semantic & Layout', 'Represents a standalone piece of content.', '<article>\n  <h2>Article Title</h2>\n  <p>Article body content...</p>\n</article>', 'Article.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="article" onclick="openInspector('article')">Inspect</button>
               <a href="Article.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -1912,7 +1912,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Semantic</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('section', 'Paired Element', 'Semantic & Layout', 'Should usually contain a heading tag.', '<section>\n  <h2>Section Heading</h2>\n  <p>Related section body...</p>\n</section>', 'Section.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="section" onclick="openInspector('section')">Inspect</button>
               <a href="Section.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -1934,7 +1934,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Semantic</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('aside', 'Paired Element', 'Semantic & Layout', 'Defines indirectly related callout content.', '<aside>\n  <h4>Related Links</h4>\n  <p>Check out our docs...</p>\n</aside>', 'Aside.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="aside" onclick="openInspector('aside')">Inspect</button>
               <a href="Aside.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -1956,7 +1956,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Semantic</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('footer', 'Paired Element', 'Semantic & Layout', 'Can be used for page or inside article/section.', '<footer>\n  <p>&copy; 2026 Developer Portal</p>\n</footer>', 'Footer.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="footer" onclick="openInspector('footer')">Inspect</button>
               <a href="Footer.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -1979,7 +1979,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Semantic</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('div', 'Paired Element', 'Semantic & Layout', 'Use when no semantic element applies.', '<div class=\"container-grid\">\n  <div>Child 1</div>\n</div>', 'Div.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="div" onclick="openInspector('div')">Inspect</button>
               <a href="Div.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2001,7 +2001,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Semantic</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('span', 'Paired Element', 'Semantic & Layout', 'Inline wrapper for target CSS formatting.', '<p>Total: <span class=\"price\">$49</span></p>', 'Span.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="span" onclick="openInspector('span')">Inspect</button>
               <a href="Span.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2023,7 +2023,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Semantic</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('body', 'Paired Element', 'Semantic & Layout', 'The root visible container in an HTML page.', '<body>\n  <header>...</header>\n  <main>...</main>\n</body>', 'Body.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="body" onclick="openInspector('body')">Inspect</button>
               <a href="Body.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2047,7 +2047,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Forms</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('form', 'Paired Element', 'Forms & Interactive', 'Supports enctype=\"multipart/form-data\" for uploads.', '<form action=\"/api\" method=\"POST\">\n  <input type=\"text\" name=\"user\">\n  <button type=\"submit\">Submit</button>\n</form>', 'Form.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="form" onclick="openInspector('form')">Inspect</button>\n</form>', 'Form.html')">Inspect</button>
               <a href="Form.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2070,7 +2070,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Forms</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('input', 'Void Element', 'Forms & Interactive', 'No closing tag. Uses type attribute.', '<input type=\"email\" name=\"email\" required placeholder=\"you@example.com\">', 'Input.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="input" onclick="openInspector('input')">Inspect</button>
               <a href="Input.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2092,7 +2092,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Forms</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('button', 'Paired Element', 'Forms & Interactive', 'Always specify type=\"button\" or type=\"submit\".', '<button type=\"submit\" class=\"btn-primary\">Confirm Order</button>', 'Button.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="button" onclick="openInspector('button')">Inspect</button>', 'Button.html')">Inspect</button>
               <a href="Button.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2115,7 +2115,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Forms</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('label', 'Paired Element', 'Forms & Interactive', 'Binds click target directly to input ID.', '<label for=\"emailField\">Email Address:</label>\n<input id=\"emailField\" type=\"email\">', 'Label.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="label" onclick="openInspector('label')">Inspect</button>
               <a href="Label.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2138,7 +2138,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Forms</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('select', 'Paired Element', 'Forms & Interactive', 'Holds <option> and <optgroup> tags.', '<select name=\"role\">\n  <option value=\"dev\">Developer</option>\n  <option value=\"des\">Designer</option>\n</select>', 'Select.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="select" onclick="openInspector('select')">Inspect</button>
               <a href="Select.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2160,7 +2160,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Forms</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('datalist', 'Paired Element', 'Forms & Interactive', 'Linked to input via list=\"datalist-id\".', '<input list=\"browsers\" name=\"browser\">\n<datalist id=\"browsers\">\n  <option value=\"Chrome\">\n  <option value=\"Firefox\">\n</datalist>', 'Datalist.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="datalist" onclick="openInspector('datalist')">Inspect</button>
               <a href="Datalist.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2182,7 +2182,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Forms</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('fieldset', 'Paired Element', 'Forms & Interactive', 'Use with <legend> for radio and group accessibility.', '<fieldset>\n  <legend>Billing Method</legend>\n  <input type=\"radio\" name=\"pay\" id=\"card\"><label for=\"card\">Card</label>\n</fieldset>', 'Fieldset.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="fieldset" onclick="openInspector('fieldset')">Inspect</button>
               <a href="Fieldset.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2205,7 +2205,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Forms</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('details', 'Paired Element', 'Forms & Interactive', 'Interactive disclosure element handled by browser.', '<details>\n  <summary>Frequently Asked Question</summary>\n  <p>Here is the detailed response...</p>\n</details>', 'Details.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="details" onclick="openInspector('details')">Inspect</button>
               <a href="Details.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2228,7 +2228,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Forms</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('dialog', 'Paired Element', 'Forms & Interactive', 'Supports dialog.showModal() and form method=\"dialog\".', '<dialog id=\"myModal\">\n  <p>Modal content</p>\n  <button onclick=\"myModal.close()\">Close</button>\n</dialog>', 'Dialog.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="dialog" onclick="openInspector('dialog')">Inspect</button>\n</dialog>', 'Dialog.html')">Inspect</button>
               <a href="Dialog.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2251,7 +2251,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Forms</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('progress', 'Paired Element', 'Forms & Interactive', 'Represents task progress from 0 to max.', '<progress value=\"75\" max=\"100\">75%</progress>', 'Progress.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="progress" onclick="openInspector('progress')">Inspect</button>
               <a href="Progress.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2275,7 +2275,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Tables</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('table', 'Paired Element', 'Tables & Lists', 'For multi-dimensional structured data only.', '<table>\n  <tr><th>Col 1</th><th>Col 2</th></tr>\n  <tr><td>Val 1</td><td>Val 2</td></tr>\n</table>', 'Table.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="table" onclick="openInspector('table')">Inspect</button>
               <a href="Table.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2297,7 +2297,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Tables</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('caption', 'Paired Element', 'Tables & Lists', 'Must be the immediate first child of <table>.', '<table>\n  <caption>Monthly Revenue Report 2026</caption>\n  ...\n</table>', 'Caption.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="caption" onclick="openInspector('caption')">Inspect</button>
               <a href="Caption.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2319,7 +2319,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Tables</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('colgroup', 'Paired Element', 'Tables & Lists', 'Groups columns for shared width styling.', '<colgroup>\n  <col style=\"width: 30%\">\n  <col style=\"width: 70%\">\n</colgroup>', 'Colgroup.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="colgroup" onclick="openInspector('colgroup')">Inspect</button>
               <a href="Colgroup.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2341,7 +2341,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Tables</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('col', 'Void Element', 'Tables & Lists', 'Specifies properties inside <colgroup>.', '<colgroup>\n  <col span=\"2\" style=\"background:#eee\">\n</colgroup>', 'Col.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="col" onclick="openInspector('col')">Inspect</button>
               <a href="Col.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2364,7 +2364,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Tables</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('ul / ol', 'Paired Element', 'Tables & Lists', 'Parent for <li> list item elements.', '<ul>\n  <li>First Item</li>\n  <li>Second Item</li>\n</ul>', 'List.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="list" onclick="openInspector('list')">Inspect</button>
               <a href="List.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2387,7 +2387,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Tables</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('dl', 'Paired Element', 'Tables & Lists', 'Standard for metadata or term glossaries.', '<dl>\n  <dt>HTML5</dt>\n  <dd>HyperText Markup Language</dd>\n</dl>', 'DescriptionList.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="descriptionlist" onclick="openInspector('descriptionlist')">Inspect</button>
               <a href="DescriptionList.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2410,7 +2410,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Tables</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('meter', 'Paired Element', 'Tables & Lists', 'For known bounded measurements (not task progress).', '<meter value=\"60\" min=\"0\" max=\"100\" optimum=\"80\">60%</meter>', 'Meter.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="meter" onclick="openInspector('meter')">Inspect</button>
               <a href="Meter.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2434,7 +2434,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Media</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('img', 'Void Element', 'Media & Graphics', 'Always provide descriptive alt attribute.', '<img src=\"hero.jpg\" alt=\"Developer using terminal\" loading=\"lazy\">', 'Img.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="img" onclick="openInspector('img')">Inspect</button>
               <a href="Img.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2457,7 +2457,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Media</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('picture', 'Paired Element', 'Media & Graphics', 'Provides responsive fallback image formats.', '<picture>\n  <source srcset=\"large.webp\" media=\"(min-width: 800px)\">\n  <img src=\"fallback.jpg\" alt=\"Illustration\">\n</picture>', 'Picture.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="picture" onclick="openInspector('picture')">Inspect</button>
               <a href="Picture.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2479,7 +2479,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Media</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('figure', 'Paired Element', 'Media & Graphics', 'Self-contained illustration with caption.', '<figure>\n  <img src=\"chart.png\" alt=\"Architecture\">\n  <figcaption>Figure 1.1: System Flow</figcaption>\n</figure>', 'Figure.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="figure" onclick="openInspector('figure')">Inspect</button>
               <a href="Figure.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2502,7 +2502,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Media</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('video', 'Paired Element', 'Media & Graphics', 'Embedded video playback with controls.', '<video controls poster=\"thumb.jpg\" width=\"640\">\n  <source src=\"video.mp4\" type=\"video/mp4\">\n</video>', 'Video.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="video" onclick="openInspector('video')">Inspect</button>
               <a href="Video.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2524,7 +2524,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Media</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('audio', 'Paired Element', 'Media & Graphics', 'Native audio playback element.', '<audio controls src=\"track.mp3\">\n  Your browser does not support audio.\n</audio>', 'Audio.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="audio" onclick="openInspector('audio')">Inspect</button>
               <a href="Audio.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2547,7 +2547,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Media</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('svg', 'Paired Element', 'Media & Graphics', 'Vector graphics scalable without pixelation.', '<svg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\">\n  <circle cx=\"12\" cy=\"12\" r=\"10\" fill=\"currentColor\"/>\n</svg>', 'Svg.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="svg" onclick="openInspector('svg')">Inspect</button>
               <a href="Svg.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2569,7 +2569,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Media</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('iframe', 'Paired Element', 'Media & Graphics', 'Use sandbox attribute for security.', '<iframe src=\"https://example.com\" sandbox title=\"Preview\"></iframe>', 'Iframe.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="iframe" onclick="openInspector('iframe')">Inspect</button>
               <a href="Iframe.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2592,7 +2592,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Media</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('object', 'Paired Element', 'Media & Graphics', 'Useful for embedding PDFs and rich media.', '<object data=\"document.pdf\" type=\"application/pdf\" width=\"100%\" height=\"500\">\n  <p>PDF not supported.</p>\n</object>', 'Object.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="object" onclick="openInspector('object')">Inspect</button>
               <a href="Object.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2614,7 +2614,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Media</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('embed', 'Void Element', 'Media & Graphics', 'General embed point for external content.', '<embed type=\"video/webm\" src=\"video.webm\" width=\"400\" height=\"300\">', 'Embed.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="embed" onclick="openInspector('embed')">Inspect</button>
               <a href="Embed.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2637,7 +2637,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Media</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('area', 'Void Element', 'Media & Graphics', 'Used inside <map> to create clickable hotspots.', '<map name=\"infographic\">\n  <area shape=\"rect\" coords=\"34,44,270,350\" href=\"#detail\" alt=\"Item\">\n</map>', 'Area.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="area" onclick="openInspector('area')">Inspect</button>
               <a href="Area.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2661,7 +2661,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Text</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('h1-h6', 'Paired Element', 'Text & Typography', 'Never skip heading levels (e.g. h1 to h3).', '<h1>Page Title</h1>\n<h2>Primary Subheading</h2>', 'Heading.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="heading" onclick="openInspector('heading')">Inspect</button>
               <a href="Heading.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2684,7 +2684,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Text</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('a', 'Paired Element', 'Text & Typography', 'Always use rel=\"noopener\" with target=\"_blank\".', '<a href=\"https://spring.io\" target=\"_blank\" rel=\"noopener\">Spring Official</a>', 'Anchor.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="anchor" onclick="openInspector('anchor')">Inspect</button>
               <a href="Anchor.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2706,7 +2706,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Text</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('blockquote', 'Paired Element', 'Text & Typography', 'Represents extended external quotations.', '<blockquote cite=\"https://w3.org\">\n  <p>The web is for everyone.</p>\n</blockquote>', 'Blockquote.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="blockquote" onclick="openInspector('blockquote')">Inspect</button>
               <a href="Blockquote.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2728,7 +2728,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Text</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('pre', 'Paired Element', 'Text & Typography', 'Preserves raw whitespace and indents.', '<pre><code>\nconst total = 100;\nconsole.log(total);\n</code></pre>', 'Pre.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="pre" onclick="openInspector('pre')">Inspect</button>
               <a href="Pre.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2750,7 +2750,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Text</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('code', 'Paired Element', 'Text & Typography', 'For code identifiers and short commands.', '<p>Run <code>npm start</code> in terminal.</p>', 'Code.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="code" onclick="openInspector('code')">Inspect</button>
               <a href="Code.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2772,7 +2772,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Text</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('br', 'Void Element', 'Text & Typography', 'Use for postal addresses or poetry only.', '<p>100 Innovation Way<br>Bengaluru, India</p>', 'Br.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="br" onclick="openInspector('br')">Inspect</button>
               <a href="Br.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2794,7 +2794,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Text</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('hr', 'Void Element', 'Text & Typography', 'Indicates a thematic break between paragraphs.', '<p>Scene One finishes...</p>\n<hr>\n<p>Scene Two begins...</p>', 'Hr.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="hr" onclick="openInspector('hr')">Inspect</button>
               <a href="Hr.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2816,7 +2816,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Text</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('em', 'Paired Element', 'Text & Typography', 'Indicates vocal stress on words.', '<p>We <em>must</em> ship this update today.</p>', 'Em.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="em" onclick="openInspector('em')">Inspect</button>
               <a href="Em.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2838,7 +2838,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Text</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('mark', 'Paired Element', 'Text & Typography', 'Highlights search hits or reference points.', '<p>Found 5 results for <mark>spring</mark>.</p>', 'Mark.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="mark" onclick="openInspector('mark')">Inspect</button>
               <a href="Mark.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2860,7 +2860,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Text</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('sub / sup', 'Paired Element', 'Text & Typography', 'Typographical sub/superscripts.', '<p>H<sub>2</sub>O and x<sup>2</sup></p>', 'Subscript.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="subscript" onclick="openInspector('subscript')">Inspect</button>
               <a href="Subscript.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2882,7 +2882,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Text</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('del / ins', 'Paired Element', 'Text & Typography', 'For tracked document modifications or discounts.', '<p><del>$99</del> <ins>$69</ins></p>', 'Del.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="del" onclick="openInspector('del')">Inspect</button>
               <a href="Del.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2904,7 +2904,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Text</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('address', 'Paired Element', 'Text & Typography', 'For article or document author contact.', '<address>\n  Author: Kaustubh Singh<br>\n  <a href=\"mailto:kaustubh@example.com\">Email</a>\n</address>', 'Address.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="address" onclick="openInspector('address')">Inspect</button>
               <a href="Address.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2926,7 +2926,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Text</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('cite', 'Paired Element', 'Text & Typography', 'Must contain the title of a creative work.', '<p>Refer to <cite>Refactoring</cite> by Martin Fowler.</p>', 'Cite.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="cite" onclick="openInspector('cite')">Inspect</button>
               <a href="Cite.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2948,7 +2948,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Text</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('dfn', 'Paired Element', 'Text & Typography', 'Marks the term being defined in a sentence.', '<p><dfn>HTML</dfn> is the standard markup language for documents.</p>', 'Dfn.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="dfn" onclick="openInspector('dfn')">Inspect</button>
               <a href="Dfn.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2970,7 +2970,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Text</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('abbr', 'Paired Element', 'Text & Typography', 'Provides tooltips for acronyms.', '<abbr title=\"Cascading Style Sheets\">CSS</abbr>', 'Abbreviation.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="abbreviation" onclick="openInspector('abbreviation')">Inspect</button>
               <a href="Abbreviation.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -2992,7 +2992,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Text</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('bdo', 'Paired Element', 'Text & Typography', 'Overrides inline text direction.', '<bdo dir=\"rtl\">This text will render right-to-left.</bdo>', 'Bdo.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="bdo" onclick="openInspector('bdo')">Inspect</button>
               <a href="Bdo.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -3015,7 +3015,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Text</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('ruby', 'Paired Element', 'Text & Typography', 'East Asian pronunciation guides.', '<ruby>漢 <rt>かん</rt></ruby>', 'Ruby.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="ruby" onclick="openInspector('ruby')">Inspect</button>
               <a href="Ruby.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -3039,7 +3039,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Metadata</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('head', 'Paired Element', 'Document & Metadata', 'Container for head metadata (non-rendered).', '<head>\n  <title>Page</title>\n  <meta charset=\"UTF-8\">\n</head>', 'Head.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="head" onclick="openInspector('head')">Inspect</button>
               <a href="Head.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -3062,7 +3062,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Metadata</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('base', 'Void Element', 'Document & Metadata', 'Resolves all relative URLs against this URL.', '<base href=\"https://example.com/assets/\" target=\"_blank\">', 'Base.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="base" onclick="openInspector('base')">Inspect</button>
               <a href="Base.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -3085,7 +3085,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Metadata</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('script', 'Paired Element', 'Document & Metadata', 'Prefer defer or type=\"module\" for non-blocking load.', '<script src=\"app.js\" defer></script>', 'Script.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="script" onclick="openInspector('script')">Inspect</button>
               <a href="Script.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -3107,7 +3107,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Metadata</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('style', 'Paired Element', 'Document & Metadata', 'Contains embedded stylesheet declarations.', '<style>\n  body { font-family: sans-serif; }\n</style>', 'Style.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="style" onclick="openInspector('style')">Inspect</button>
               <a href="Style.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -3129,7 +3129,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Metadata</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('noscript', 'Paired Element', 'Document & Metadata', 'Rendered only when JavaScript is disabled.', '<noscript>\n  <p>JavaScript is required to view interactive features.</p>\n</noscript>', 'Noscript.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="noscript" onclick="openInspector('noscript')">Inspect</button>
               <a href="Noscript.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -3151,7 +3151,7 @@
           <div class="card-bottom-row">
             <span class="domain-badge">Metadata</span>
             <div class="card-actions-wrapper">
-              <button class="inspect-btn" onclick="openInspector('data', 'Paired Element', 'Document & Metadata', 'Attaches machine values to human visible text.', '<p>Product: <data value=\"SKU-8921\">Wireless Keyboard</data></p>', 'Data.html')">Inspect</button>
+              <button class="inspect-btn" data-tag="data" onclick="openInspector('data')">Inspect</button>
               <a href="Data.html" target="_blank" class="explore-link">Explore &rarr;</a>
             </div>
           </div>
@@ -3286,7 +3286,7 @@
 
         // 1. Theme Management
         const themeBtn = document.getElementById('themeToggleBtn');
-        const savedTheme = localStorage.getItem('html5_dev_theme') || 'dark';
+        const savedTheme = localStorage.getItem('html5_dev_theme') || localStorage.getItem('html_guide_theme') || 'dark';
 
         if (savedTheme === 'light') {
           document.body.classList.add('light-theme');
@@ -3299,6 +3299,7 @@
           const isLight = document.body.classList.toggle('light-theme');
           const newTheme = isLight ? 'light' : 'dark';
           localStorage.setItem('html5_dev_theme', newTheme);
+          localStorage.setItem('html_guide_theme', newTheme);
           themeBtn.innerHTML = isLight ? '&#9790;' : '&#9728;';
         });
 
@@ -3643,7 +3644,490 @@
           }
         });
 
-        // 4. Quick Element Inspector Modal
+        // 4. Quick Element Inspector Modal & Metadata Registry
+        const TAG_DETAILS = {
+          "header": {
+            "tag": "header",
+            "nature": "Paired Element",
+            "cat": "Semantic & Layout",
+            "guidance": "Commonly scoped at page or article level.",
+            "code": "<header>\n  <h1>Website Title</h1>\n  <nav>...</nav>\n</header>",
+            "link": "Header.html"
+          },
+          "nav": {
+            "tag": "nav",
+            "nature": "Paired Element",
+            "cat": "Semantic & Layout",
+            "guidance": "Only for major navigational link clusters.",
+            "code": "<nav aria-label=\"Main Navigation\">\n  <ul>\n    <li><a href=\"#home\">Home</a></li>\n  </ul>\n</nav>",
+            "link": "Nav.html"
+          },
+          "main": {
+            "tag": "main",
+            "nature": "Paired Element",
+            "cat": "Semantic & Layout",
+            "guidance": "Only one visible <main> tag allowed per page.",
+            "code": "<main id=\"content\">\n  <h2>Page Headline</h2>\n  <p>Dominant content...</p>\n</main>",
+            "link": "Main.html"
+          },
+          "article": {
+            "tag": "article",
+            "nature": "Paired Element",
+            "cat": "Semantic & Layout",
+            "guidance": "Represents a standalone piece of content.",
+            "code": "<article>\n  <h2>Article Title</h2>\n  <p>Article body content...</p>\n</article>",
+            "link": "Article.html"
+          },
+          "section": {
+            "tag": "section",
+            "nature": "Paired Element",
+            "cat": "Semantic & Layout",
+            "guidance": "Should usually contain a heading tag.",
+            "code": "<section>\n  <h2>Section Heading</h2>\n  <p>Related section body...</p>\n</section>",
+            "link": "Section.html"
+          },
+          "aside": {
+            "tag": "aside",
+            "nature": "Paired Element",
+            "cat": "Semantic & Layout",
+            "guidance": "Defines indirectly related callout content.",
+            "code": "<aside>\n  <h4>Related Links</h4>\n  <p>Check out our docs...</p>\n</aside>",
+            "link": "Aside.html"
+          },
+          "footer": {
+            "tag": "footer",
+            "nature": "Paired Element",
+            "cat": "Semantic & Layout",
+            "guidance": "Can be used for page or inside article/section.",
+            "code": "<footer>\n  <p>&copy; 2026 Developer Portal</p>\n</footer>",
+            "link": "Footer.html"
+          },
+          "div": {
+            "tag": "div",
+            "nature": "Paired Element",
+            "cat": "Semantic & Layout",
+            "guidance": "Use when no semantic element applies.",
+            "code": "<div class=\"container-grid\">\n  <div>Child 1</div>\n</div>",
+            "link": "Div.html"
+          },
+          "span": {
+            "tag": "span",
+            "nature": "Paired Element",
+            "cat": "Semantic & Layout",
+            "guidance": "Inline wrapper for target CSS formatting.",
+            "code": "<p>Total: <span class=\"price\">$49</span></p>",
+            "link": "Span.html"
+          },
+          "body": {
+            "tag": "body",
+            "nature": "Paired Element",
+            "cat": "Semantic & Layout",
+            "guidance": "The root visible container in an HTML page.",
+            "code": "<body>\n  <header>...</header>\n  <main>...</main>\n</body>",
+            "link": "Body.html"
+          },
+          "form": {
+            "tag": "form",
+            "nature": "Paired Element",
+            "cat": "Forms & Interactive",
+            "guidance": "Supports enctype=\"multipart/form-data\" for uploads.",
+            "code": "<form action=\"/api\" method=\"POST\">\n  <input type=\"text\" name=\"user\">\n  <button type=\"submit\">Submit</button>\n</form>",
+            "link": "Form.html"
+          },
+          "input": {
+            "tag": "input",
+            "nature": "Void Element",
+            "cat": "Forms & Interactive",
+            "guidance": "No closing tag. Uses type attribute.",
+            "code": "<input type=\"email\" name=\"email\" required placeholder=\"you@example.com\">",
+            "link": "Input.html"
+          },
+          "button": {
+            "tag": "button",
+            "nature": "Paired Element",
+            "cat": "Forms & Interactive",
+            "guidance": "Always specify type=\"button\" or type=\"submit\".",
+            "code": "<button type=\"submit\" class=\"btn-primary\">Confirm Order</button>",
+            "link": "Button.html"
+          },
+          "label": {
+            "tag": "label",
+            "nature": "Paired Element",
+            "cat": "Forms & Interactive",
+            "guidance": "Binds click target directly to input ID.",
+            "code": "<label for=\"emailField\">Email Address:</label>\n<input id=\"emailField\" type=\"email\">",
+            "link": "Label.html"
+          },
+          "select": {
+            "tag": "select",
+            "nature": "Paired Element",
+            "cat": "Forms & Interactive",
+            "guidance": "Holds <option> and <optgroup> tags.",
+            "code": "<select name=\"role\">\n  <option value=\"dev\">Developer</option>\n  <option value=\"des\">Designer</option>\n</select>",
+            "link": "Select.html"
+          },
+          "datalist": {
+            "tag": "datalist",
+            "nature": "Paired Element",
+            "cat": "Forms & Interactive",
+            "guidance": "Linked to input via list=\"datalist-id\".",
+            "code": "<input list=\"browsers\" name=\"browser\">\n<datalist id=\"browsers\">\n  <option value=\"Chrome\">\n  <option value=\"Firefox\">\n</datalist>",
+            "link": "Datalist.html"
+          },
+          "fieldset": {
+            "tag": "fieldset",
+            "nature": "Paired Element",
+            "cat": "Forms & Interactive",
+            "guidance": "Use with <legend> for radio and group accessibility.",
+            "code": "<fieldset>\n  <legend>Billing Method</legend>\n  <input type=\"radio\" name=\"pay\" id=\"card\"><label for=\"card\">Card</label>\n</fieldset>",
+            "link": "Fieldset.html"
+          },
+          "details": {
+            "tag": "details",
+            "nature": "Paired Element",
+            "cat": "Forms & Interactive",
+            "guidance": "Interactive disclosure element handled by browser.",
+            "code": "<details>\n  <summary>Frequently Asked Question</summary>\n  <p>Here is the detailed response...</p>\n</details>",
+            "link": "Details.html"
+          },
+          "dialog": {
+            "tag": "dialog",
+            "nature": "Paired Element",
+            "cat": "Forms & Interactive",
+            "guidance": "Supports dialog.showModal() and form method=\"dialog\".",
+            "code": "<dialog id=\"myModal\">\n  <p>Modal content</p>\n  <button onclick=\"myModal.close()\">Close</button>\n</dialog>",
+            "link": "Dialog.html"
+          },
+          "progress": {
+            "tag": "progress",
+            "nature": "Paired Element",
+            "cat": "Forms & Interactive",
+            "guidance": "Represents task progress from 0 to max.",
+            "code": "<progress value=\"75\" max=\"100\">75%</progress>",
+            "link": "Progress.html"
+          },
+          "table": {
+            "tag": "table",
+            "nature": "Paired Element",
+            "cat": "Tables & Lists",
+            "guidance": "For multi-dimensional structured data only.",
+            "code": "<table>\n  <tr><th>Col 1</th><th>Col 2</th></tr>\n  <tr><td>Val 1</td><td>Val 2</td></tr>\n</table>",
+            "link": "Table.html"
+          },
+          "caption": {
+            "tag": "caption",
+            "nature": "Paired Element",
+            "cat": "Tables & Lists",
+            "guidance": "Must be the immediate first child of <table>.",
+            "code": "<table>\n  <caption>Monthly Revenue Report 2026</caption>\n  ...\n</table>",
+            "link": "Caption.html"
+          },
+          "colgroup": {
+            "tag": "colgroup",
+            "nature": "Paired Element",
+            "cat": "Tables & Lists",
+            "guidance": "Groups columns for shared width styling.",
+            "code": "<colgroup>\n  <col style=\"width: 30%\">\n  <col style=\"width: 70%\">\n</colgroup>",
+            "link": "Colgroup.html"
+          },
+          "col": {
+            "tag": "col",
+            "nature": "Void Element",
+            "cat": "Tables & Lists",
+            "guidance": "Specifies properties inside <colgroup>.",
+            "code": "<colgroup>\n  <col span=\"2\" style=\"background:#eee\">\n</colgroup>",
+            "link": "Col.html"
+          },
+          "list": {
+            "tag": "ul / ol",
+            "nature": "Paired Element",
+            "cat": "Tables & Lists",
+            "guidance": "Parent for <li> list item elements.",
+            "code": "<ul>\n  <li>First Item</li>\n  <li>Second Item</li>\n</ul>",
+            "link": "List.html"
+          },
+          "descriptionlist": {
+            "tag": "dl",
+            "nature": "Paired Element",
+            "cat": "Tables & Lists",
+            "guidance": "Standard for metadata or term glossaries.",
+            "code": "<dl>\n  <dt>HTML5</dt>\n  <dd>HyperText Markup Language</dd>\n</dl>",
+            "link": "DescriptionList.html"
+          },
+          "meter": {
+            "tag": "meter",
+            "nature": "Paired Element",
+            "cat": "Tables & Lists",
+            "guidance": "For known bounded measurements (not task progress).",
+            "code": "<meter value=\"60\" min=\"0\" max=\"100\" optimum=\"80\">60%</meter>",
+            "link": "Meter.html"
+          },
+          "img": {
+            "tag": "img",
+            "nature": "Void Element",
+            "cat": "Media & Graphics",
+            "guidance": "Always provide descriptive alt attribute.",
+            "code": "<img src=\"hero.jpg\" alt=\"Developer using terminal\" loading=\"lazy\">",
+            "link": "Img.html"
+          },
+          "picture": {
+            "tag": "picture",
+            "nature": "Paired Element",
+            "cat": "Media & Graphics",
+            "guidance": "Provides responsive fallback image formats.",
+            "code": "<picture>\n  <source srcset=\"large.webp\" media=\"(min-width: 800px)\">\n  <img src=\"fallback.jpg\" alt=\"Illustration\">\n</picture>",
+            "link": "Picture.html"
+          },
+          "figure": {
+            "tag": "figure",
+            "nature": "Paired Element",
+            "cat": "Media & Graphics",
+            "guidance": "Self-contained illustration with caption.",
+            "code": "<figure>\n  <img src=\"chart.png\" alt=\"Architecture\">\n  <figcaption>Figure 1.1: System Flow</figcaption>\n</figure>",
+            "link": "Figure.html"
+          },
+          "video": {
+            "tag": "video",
+            "nature": "Paired Element",
+            "cat": "Media & Graphics",
+            "guidance": "Embedded video playback with controls.",
+            "code": "<video controls poster=\"thumb.jpg\" width=\"640\">\n  <source src=\"video.mp4\" type=\"video/mp4\">\n</video>",
+            "link": "Video.html"
+          },
+          "audio": {
+            "tag": "audio",
+            "nature": "Paired Element",
+            "cat": "Media & Graphics",
+            "guidance": "Native audio playback element.",
+            "code": "<audio controls src=\"track.mp3\">\n  Your browser does not support audio.\n</audio>",
+            "link": "Audio.html"
+          },
+          "svg": {
+            "tag": "svg",
+            "nature": "Paired Element",
+            "cat": "Media & Graphics",
+            "guidance": "Vector graphics scalable without pixelation.",
+            "code": "<svg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\">\n  <circle cx=\"12\" cy=\"12\" r=\"10\" fill=\"currentColor\"/>\n</svg>",
+            "link": "Svg.html"
+          },
+          "iframe": {
+            "tag": "iframe",
+            "nature": "Paired Element",
+            "cat": "Media & Graphics",
+            "guidance": "Use sandbox attribute for security.",
+            "code": "<iframe src=\"https://example.com\" sandbox title=\"Preview\"></iframe>",
+            "link": "Iframe.html"
+          },
+          "object": {
+            "tag": "object",
+            "nature": "Paired Element",
+            "cat": "Media & Graphics",
+            "guidance": "Useful for embedding PDFs and rich media.",
+            "code": "<object data=\"document.pdf\" type=\"application/pdf\" width=\"100%\" height=\"500\">\n  <p>PDF not supported.</p>\n</object>",
+            "link": "Object.html"
+          },
+          "embed": {
+            "tag": "embed",
+            "nature": "Void Element",
+            "cat": "Media & Graphics",
+            "guidance": "General embed point for external content.",
+            "code": "<embed type=\"video/webm\" src=\"video.webm\" width=\"400\" height=\"300\">",
+            "link": "Embed.html"
+          },
+          "area": {
+            "tag": "area",
+            "nature": "Void Element",
+            "cat": "Media & Graphics",
+            "guidance": "Used inside <map> to create clickable hotspots.",
+            "code": "<map name=\"infographic\">\n  <area shape=\"rect\" coords=\"34,44,270,350\" href=\"#detail\" alt=\"Item\">\n</map>",
+            "link": "Area.html"
+          },
+          "heading": {
+            "tag": "h1-h6",
+            "nature": "Paired Element",
+            "cat": "Text & Typography",
+            "guidance": "Never skip heading levels (e.g. h1 to h3).",
+            "code": "<h1>Page Title</h1>\n<h2>Primary Subheading</h2>",
+            "link": "Heading.html"
+          },
+          "anchor": {
+            "tag": "a",
+            "nature": "Paired Element",
+            "cat": "Text & Typography",
+            "guidance": "Always use rel=\"noopener\" with target=\"_blank\".",
+            "code": "<a href=\"https://spring.io\" target=\"_blank\" rel=\"noopener\">Spring Official</a>",
+            "link": "Anchor.html"
+          },
+          "blockquote": {
+            "tag": "blockquote",
+            "nature": "Paired Element",
+            "cat": "Text & Typography",
+            "guidance": "Represents extended external quotations.",
+            "code": "<blockquote cite=\"https://w3.org\">\n  <p>The web is for everyone.</p>\n</blockquote>",
+            "link": "Blockquote.html"
+          },
+          "pre": {
+            "tag": "pre",
+            "nature": "Paired Element",
+            "cat": "Text & Typography",
+            "guidance": "Preserves raw whitespace and indents.",
+            "code": "<pre><code>\nconst total = 100;\nconsole.log(total);\n</code></pre>",
+            "link": "Pre.html"
+          },
+          "code": {
+            "tag": "code",
+            "nature": "Paired Element",
+            "cat": "Text & Typography",
+            "guidance": "For code identifiers and short commands.",
+            "code": "<p>Run <code>npm start</code> in terminal.</p>",
+            "link": "Code.html"
+          },
+          "br": {
+            "tag": "br",
+            "nature": "Void Element",
+            "cat": "Text & Typography",
+            "guidance": "Use for postal addresses or poetry only.",
+            "code": "<p>100 Innovation Way<br>Bengaluru, India</p>",
+            "link": "Br.html"
+          },
+          "hr": {
+            "tag": "hr",
+            "nature": "Void Element",
+            "cat": "Text & Typography",
+            "guidance": "Indicates a thematic break between paragraphs.",
+            "code": "<p>Scene One finishes...</p>\n<hr>\n<p>Scene Two begins...</p>",
+            "link": "Hr.html"
+          },
+          "em": {
+            "tag": "em",
+            "nature": "Paired Element",
+            "cat": "Text & Typography",
+            "guidance": "Indicates vocal stress on words.",
+            "code": "<p>We <em>must</em> ship this update today.</p>",
+            "link": "Em.html"
+          },
+          "mark": {
+            "tag": "mark",
+            "nature": "Paired Element",
+            "cat": "Text & Typography",
+            "guidance": "Highlights search hits or reference points.",
+            "code": "<p>Found 5 results for <mark>spring</mark>.</p>",
+            "link": "Mark.html"
+          },
+          "subscript": {
+            "tag": "sub / sup",
+            "nature": "Paired Element",
+            "cat": "Text & Typography",
+            "guidance": "Typographical sub/superscripts.",
+            "code": "<p>H<sub>2</sub>O and x<sup>2</sup></p>",
+            "link": "Subscript.html"
+          },
+          "del": {
+            "tag": "del / ins",
+            "nature": "Paired Element",
+            "cat": "Text & Typography",
+            "guidance": "For tracked document modifications or discounts.",
+            "code": "<p><del>$99</del> <ins>$69</ins></p>",
+            "link": "Del.html"
+          },
+          "address": {
+            "tag": "address",
+            "nature": "Paired Element",
+            "cat": "Text & Typography",
+            "guidance": "For article or document author contact.",
+            "code": "<address>\n  Author: Kaustubh Singh<br>\n  <a href=\"mailto:kaustubh@example.com\">Email</a>\n</address>",
+            "link": "Address.html"
+          },
+          "cite": {
+            "tag": "cite",
+            "nature": "Paired Element",
+            "cat": "Text & Typography",
+            "guidance": "Must contain the title of a creative work.",
+            "code": "<p>Refer to <cite>Refactoring</cite> by Martin Fowler.</p>",
+            "link": "Cite.html"
+          },
+          "dfn": {
+            "tag": "dfn",
+            "nature": "Paired Element",
+            "cat": "Text & Typography",
+            "guidance": "Marks the term being defined in a sentence.",
+            "code": "<p><dfn>HTML</dfn> is the standard markup language for documents.</p>",
+            "link": "Dfn.html"
+          },
+          "abbreviation": {
+            "tag": "abbr",
+            "nature": "Paired Element",
+            "cat": "Text & Typography",
+            "guidance": "Provides tooltips for acronyms.",
+            "code": "<abbr title=\"Cascading Style Sheets\">CSS</abbr>",
+            "link": "Abbreviation.html"
+          },
+          "bdo": {
+            "tag": "bdo",
+            "nature": "Paired Element",
+            "cat": "Text & Typography",
+            "guidance": "Overrides inline text direction.",
+            "code": "<bdo dir=\"rtl\">This text will render right-to-left.</bdo>",
+            "link": "Bdo.html"
+          },
+          "ruby": {
+            "tag": "ruby",
+            "nature": "Paired Element",
+            "cat": "Text & Typography",
+            "guidance": "East Asian pronunciation guides.",
+            "code": "<ruby>漢 <rt>かん</rt></ruby>",
+            "link": "Ruby.html"
+          },
+          "head": {
+            "tag": "head",
+            "nature": "Paired Element",
+            "cat": "Document & Metadata",
+            "guidance": "Container for head metadata (non-rendered).",
+            "code": "<head>\n  <title>Page</title>\n  <meta charset=\"UTF-8\">\n</head>",
+            "link": "Head.html"
+          },
+          "base": {
+            "tag": "base",
+            "nature": "Void Element",
+            "cat": "Document & Metadata",
+            "guidance": "Resolves all relative URLs against this URL.",
+            "code": "<base href=\"https://example.com/assets/\" target=\"_blank\">",
+            "link": "Base.html"
+          },
+          "script": {
+            "tag": "script",
+            "nature": "Paired Element",
+            "cat": "Document & Metadata",
+            "guidance": "Prefer defer or type=\"module\" for non-blocking load.",
+            "code": "<script src=\"app.js\" defer><\/script>",
+            "link": "Script.html"
+          },
+          "style": {
+            "tag": "style",
+            "nature": "Paired Element",
+            "cat": "Document & Metadata",
+            "guidance": "Contains embedded stylesheet declarations.",
+            "code": "<style>\n  body { font-family: sans-serif; }\n</style>",
+            "link": "Style.html"
+          },
+          "noscript": {
+            "tag": "noscript",
+            "nature": "Paired Element",
+            "cat": "Document & Metadata",
+            "guidance": "Rendered only when JavaScript is disabled.",
+            "code": "<noscript>\n  <p>JavaScript is required to view interactive features.</p>\n</noscript>",
+            "link": "Noscript.html"
+          },
+          "data": {
+            "tag": "data",
+            "nature": "Paired Element",
+            "cat": "Document & Metadata",
+            "guidance": "Attaches machine values to human visible text.",
+            "code": "<p>Product: <data value=\"SKU-8921\">Wireless Keyboard</data></p>",
+            "link": "Data.html"
+          }
+        };
+
         const inspectorModal = document.getElementById('inspectorModal');
         const modalCloseBtn = document.getElementById('modalCloseBtn');
         const modalTagTitle = document.getElementById('modalTagTitle');
@@ -3655,17 +4139,36 @@
         const modalCopySnippetBtn = document.getElementById('modalCopySnippetBtn');
 
         window.openInspector = function (tag, nature, cat, guidance, code, link) {
-          modalTagTitle.textContent = `<${tag}>`;
-          modalElementType.textContent = nature;
-          modalCategory.textContent = cat;
-          modalGuidance.textContent = guidance;
-          modalCodeSnippet.textContent = code;
-          modalDeepLink.setAttribute('href', link);
+          const item = (typeof tag === 'string' && TAG_DETAILS[tag]) ? TAG_DETAILS[tag] : null;
+          const displayTag = item ? item.tag : tag;
+          const displayNature = item ? item.nature : (nature || 'Paired Element');
+          const displayCat = item ? item.cat : (cat || 'HTML Standard');
+          const displayGuidance = item ? item.guidance : (guidance || '');
+          const displayCode = item ? item.code : (code || '');
+          const displayLink = item ? item.link : (link || `${displayTag}.html`);
+
+          modalTagTitle.textContent = `<${displayTag}>`;
+          modalElementType.textContent = displayNature;
+          modalCategory.textContent = displayCat;
+          modalGuidance.textContent = displayGuidance;
+          modalCodeSnippet.textContent = displayCode;
+          modalDeepLink.setAttribute('href', displayLink);
 
           inspectorModal.style.display = 'flex';
           inspectorModal.setAttribute('aria-hidden', 'false');
           document.body.style.overflow = 'hidden';
         };
+
+        // Event delegation for inspect buttons
+        elementsGrid.addEventListener('click', (e) => {
+          const btn = e.target.closest('.inspect-btn');
+          if (!btn) return;
+          const card = btn.closest('.element-card');
+          const tagName = btn.getAttribute('data-tag') || (card ? card.getAttribute('data-name') : null);
+          if (tagName) {
+            openInspector(tagName);
+          }
+        });
 
         function closeModal() {
           inspectorModal.style.display = 'none';
