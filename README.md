@@ -4,7 +4,7 @@ An interactive, deeply structured reference guide for **60 HTML tags** with real
 
 **Live Website:** [https://vibeiwthkaustubh.github.io/html-cheat-sheet/](https://vibeiwthkaustubh.github.io/html-cheat-sheet/)  
 **Author:** Kaustubh Singh  
-**Instagram:** [@__kaustubh_singh](https://instagram.com/__kaustubh_singh)  
+**Instagram:** [@__kaustubh__singh](https://instagram.com/__kaustubh__singh)  
 
 ---
 
